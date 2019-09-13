@@ -22,11 +22,26 @@ abstract: |
 
 # Introduction
 
-# Methods
+# Existing stablecoin (specific)
 
-# Results
+decentralizedcurrency.pdf
+
+## digix
+## basis
+## centre
+## gemini-dollar
+## havven
+## PAX
+## Tether
+
+https://makerdao.com/en/whitepaper/#overview-of-the-dai-stablecoin-system
+
+
+# General stablecoin techniques and challenges (generalised)
 
 # Discussion
+
+## Discussion of stablecoin tactics
 
 # Conclusion
 

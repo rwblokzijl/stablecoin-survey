@@ -2,3 +2,4 @@ bibliography.bib
 deps
 Makefile
 papers
+*.swp
