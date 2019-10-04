@@ -5,13 +5,24 @@ title: Dirty notes
 
 Reading list in order:
 
-|---|--------------------------------------------------------------------|--|
+|---|--------------------------------------------------------------------|---|
 | 1 | APG Email                                                          | x |
-| 2 | Money Routing by Trusting Strangers with your Funds - 08696786.pdf |  |
-| 3 | How to make a digital currency on a blockchain stable              |  |
-| 4 | Wikipedia                                                          |  |
-| 5 | Are Stable Coins Stable? - Usman W. Chohan, MBA, PhD               |  |
-| 6 | Coin whitepapers                                                   |  |
+| 2 | Money Routing by Trusting Strangers with your Funds - 08696786.pdf | x |
+| 3 | How to make a digital currency on a blockchain stable              |   |
+| 4 | Duffie digital payments                                            |   |
+| 5 | Ipv8 paper????                                                     |   |
+| 6 | Wikipedia                                                          |   |
+| 7 | Are Stable Coins Stable? - Usman W. Chohan, MBA, PhD               |   |
+| 8 | Coin whitepapers                                                   |   |
+
+| Have | !Have |
+| Hodl | buy   |
+
+| Positive | Have | !Have |
+| ---      | ---  | ---   |
+| Spend    |      |       |
+| !Spend   |      |       |
+
 
 # Notes per read item
 
@@ -19,6 +30,62 @@ Reading list in order:
 
 APG wants to track IOU's on a blockchain. This is not necessarily related to
 stablecoin, though some concepts might be transferable.
+
+## 2 Money Routing by Trusting Strangers with your Funds
+
+08696786.pdf
+
+ - Paper by TUD
+ - Presents a usecase for using trustchain to track bank transactions
+     - Trustchain seems useful in specific circumstances
+     - Able to prove a deal happened but not whether it didnt (like contracts)
+        - Double spending not solved
+        - Useful for contracts
+
+
+## 3 How to make a digital currency on a blockchain stable
+
+The authors present a model of the interdependencies of mining reward, mining
+cost, reachability of proof of work, number of miners, block creation time,
+supply and demand.
+
+The authors describe an equilibrium between the price of the coin (thus the
+reward) and the cost of mining (electricity).
+
+Based on this theory the authors present the following options in times of
+positive demand shock:
+
+ - Not changing reachability of proof of work so miners are incentivised to
+ create more coins. (This also increases block creation, leading to higher
+ transaction throughput but also a faster growing chain).
+ - To avoid accidental forks the time between blocks needs to be limited to some
+ minimum time.
+ - In order to still stabilise the price when the time between blocks cannot be
+ halved again, the difficulty of the PoW can be increased while increasing the
+ reward to maintain a stable new coin supply.
+
+And the following in times of negative shocks:
+
+ - Not changing reachability of proof of work so miners are incentivised to
+create fewer coins. (This also reduces block creation, leading to lower
+transaction throughput but also a faster growing chain).
+- To maintain proper transaction throughput time between blocks needs to be
+limited to some maximum time.
+- In order to still stabilise the price when the time between blocks cannot be
+doubled again, the difficulty of the PoW can be decreased while increasing the
+reward to maintain a stable new coin supply.
+
+ - Every X blocks reduce the supply of coins by deleting a percentage of
+ existing coins uniformly across all coins.
+ - This would come in place of the halving rule over time.
+
+
+
+## 4 Duffie
+
+Duffie doesnt go deep into mechanisms for price control, but does look at policy
+and economic implications of having stablecoins. Duffie claims they can only be
+centrally controlled (in practice) but this is semi-disproven by MakerDAO.
 
 # Questions:
 
@@ -39,6 +106,7 @@ stablecoin, though some concepts might be transferable.
 # General stablecoin papers
 
 [How to make a digital currency on a blockchain stable] (https://www.sciencedirect.com/science/article/pii/S0167739X18300475)
+Can We Stabilize the Price of a Cryptocurrency?: Understanding the Design of Bitcoin and Its Potential to Compete with Central Bank Money - SSRN-id2519367.pdf
 
 Are Stable Coins Stable? - Usman W. Chohan, MBA, PhD
 DuffieDigitalPaymentsMay2019.pdf
