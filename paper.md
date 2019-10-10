@@ -22,26 +22,48 @@ abstract: |
 
 # Introduction
 
-# Existing stablecoin (specific)
+# Earlier work
 
-decentralizedcurrency.pdf
+Multiple
 
-## digix
-## basis
-## centre
-## gemini-dollar
-## havven
-## PAX
-## Tether
+# Collateralization (Pegging to Stable currencies)
 
-https://makerdao.com/en/whitepaper/#overview-of-the-dai-stablecoin-system
+Not going into crypto pegged
+Pegged to bitcoin: WBTC(btc)
 
+## Collateralization by Centralisation
 
-# General stablecoin techniques and challenges (generalised)
+Dollar: AnchorUSD, Gemini Dollar, Neutral Dollar(aggregate), PAXos, TrueUSD, USD Coin,
+
+Euro: Augmint
+
+Gold: Digix
+
+## Collateralization by Crypto
+
+To the Dollar: MakerDAO(eth), EOSDT(eos),
+
+### Overcollateralization
+
+### Pricefeeds
+
+### Governance
+
+# Stabilisting through algorithms
+
+Stabilising is not pegging
+
+Changing parameters to make the currecy respond dynamically to price changes
+
+## Indicators of price changes
+
+### Supply
+Hash rate
+
+### Demand
+Transaction fees
 
 # Discussion
-
-## Discussion of stablecoin tactics
 
 # Conclusion
 
