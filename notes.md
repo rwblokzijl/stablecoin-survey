@@ -3,7 +3,15 @@ title: Dirty notes
 
 ---
 
-Reading list in order:
+# TO UNDERSTAND
+
+ -
+
+
+
+# Introduction notes
+
+# Reading list in order:
 
 |---|--------------------------------------------------------------------|---|
 | 1 | APG Email                                                          | x |
@@ -113,6 +121,43 @@ DuffieDigitalPaymentsMay2019.pdf
 SSRN-id3326823.pdf
 
 # Whitepapers for other stablecoins
+
+
+## Collateralised centrally
+
+- Dollar
+    - AnchorUSD
+    - Gemini Dollar
+    - Neutral Dollar(aggregate)
+    - PAXos
+    - TrueUSD
+    - USD Coin
+
+- Euro
+    - Augmint
+- Gold
+    - Digix
+
+## Collateralised decentrally
+
+Pegged to Fiat:
+
+ - MakerDAO(eth)
+    - Uses CDPs to
+ - EOSDT(eos)
+
+Pegged to bitcoin:
+ - WBTC(btc)
+
+## Not Collateralised
+
+ - Bay
+    - "Freezes" a fraction of the coins when the price gets to low
+        - This reduces liquidity and thus reduces supply
+    * Liquid coins can be traded instantly
+    * Frozen coins can be traded with a delay of a month
+
+
 
 08751402.pdf (elasticoin)
 Fedcoin_Central_Bank_R3.pdf

@@ -1,5 +1,7 @@
 ---
-title: Stable coin - A literature survey
+title: |
+    | Financial Derivatives on the Blockchain
+    | Stablecoin - A literature survey
 date: \today
 author:
   - name: Robert Wessel Blokzijl
@@ -22,11 +24,23 @@ abstract: |
 
 # Introduction
 
+Without stablecoins payments in bitcoin are converted to USD immediately in
+order to reduce risk. Stablecoins allow you to hold and trade the crypto rather
+than having to rely on a fiat currency.
+
 # Earlier work
 
 Multiple
 
 # Collateralization (Pegging to Stable currencies)
+
+The most common way to stabilise a currency is to hold some form of collateral.
+This stabilises the price of the currency by allowing holders of the currency
+to always buy and sell at a set price. Traditionally pegs of a currency to
+either gold or another currency have been controlled by a regulating authority
+holding a reserve of the underlying asset.
+
+In the world of crypto,
 
 Not going into crypto pegged
 Pegged to bitcoin: WBTC(btc)
@@ -39,9 +53,9 @@ Euro: Augmint
 
 Gold: Digix
 
-## Collateralization by Crypto
+## Collateralization by Crypto (Stability as a Service)
 
-To the Dollar: MakerDAO(eth), EOSDT(eos),
+To the Dollar: MakerDAO(eth), EOSDT(eos), BitUSD
 
 ### Overcollateralization
 
@@ -49,11 +63,15 @@ To the Dollar: MakerDAO(eth), EOSDT(eos),
 
 ### Governance
 
-# Stabilisting through algorithms
+# Stability without Collateralization
+
+Bay Stablecoin
 
 Stabilising is not pegging
 
 Changing parameters to make the currecy respond dynamically to price changes
+
+
 
 ## Indicators of price changes
 
@@ -65,7 +83,13 @@ Transaction fees
 
 # Discussion
 
+## Centralisation
+
+## Complexity and Ease of Use
+
 # Conclusion
+
+cite[@AreStabl89:online].
 
 # Future research
 
