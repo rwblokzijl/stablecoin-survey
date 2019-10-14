@@ -11,6 +11,13 @@ title: Dirty notes
 
 # Introduction notes
 
+What to warm people up for:
+ - A fully trustless and decentralised market for derivitives stabalising
+ currencies.
+ - A case study on how to implement a derivitive
+
+In this survey we aim to classify one aspect of this overlay:
+
 # Reading list in order:
 
 |---|--------------------------------------------------------------------|---|
@@ -195,3 +202,108 @@ https://ieeexplore.ieee.org/document/8696786
 # Related projects within the research group
 
 https://github.com/Tribler/tribler/issues/4044
+
+# Sources
+
+| Title:                                                                                                                                                                                                   | Notes |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------|
+| [How to make a digital currency on a blockchain stable](https://www.sciencedirect.com/science/article/pii/S0167739X18300475)                                                                             |       |
+| [Are Stable Coins Stable?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3326823)                                                                                                                  |       |
+| [DuffieDigital and Fast Payment Systems](https://www.darrellduffie.com/uploads/policy/DuffieDigitalPaymentsMay2019.pdf)                                                                                  |       |
+| [Money as IOUs in Social Trust Networks](https://www.researchgate.net/publication/228729340_Money_as_IOUs_in_Social_Trust_Networks_and_a_Proposal_for_a_Decentralized_Currency_Network_Protocol)         |       |
+| [Can We Stabilize the Price of a Cryptocurrency?: Understanding the Design of Bitcoin and Its Potential to Compete with Central Bank Money](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2519367) |       |
+| [TrustChain](https://ieeexplore.ieee.org/document/8696786)                                                                                                                                               |       |
+| [THE STATE OF STABLECOINS](https://www.blockchain.com/ru/static/pdf/StablecoinsReportFinal.pdf)                                                                                                          |       |
+| [Stablecoins in Cryptoeconomics. From Initial Coin Offerings (ICOs) to Central Bank Digital Currencies (CBDCs)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3385840)                             |       |
+| [Stablecoin: Yet Another Layer of Cryptocurrency Complexity](https://search.proquest.com/docview/2287330661?pq-origsite=gscholar)                                                                        |       |
+| [(In)stability for the Blockchain: Deleveraging Spirals and Stablecoin Attacks](https://arxiv.org/abs/1906.02152)                                                                                        |       |
+| [Elasticoin: Low-Volatility PoSW](https://ieeexplore.ieee.org/document/8751402/)                                                                                                                         |       |
+| [Chainlink](https://link.smartcontract.com/whitepaper)
+| [Designing Stable Coins](https://duo.network/papers/duo_academic_white_paper.pdf)
+| [Fedcoin_Central_Bank_R3.pdf](https://www.r3.com/reports/fedcoin-a-central-bank-issued-cryptocurrency/)                    |                                                                                |
+
+| Stablecoin                                                                                                                 | notes                                                                                                                                                  |
+|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [Ampleforth](https://www.ampleforth.org/paper/)                                                                            | Formerly fragments, Scales existing coins in place to make 1 equal to a dollar, rebase happens at most every 24 hours                                  |
+| [Anchor](https://theanchor.io/whitepaper/)                                                                                 | Pegs to "Global Economic Growth" with MMU oracle (Monetary Measurement Unit). Uses Seigniorage Shares Model                                            |
+| [basis_whitepaper_en.pdf](https://www.basis.io/basis_whitepaper_en.pdf)                                                    | decentralised, defunct, brings up interesting faults of makerdao and bitshares was based on Seigniorage Shares Model                                   |
+| [BitBay](https://bitbay.market/downloads/whitepapers/bitbay-dynamic-peg.pdf)                                               | peg needed for trading platform, maintains rollong peg by freezing users coins                                                                         |
+| [BitShares](https://www.bitshares.foundation/articles/2018-06-01-bitshareswhitepaper)                                      | bitusd is a token for speculating on bitshares uses CDP like structure                                                                                 |
+| [centre-whitepaper.pdf](https://www.centre.io/pdfs/centre-whitepaper.pdf)                                                  | fiat pegged, multiple holders/issuers (exchanges)                                                                                                      |
+| [digix-whitepaper.pdf](https://digix.global/whitepaper.pdf)                                                                | DAO, gold pegged coin, central storage of gold                                                                                                         |
+| [DaiDec17WP.pdf](https://makerdao.com/whitepaper/DaiDec17WP.pdf)                                                           | DAO, pegged to dollar, CDP accepting ether, plans to add Digix gold CDPs                                                                               |
+| [gemini-dollar-whitepaper.pdf](https://gemini.com/wp-content/themes/gemini/assets/img/dollar/gemini-dollar-whitepaper.pdf) | Centralised, fiat backed, made by exchange                                                                                                             |
+| [havven_whitepaper.pdf](https://www.synthetix.io/uploads/havven_whitepaper.pdf)                                            | generalises stablecoin to tracking of offchain trackers, now synthetix, hold singe collatoral pool of "SNX", allows exchanes between any tracked asset |
+| [JPMorgan Coin](https://www.jpmorgan.com/global/news/digital-coin-payments)                                                | Centralised, JP Morgan backed, aim to provide fast inter-organisation value transfer                                                                   |
+| [Libra](https://libra.org/en-US/wp-content/uploads/sites/23/2019/06/LibraWhitePaper_en_US.pdf)                             | Centralised, not pegged, or backed                                                                                                                     |
+| [PAX_Whitepaper.pdf](https://account.paxos.com/whitepaper.pdf)                                                             | Centralised, fully collatoralised
+| [Reserve](https://reserve.org/whitepaper.pdf)                                                                              |                                                                                                                                                        |
+| [TetherWhitePaper.pdf](https://tether.to/wp-content/uploads/2016/06/TetherWhitePaper.pdf)                                  | c                                                                                                                                                      |
+| [TrueUSD](https://www.trusttoken.com/trueusd)                                                                              | c+                                                                                                                                                     |
+| [Nubits](https://nubits.com/whitepaper)                                                                                    | c---                                                                                                                                                   |
+| [Stasis](https://www.docdroid.net/QdCqGO9/stasis-white-paper-2.pdf)                                                        | c                                                                                                                                                      |
+| [Steem dollar](https://steem.com/steem-whitepaper.pdf)                                                                     |                                                                                                                                                        |
+| [AuroraDAO](https://auroradao.com/whitepaper/Aurora-Labs-Whitepaper-V0.9.7.pdf)                                            |                                                                                                                                                        |
+| [globcoin](https://globcoin.io/assets/pdf/whitepaper-Globcoin-v3.1.0.pdf)                                                  |                                                                                                                                                        |
+| [x8currency](https://x8currency.com/wp-content/uploads/X8-Project-TGE-Whitepaper.pdf)                                      |                                                                                                                                                        |
+| [stably](https://www.stably.io/static/whitepaper.pdf)                                                                      |                                                                                                                                                        |
+| [minex](https://minexcoin.com/html/download/wpeng.pdf)                                                                     |                                                                                                                                                        |
+| [carbon](https://www.carbon.money/whitepaper.pdf)                                                                          |                                                                                                                                                        |
+| [augmint](https://docs.google.com/document/d/1IQwGEsImpAv2Nlz5IgU_iCJkEqlM2VUHf5SFkcvb80A/edit#heading=h.wx1pwmuencup)     |                                                                                                                                                        |
+
+| Defunct:    |
+|-------------|
+| Kowala      |
+| AAA reserve |
+
+| Centralised stablecoins |  |  |
+
+# Paper in few sentences:
+
+Intro
+Stablalising a currency is very useful.
+
+Stablalising a currency is always done through market makers. By incentivising
+people to buy a currency when the price is low, and selling it when it is high,
+supply and demand will be adjusted to stabelise the currecy around any chosen
+value.
+
+Centralised
+The easiest way to get market makes to buy and sell a currency to stablilise the
+price, is by simply being the entity that sells and buys it at that price.
+
+pros, more pros, mooore pros
+allow interbank payments (jpmorgan coin)
+
+problems...
+
+Decentralised
+To avoid a central party holding the colatoral neccesary, ways have been
+developped to create a market...
+
+Bitshares
+
+Match people going long and short on the currency
+
+Someone takes the hit, not the system
+
+pros, more pros, mooore pros
+
+problems... linked to the bitshares platform
+
+makerdao
+
+pros, more pros, mooore pros
+
+problems... this fails when markets go crazy... this
+
+Generalising the ideas of these currencies
+
+Derivatives on the chain
+
+Global enforcement based on contracts
+    - Futures and options
+        - enforced by collatoral
+        - or reputation (trustchain)
+
+

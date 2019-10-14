@@ -1,7 +1,8 @@
 ---
 title: |
-    | Financial Derivatives on the Blockchain
-    | Stablecoin - A literature survey
+    | Financial Derivatives on the Blockchain or
+    | How to Stabilise a Crypto Currency
+    | A Literature Survey
 date: \today
 author:
   - name: Robert Wessel Blokzijl
@@ -28,11 +29,13 @@ Without stablecoins payments in bitcoin are converted to USD immediately in
 order to reduce risk. Stablecoins allow you to hold and trade the crypto rather
 than having to rely on a fiat currency.
 
-# Earlier work
+# Prerequisitre knowledge
 
 Multiple
 
-# Collateralization (Pegging to Stable currencies)
+# Making a market
+
+Collateralization (Pegging to Stable currencies)
 
 The most common way to stabilise a currency is to hold some form of collateral.
 This stabilises the price of the currency by allowing holders of the currency
@@ -70,8 +73,6 @@ Bay Stablecoin
 Stabilising is not pegging
 
 Changing parameters to make the currecy respond dynamically to price changes
-
-
 
 ## Indicators of price changes
 
