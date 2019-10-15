@@ -31,7 +31,7 @@ than having to rely on a fiat currency.
 
 # Prerequisitre knowledge
 
-Multiple
+
 
 # Making a market
 
