@@ -3,9 +3,18 @@ title: Dirty notes
 
 ---
 
-# TO UNDERSTAND
+# TO Do
 
- -
+
+ - Intro rewrite (Thursday)
+ - History of money and requirements for a currency (Wednesday)
+ - Decentralised (Monday)
+ - General Theory (Wednesday)
+ - Border-text (Thursday)
+     - Discussion
+     - Future Research
+     - Conclusion
+     - abstract
 
 
 

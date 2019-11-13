@@ -79,14 +79,28 @@
     </choose>
   </macro>
   <macro name="author">
-    <names variable="author">
-      <name initialize-with=". " delimiter=", " and="text"/>
-      <label form="short" prefix=", " text-case="capitalize-first"/>
-      <substitute>
-        <names variable="editor"/>
-        <names variable="translator"/>
-      </substitute>
-    </names>
+    <choose>
+      <if type="article-journal report" match="any">
+        <names variable="author">
+          <name initialize-with=". " delimiter=", " and="text"/>
+          <label form="short" prefix=", " text-case="capitalize-first"/>
+          <substitute>
+            <names variable="editor"/>
+            <names variable="translator"/>
+          </substitute>
+        </names>
+      </if>
+      <else>
+        <names variable="author">
+          <name initialize="false" initialize-with=". " delimiter=", " and="text"/>
+          <label form="short" prefix=", " text-case="capitalize-first"/>
+          <substitute>
+            <names variable="editor"/>
+            <names variable="translator"/>
+          </substitute>
+        </names>
+      </else>
+    </choose>
   </macro>
   <macro name="editor">
     <names variable="editor">
