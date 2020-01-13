@@ -500,10 +500,10 @@ Variations in these systems leads to differences in features like:
  - the direction of interest payments,
  - the matching of investor to speculator,
  - the amount of collateral put up by each party,
- - the mechanism of a margin call.
+ - the mechanism of a margin call or forced-settlement.
 
 To explain the variation between the systems we use some examples. We show how
-diffences in the purpose of the system leads to differences in the features, and
+defences in the purpose of the system leads to differences in the features, and
 how the price keeps stabilising.
 
 #### Reserve bank speculator model
@@ -551,7 +551,7 @@ like the speculator gets their value from speculation only. They can, for
 example, sell their tokens on the market for more of the collateral thus
 leveraging their speculation on the collateral by some factor.
 
-Usually, the designer inteded way for the speculator to make a profit is by peer
+Usually, the designer intended way for the speculator to make a profit is by peer
 to peer lending. Instead of selling the tokens on the market, the speculator can
 lend out the tokens to makes some extra dividends while speculating on the
 collateral. In this way, the speculator acts as the reserve bank increasing
@@ -563,29 +563,28 @@ the future, thus creating an asset that is more stable than the underlying
 collateral.
 
 The complete risk acceptance and decision making of the speculator allows for a
-number of expantions on the already explained concepts. First, since the success
-of the network is dependent on being properly collateralized, and this in turn
-is dependent on the market value of the collateral, it makes sense to diversify
-the collateral. Thus, a multi-collateral system, which improves guarantees for
-token holders can be created, where the speculators have a choice in what
-collateral they want to stake. This protects the system against a price crash in
-one collateral category, as speculators are incentivised to exchange the
-collateral that is dropping in value for more price-stable collateral.
+number of expansions on the already explained concepts. First, since the success
+of the network is dependent on everyone being properly collateralized on
+average, and this in turn is dependent on the market value of the collateral, it
+makes sense to diversify the collateral. Thus, a multi-collateral system, which
+improves guarantees for token holders can be created, where the speculators have
+a choice in what collateral they want to stake. This protects the system against
+a price crash in one collateral category, as speculators are incentivised to
+exchange the collateral that is dropping in value for more price-stable
+collateral.
 
 #### Speculation market model
 
-In the second system both the speculator and the investor are making a
-prediction on the value of the stablecoin.
-
 In this model the stablecoin can still be bought by the investor to offload risk
-to an investor on the open market. On the other side of the coin, the speculator
+to a speculator on some market. On the other side of the coin, the speculator
 still puts up extra collateral to back the coin in order to speculate on the
-underlying assets.
+underlying assets and provide collateral in case of a price dip.
 
-The differences between this model and the reserve bank model is that the
-mechanism to match investor to speculator, hereafter called the internal market,
-is done through margin trading. This internal market a decentralised exchange
-where speculators and investors put up offers to be matched with eachother.
+The first differences between this model and the reserve bank model is that the
+mechanism to match investor to speculator, hereafter called the "internal
+market", is done through margin trading. This means that the internal market is
+effectively an exchange where speculators and investors put up offers to be
+matched with each other.
 
 The model relies on the fact that the investor, at any time, can redeem the
 stablecoin for 1 dollars worth of collateral. This way the price should always
@@ -593,75 +592,149 @@ be around 1 dollar.
 
 When a speculator puts up an offer, it acts like a proposal to the investor. The
 offer describes the amount of collateral that the investor should pay into
-the debt position. The investor knows that they can get 1 dollar, for it at any
-point later. So this should provide a lower bound on the value of the coin.
+the debt position. The investor knows that they have some guarantee to redeem it
+for 1 dollar of collateral at any point later. This fact provide a lower bound
+on the value of the coin as coins sold below a dollar will immediately be bought
+up and redeemed. This creates a price for the investor of 1 dollar plus some
+premium. This premium acts as an incentive for the speculator to put up the
+extra collateral and is variable based on the market.
 
-After an investor gets matched with an order, the speculator puts of the rest of
-the collateral required to meet the minimum ratio and maintains this throughout
-the lifetime of the contract.
+After two orders get matched on the internal market, the investor provides the
+agreed upon amount of collateral, and the speculator puts up the rest of the
+collateral required to meet the minimum ratio and maintains this throughout the
+lifetime of the contract.
 
-The stablecoin is fully fungible as they can be redeemed for 1 dollar at any
-time regardless of how much collateral the first investor put up.
+The generated stablecoin is given to the investor and is fully fungible as they
+can be redeemed for 1 dollar at any time regardless of how much collateral the
+first investor put up. The coin can now be traded just like any other currency
+on some external market.
 
-Interest here is payed from the speculator to the investor, as the investor
+Interest in this is payed from the speculator to the investor, as the investor
 allows the speculator to use their collateral to speculate on.
 
-When finally the stablecoin holders wants to close out their side of the
-contract, they make another order on the market. They will then get matched with
-a speculator wishing to close out their contract. At this point the speculator
-will take their earnings or losses.
+When finally a stablecoin holder wants to close out their side of the
+contract and redeem their dollar of collateral, they make another order on the
+internal market. They will then get matched with a speculator wishing to close
+out their contract.
 
-In order to make sure there are always enough speculators willing to close out a
-stablecoin, this model can employ a maximum lifetime of a contract. This forces
-a speculator to close out their contract within a set time.
+The investor gets 1 dollar of collateral from the contract of the speculator,
+and the speculator gets the rest. At this point the speculator will take their
+earnings or losses as they will have get more collateral than they put in if the
+price of the collateral has gone up, and they will lose collateral if the price
+of the collateral has gone down.
 
-out:
-speculator: buying back from the market (covering a short)
-investor:  autoliquidate lowest collateral
-matches: buy orders from speculator
-matches: sell orders from investors
+In order to make sure there are always enough speculators willing to settle a
+stablecoin, this model can employ some ways of forcing speculators to match the
+settlement. The first way is a maximum lifetime for speculator contracts. This
+forces speculators to close out their contract within a set time, say 30 days.
+This guarantees that any investor can redeem their coin within this time as the
+full outstanding amount of stablecoins in the system have to be bought back
+every 30 day. The second way is to simply close out the speculators contract
+that has the lowest collateral ratio. This has the benefit that investors get
+their money back quicker than the first option. This also incentives the
+speculator keep a high collateralization ratio.
 
-ideal expectation: self-reenforcement of the value
+This system, though similar, is fundamentally different from the reserve bank
+model in that the speculation is meant act like a prediction market while the
+stablecoin aspect is secondary. It also has the issue that there needs to be
+some exchange mechanism to match orders.
 
-when low: everyone buys bitshares moving the margin up
-when high:
+This system differs from the reserve bank model in the fact that the guarantee
+for the investor generated after 2 people create a coin together. The first and
+last investor are always interacting through the internal market, which causes
+the investor to be more that just someone looking for a safe position. As the
+investor buys the coin at some "premium" they are betting that the price on the
+market when they want to sell accounts for this premium.
 
-reality: low demand pushed price down and undercollateralised
+However, when buying a coin on the open market this stablecoin is only subject
+to the change in the premium and not the volatility of the coin.
 
-interest:
+The feasibility of this mechanism is yet to fully prove itself in reality,
+though some steps have been made. The BitShares exchange was the first to use
+this mechanism and originally implemented a 30 day limit for speculator
+contracts, thus guaranteeing a maximum liquidation delay of 30 days. This was
+stable for a while but eventually lead to a distrust in the "guarantee" that the
+coin was redeemable, as you essentially have to freeze your asset for 30 days to
+get your money back. This lead to the value of BitUSD dropping, which lead in
+turn lead to people "shorting" BitUSD by taking worse and worse prices for the
+stablecoin, as they expected to be able to close their contracts while the price
+of BitUSD was even lower. This created a negative feedback loop where the
+dropping price of BitUSD acturally provided an incentive to create more BitUSD.
 
-30 day buyback
+As a result, the BitShares holders voted for global settlement to avoid the
+further loss of stability. Eventually the stablecoin was relaunched with the
+30 day limit removed and a 24 hour guarantee built in that matches the
+settlement order with the lowest collateralized contract. The price has not made
+it back to one dollar and remains relatively volatile.
 
-inflation of shares
+Other BitShares stablecoins like BitCNY also use this mechanism and are stable,
+likely because of a larger, thus more resilient, market.
 
+#### Debt-pool Tracker service
 
-#### Tracker service/speculation market
-(Synthetix)
+The final matchmaking system is very similar to the reserve bank system, but
+abstracts away from the concept of having a single stablecoin, and just aims to
+track the prices of many different assets.
 
+The system tracks the total debt of a speculator, rather than the specific
+stablecoin assets. This means that, just like in the reserve bank model, a
+speculator can put up any amount of collateral and issue "debt" based on some
+collateralization ratio. This means that the speculator is again the party that
+provides the stability, and absorbs any price shocks to the collateral.
 
-### To capture:
+As an investor the story changes. Any holder of a stablecoin can directly
+exchange it for a different stablecoin of equal value, at any time, using only
+the blockchain. Like before, the investor buys the stablecoin on the market.
+Lets say they buy a stablecoin that tracks the dollar. The blockchain allows
+them to exchange it for a stablecoin that tracks the euro at some exchange rat
+between the dollar and the euro.
 
-- Ratio of collateral payed by the investor
-- Interest payed from investor to speculator or vice versa
+Since no money was created, the total value in the system did not change and
+thus no interaction with the underlying collateral was needed. This allow the
+system to create synthetic assets that track any underlying assets, including
+currencies, stocks, other cryptos, and even the inverse of these.
+
+When a speculator wants to leave the system, they simply have to buy back some
+assets worth what they originally created before they get their collateral back.
+
+In this system interest is periodically payed from all investors to all
+speculators as incentive for the speculators to collateralize the system.
+
+This system can provide a whole ecosystem for tracking real world assets and
+allows easy movement between them.
 
 ### Overview
 
-| Stablecoin | Peg | Collateral       | Min. col. | Match-making                | Interest paid | Governance | Details |
-|------------|-----|------------------|---------|-----------------------------|---------------|------------|---------|
-| MakerDAO   | USD | Ether (and more) | 150%    | Speculator to Investor Loan | to Speculator |
-| BitShares  | USD | Bitshares        | 300%    | Margin Trading              | to investor   |
-| Synthetix  | USD | SNX              | 750%    | Global interest calculation |
-| USDQ       | USD | Bitcoin          | 200%    |
+As can be seen in \ref{TODO} There are a few large players in the crypto collateralized stablecoin scene.
 
 
-To mention:
-1. Global settlement
-2. Governance
-3. Share of collateral, vs interest
-4. BitShares exchange
-5. MakerDAO
-6. Synthetix
-7. Future
+| Stablecoin (System)   | Peg   | Collateral       | Min. col. | Matchmaking                   | Interest paid                        | Governance (token)   |
+|-----------------------|-------|------------------|-----------|-------------------------------|--------------------------------------|----------------------|
+| DAI (MakerDAO)        | USD   | Ether (and more) | 150%      | Reserve bank speculator model | To Speculator (external)             | DAO (MKR)            |
+| BitAssets (BitShares) | Multi | BTS              | 300%      | Margin Trading                | Variable premium, once to speculator | DAO (BTS)            |
+| Synths (Synthetix)    | Multi | SNX              | 750%      | Debt-Pool Tracker             | Global interest calculation          | Centralsed, DAO soon |
+| USDQ (QDAO)           | USD   | Bitcoin          | 200%      | Reserve bank speculator model | To Speculator (external)             | DAO (QDAO)           |
+
+MakerDAO is currently the largest most trusted system. They now allow for
+multiple different types of collateral, including Ether, BAT, REP and X0. They
+allow the community to vote using their (MKR) token. On which assets will be
+added for collateral.
+
+BitShares is the system with one of the oldest working stablecoin, BitCNY,
+active since september 2014. BitShares is a decentralised exchange that allows
+users to speculate on a number of different BitAssets, including BitUSD, BitEUR,
+and BitBTC.
+
+Synthetix describes itself as a "synthetic asset platform" and provides a number
+of stablecoins that track multiple real world currencies and assets. They allow
+direct conversion from one to another using the debt-pool tracker system where
+speculators are collateralizing the system at a minimum of 750%. The Synthetix
+platform started of centralised and is still a work in progress but is making
+major steps towards decentralisation. They offer many tracking assets like:
+sEUR, sUSD, sBTC, sETH. They also offer inverted assets to bet against some
+assets like: iBTC, and iETH. Currently they also support commodities like sXAU
+which tracks the Philadelphia Gold and Silver Index, and they plan to add
+trackers for various company stocks.
 
 ## Non-collateralized stablecoins
 
@@ -713,6 +786,10 @@ pegs can be broken. Klages-Mundt build a generalised model of decentralised
 crypto-collateralized stablecoins. It describes possible attacks on these
 systems where the pegged currency is bid up so an extent where collateral starts
 to get margin-called creating a run-away feedback loop.
+
+## What would be nice to see in the central space
+
+## What would be nice to see in the decentral space
 
 # Conclusion
 
