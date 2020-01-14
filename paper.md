@@ -736,9 +736,96 @@ assets like: iBTC, and iETH. Currently they also support commodities like sXAU
 which tracks the Philadelphia Gold and Silver Index, and they plan to add
 trackers for various company stocks.
 
-## Non-collateralized stablecoins
+## Non-collateralized Stablecoins
 
-## Oracles
+Collateralized stablecoins by definition are pegged currencies. They rely on a
+different currencies to provide their stability. Without the stability of the US
+dollar or similar, none of these currencies would work.
+
+In addition the crypto collateralized stablecoins are dependent on the overall
+stability of their collateral currency. If the price of the collateral drops
+fast enough in relation to the pegged currency, many of these stablecoins would
+lose their peg and therefore investor confidence. Though these risks can be
+reduced in various ways, the general stabilisation of a currency without help
+from the outside world remains a very impactful way to improve cryptocurrencies.
+
+Some stablecoins, rather than offloading risk to speculators, aim to reduce
+volatility by controlling the demand and supply of currencies in other ways. In
+this section we describe the securities model for expanding and contracting the
+money supply, as well as some more theoretical techniques and currency
+parameters for reducing volatility.
+
+### Securities model
+
+The stabilisation of currencies is much older than cryptocurrencies. So to see
+how cryptocurrencies van be stabilised, some have looked to the way central
+banks stabilise traditional currencies. Specifically toward open market
+operations by the federal reserve.
+
+When the fed wants to increase the money supply in times of deflation, they will
+buy government securities thus getting money out into the hands of the public.
+When they then want to decrease the money supply, they will sell the securities
+thus getting the money out of the system.
+
+The securities stablecoin model utilises this concept. In times of deflation
+the blockchain will start selling bonds that lock up a buyers coins for a period
+of time. Variables that can be used to maintain a certain price level are:
+
+- The interest payed over the bond - higher encourages purchase
+- The lifetime of the bond - this is how long the money is out of circulation
+
+In times of deflation bonds can be discouraged or disabled, or outstanding bonds
+can be released prematurely. When all bonds are released and deflation is still
+a problem, more money can be printed and distributed in some way.
+
+These techniques have the potential to stabilise a currency without any
+collateral. However, the choice on when the money supply should be expanded or
+retracted, still needs to be made in a decentralised way. Consequently this is
+where the largest differences between the existing stablecoins lie.
+
+- Oracle based
+- voting based
+
+### Overview of real world non-collateralized stabilising
+
+| Stablecoin (System)                 | Target | Target feed | Duration | Interest             | Governance (token) |
+|-------------------------------------|--------|-------------|----------|----------------------|--------------------|
+| Nubits                              | USD    |             | Voted    | Voted (per duration) | DAO (NuShares)       |
+| BitBay [@BitBay:whitepaper]         | None   |
+| Anchor[@Anchor:whitepaper]
+| Ampleforth [@Ampleforth:whitepaper]
+| Basis[@Basis:whitepaper]
+
+The first stablecoin to be stable for a year was Nubits[@Nubits:whitepaper].
+They lost their peg twice and successfully recovered once in 2016, but after the
+"Christmas crash" of late 2017-2018 investor massively bought the stablecoin as
+presumably it was safe compared to the rest of the crashing crypto market
+because of its peg to the dollar. This grew the market cap of nubits by 1500%
+over a few months.
+
+it lost its peg again and never recovered.
+
+and in what manner is making decisions about interest rates
+
+    - force bonds
+
+ - deciding whether to grow or shrink
+    - oracle
+        - feed voting
+        - community voting
+    - defined function
+
+### Techniques for stabilising any currency
+
+ - not
+
+
+
+## Oracles and pricefeeds
+
+ - Decentralised oracle
+ - Defined function
+ -
 
 # Discussions of Stablecoins
 
