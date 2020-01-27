@@ -291,7 +291,7 @@ capitalisation and some of their operational aspects:
 
 | Stablecoin                    | Market Cap      | Pegged asset   | Escrow               | FDIC-insurance | Launch | Notes                                                            |
 |-------------------------------|-----------------|----------------|----------------------|----------------|--------|------------------------------------------------------------------|
-| Tether[@Tether:whitepaper]    | 4 Billion USD   | USD            | Single organisation  | No             | 2014   | Largest Stablecoin, 4th largest cryptocurrency                   |
+| Tether[@Tether:whitepaper]    | 4 Trillion USD  | USD            | Single organisation  | No             | 2014   | Largest Stablecoin, 4th largest cryptocurrency                   |
 | USDC[@Centre:whitepaper]      | 464 Million USD | USD            | Single organisation  | Some exchanges | 2018   | Created and owned by various crypto exchanges                    |
 | PAXos[@PAXos:whitepaper]      | 238 Million USD | USD            | Single organisation  | Yes            | 2018   | Regulated by the New York State Department of Financial Services |
 | TrueUSD[@TrueUSD:whitepaper]  | 161 Million USD | USD            | Multiple independent | Some escrows   | 2018   | Distributes risk with multiple independent escrows               |
@@ -738,16 +738,13 @@ trackers for various company stocks.
 
 ## Non-collateralized Stablecoins
 
-Collateralized stablecoins by definition are pegged currencies. They rely on a
-different currencies to provide their stability. Without the stability of the US
-dollar or similar, none of these currencies would work.
-
-In addition the crypto collateralized stablecoins are dependent on the overall
-stability of their collateral currency. If the price of the collateral drops
-fast enough in relation to the pegged currency, many of these stablecoins would
-lose their peg and therefore investor confidence. Though these risks can be
-reduced in various ways, the general stabilisation of a currency without help
-from the outside world remains a very impactful way to improve cryptocurrencies.
+Crypto collateralized stablecoins are dependent on the overall stability of
+their collateral currency. If the price of the collateral drops fast enough in
+relation to the pegged currency, many of these stablecoins would lose their
+exchange guarantee, and therefore lose investor confidence. Though these risks
+can be reduced in various ways, the general stabilisation of a currency without
+the reliance on collateral is a sought after feature that could improve
+significantly stablecoins.
 
 Some stablecoins, rather than offloading risk to speculators, aim to reduce
 volatility by controlling the demand and supply of currencies in other ways. In
@@ -758,76 +755,120 @@ parameters for reducing volatility.
 ### Securities model
 
 The stabilisation of currencies is much older than cryptocurrencies. So to see
-how cryptocurrencies van be stabilised, some have looked to the way central
-banks stabilise traditional currencies. Specifically toward open market
-operations by the federal reserve.
+how cryptocurrencies can be stabilised, some have taken inspiration from the way
+central banks stabilise traditional currencies. Specifically open market
+operations employed by central banks and the federal reserve.
 
-When the fed wants to increase the money supply in times of deflation, they will
-buy government securities thus getting money out into the hands of the public.
-When they then want to decrease the money supply, they will sell the securities
-thus getting the money out of the system.
+When the fed wants to increase the money supply in times of deflation, they
+often buy government securities thus getting money out into the hands of the
+public. When they then want to decrease the money supply, they will sell the
+securities thus getting the money out of the system.
 
-The securities stablecoin model utilises this concept. In times of deflation
-the blockchain will start selling bonds that lock up a buyers coins for a period
-of time. Variables that can be used to maintain a certain price level are:
+The securities stablecoin model utilises this concept. In times of inflation
+when the currency is undervalued, the blockchain will start selling bonds. These
+bonds lock up a buyers coins for a period of time, and will pay them back,
+including some interest, after a certain time. Since some of the money is now
+temporally out of circulation, the currency left on the market will go up in
+value.
+
+In times of deflation when the currency in overvalued, bonds can be discouraged
+or disabled. Outstanding bonds can also be payed back prematurely in order to
+increase the money supply. When all bonds have released and deflation is still a
+problem, more money can be printed and distributed in some way until there the
+price is back down to the desired level.
+
+Variables that can be tweaked to maintain the desired price level are:
 
 - The interest payed over the bond - higher encourages purchase
 - The lifetime of the bond - this is how long the money is out of circulation
 
-In times of deflation bonds can be discouraged or disabled, or outstanding bonds
-can be released prematurely. When all bonds are released and deflation is still
-a problem, more money can be printed and distributed in some way.
-
 These techniques have the potential to stabilise a currency without any
-collateral. However, the choice on when the money supply should be expanded or
-retracted, still needs to be made in a decentralised way. Consequently this is
-where the largest differences between the existing stablecoins lie.
+collateral being needed. However, the choice of when the money supply should be
+expanded or retracted still needs to be made in a decentralised way.
+Consequently this is where the largest differences between the existing
+stablecoins lie.
 
-- Oracle based
-- voting based
+#### Self stabilisation mechanisms
+
+By tweaking bond lifetime and interest rates a currency can be stabilised.
+However there still needs to be some decentralised mechanism that triggers
+changes to these parameters. Usually one of two self stabilising mechanisms
+is used:
+
+- Share voting based parameter setting
+- An Oracle based price feedback mechanism
+
+Voting based parameter setting works how one would expect. The holders of a
+token, in some cases the stablecoin itself but usually a governance token, vote
+periodically on the stabilisation parameters of the network.
+
+Within the oracle based system, the blockchain will activate an "expansion
+phase" in a time where the price of the coin is above the target, and a
+"contraction phase" when the price is below the target. The bond yield can be
+static or scale with how far the price is from the target, thus rewarding larger
+risk takers.
+
+Note that even oracle based stablecoins are usually DAO's that vote on the
+function that maps price target mismatch to bond parameters.
 
 ### Overview of real world non-collateralized stabilising
 
-| Stablecoin (System)                 | Target | Target feed | Duration | Interest             | Governance (token) |
-|-------------------------------------|--------|-------------|----------|----------------------|--------------------|
-| Nubits                              | USD    |             | Voted    | Voted (per duration) | DAO (NuShares)       |
-| BitBay [@BitBay:whitepaper]         | None   |
-| Anchor[@Anchor:whitepaper]
-| Ampleforth [@Ampleforth:whitepaper]
-| Basis[@Basis:whitepaper]
-
-The first stablecoin to be stable for a year was Nubits[@Nubits:whitepaper].
-They lost their peg twice and successfully recovered once in 2016, but after the
-"Christmas crash" of late 2017-2018 investor massively bought the stablecoin as
-presumably it was safe compared to the rest of the crashing crypto market
-because of its peg to the dollar. This grew the market cap of nubits by 1500%
-over a few months.
-
-it lost its peg again and never recovered.
-
-and in what manner is making decisions about interest rates
-
-    - force bonds
-
- - deciding whether to grow or shrink
-    - oracle
-        - feed voting
-        - community voting
-    - defined function
-
-### Techniques for stabilising any currency
-
- - not
+| Stablecoin (System)                 | Target | Stabilisation Mechanism | Duration  | Interest | Governance (token) |
+|-------------------------------------|--------|-------------------------|-----------|----------|--------------------|
+| Nubits                              | USD    | Voting                  | Voted     | Voted    | DAO (NuShares)     |
+| BitBay [@BitBay:whitepaper]         | None   | Voting                  | Unlimited | None     | DAO (BitBay)       |
+| Anchor[@Anchor:whitepaper]          |
+| Basis[@Basis:whitepaper]            | USD    | Oracle                  | 5 years   | Voted    | DAO                |
+| Ampleforth [@Ampleforth:whitepaper] |
 
 
+The first stablecoin to be stable for a year was NuBits[@Nubits:whitepaper].
+NuBits stabilised by using a bond mechanism as well as voted in "guardians" who
+would get newly printed NuBits and would in turn provide liquidity to the market.
+These guardians would sell and buy the NuBits on the market at the price
+determined by the peg. In a way this turns the guardians into holders of
+collateral.
 
-## Oracles and pricefeeds
+NuBits lost their peg twice and successfully recovered once in 2016, but after
+the "Christmas crash" of late 2017-2018 investors massively bought the
+stablecoin as presumably it was safe compared to the rest of the crashing crypto
+market because of its peg to the dollar. This grew the market cap of NuBits by
+1500% over a few months while the guardians mostly held collateral in bitcoin.
+When then the crypto market started to recover, many sold their NuBits putting
+large pressure on the guardians who were now forced to buy NuBits for fewer
+bitcoins than they bought then for during the crash. This under-collateralized
+NuBits to a point where the guardians ran out of collateral, the currency lost
+its price guarantee, and the peg could no longer be maintained.
 
- - Decentralised oracle
- - Defined function
- -
+NuBits provides an example of the main flaw of the securities model, it requires
+trust in the mechanism, which lacks when it is needed most: in a down market.
+
+## Oracles
+
+All stablecoins that peg to a fiat currency need some information about the
+price of that currency at any point in time. So far we have referred to Oracles
+as a source of this. In reality, this is a non-trivial problem and it is solved
+in a couple different ways.
+
+  - Using a centralised source[TODO]
+  - Using decentralised voting[TODO]
+        - Specific[TODO]
+        - Generalised[TODO]
+  - Using the median of multiple price feeds[TODO]
+
+## Techniques for adding stability to any currency
+
+Collateralized stablecoins by definition are pegged currencies. They rely on
+other currencies to provide their stability. Without the stability of the US
+dollar or similar, none of these currencies would work.
 
 # Discussions of Stablecoins
+
+## Discussion on the viability of Centralsed Stablecoins
+
+## Discussion on the viability of Crypto Collateralized Stablecoins
+
+## Discussion on the viability of Non Collateralized Stablecoins
 
 Besides the papers describing techniques, some research has been done into
 existing stablecoins, quantifying their prevalence, and discussing their
@@ -861,11 +902,9 @@ looks at the way that stablecoins can fit into the modern legal system. Lee
 argues for Bankruptcy Courts to treat stablecoins as a commodity as opposed to a
 currency.
 
-```
 In [@Fedcoin] Koning describes the requirements and considerations for a stable
 currency controlled by a central bank. Koning describes the monetary policy and
 choices that comes along with implementing a digital currency on a large scale.
-```
 
 In [@In_stability_for_the_Blockchain] Klages-Mundt et al. look at the existing
 stablecoins through a critical lens and describe some ways in which the currency
