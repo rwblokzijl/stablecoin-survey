@@ -850,17 +850,104 @@ price of that currency at any point in time. So far we have referred to Oracles
 as a source of this. In reality, this is a non-trivial problem and it is solved
 in a couple different ways.
 
-  - Using a centralised source[TODO]
-  - Using decentralised voting[TODO]
-        - Specific[TODO]
-        - Generalised[TODO]
-  - Using the median of multiple price feeds[TODO]
+The simplest solution is having a centralised source, this does create a central
+point of control and thus a central point of failure. When there is a central
+party that facilitates the exchange, this is not a problem.
 
-## Techniques for adding stability to any currency
+Efforts have been made to decentralise the oracles as well. When every other
+aspect of the network is decentralised, a decentralised oracle will provide more
+security, which in turn boosts investor trust as this removes the central point
+of failure.
+
+One way to decentralise the network is to have all nodes in the network vote on
+the value of the input. Here a proof of stake system can be used that punishes
+bad inputs to the system. If there are multiple different values given, the
+median can be taken.
+
+Some decentralised currencies have a DAO token or similar that is tied to
+the health of the network. Since the value of the DAO token is dependent on the
+health of the network, holders of this token are incentivised to act honestly.
+In addition, some punishment for bad behaviour can be added in the form of proof
+of stake to aid in determining the correct price.
+
+This mechanism also more specifically applicable, just determining precise price
+levels. Some stablecoins do not track the price, but have token holders vote
+whether the price is too high or too low, and based on that will trigger either
+"inflationary", or "deflationary" periods [@BitBay:whitepaper].
+
+This concept can also generalised even further. A long desired goal is to get
+real world information onto the blockchain in general. Solutions have emerged
+[@Chainlink:whitepaper] that aim to solve this problem by creating a general
+infrastructure of nodes that access real world data and record this data onto
+the blockchain. To incentivise honesty of nodes, they stake an amount of network
+tokens that can be taken from them if the rest of the network disagrees with
+their votes. In addition node reputation van be tracked on-chain in order to
+allow users to choose the most trustworthy nodes.
+
+## General techniques for adding stability to any currency
 
 Collateralized stablecoins by definition are pegged currencies. They rely on
 other currencies to provide their stability. Without the stability of the US
-dollar or similar, none of these currencies would work.
+dollar or similar, none of these currencies would work. When it comes to
+inherent stability of blockchain currencies, a lot of academic research is
+available. [TODO]
+
+A number of papers [cite] propose cryptocurrency
+parameters that dynamically respond to changes in supply and demand.
+
+##AFTER THIS IS OLD
+
+Saito argues that the absence of a link between newly minted currency and the
+supply and demand leads to unnecessary instability.
+Since miners will increase
+and decrease their mining efforts as the price of bitcoin fluctuated, this
+behaviour can be build upon to respond to both demand and supply shocks.
+
+For now the research into stablecoins mainly aims to model and improve the
+mining algorithms. In "How to make a digital currency on a blockchain stable"
+[@How_to_make_a_digital_currency_on_a_blockchain_stable] Saito et al. describes
+a number of improvements that would make bitcoin more capable of responding to
+fluctuations in price.
+
+
+Saito suggests that mining reward should go up when mining rate increases as
+this only happens when the price of bitcoin has risen. Thus increasing the
+supply and absorbing some of the demand shock. Inversely mining reward should go
+down when mining rate decreases.
+
+According to Saito this should be done by not resetting the block mining time to
+10 minutes unless a minimum/maximum threshold is reached. When the threshold
+blocktime is reached the reward for the block should simply be scaled with the
+mining difficulty.
+
+Saito also suggests no halving in mining reward. To cull inflation he suggests a
+mechanism for deflation of the currency every 100 blocks all bitcoins are
+depreciated in value by deleting a percentage of them universally.
+
+In "Elasticoin: Low-Volatility Cryptocurrency with Proofs of Sequential Work"
+[@Elasticoin_Low-Volatility_PoSW] Dong et al. argues that as the mining rate
+should remain constant, a better way to build a more stable currency is as a
+secondary token. Dong argues for using Proofs of Sequential work (PoSW) to
+generate currency at a fixed rate. This allows anyone to mine a coin by putting
+in some work. This leads more mining when the price is high and nearly none when
+it is low.
+
+Dong argues that PoSW will scale much better into the future as the sequential
+speed of processors improves at a much slower rate than parallel speeds. Dong
+presents a non-interactive PoSW. And an algorithm for minting based on this
+Proof.
+
+In "Can we Stabilise the Price of a Cryptocurrency?" [@CanWeStabilize] Iwamura
+et al. preset "Improved Bitcoin" (IBC). A theoretical currency where the reward
+to the miners is adjusted based on the price. Iwamura argues that there is a need
+for a mechanism of reducing circulating supply of the currency in case of a
+negative demand shock. Just like Saito, Iwamura argues for allowing blocktime to
+vary with mining power.
+
+Since it is not possible to withdraw currency directly from the market, Iwamura
+argues for some rate of inflation to absorb demand shocks. Iwamura argues for a
+depreciation rate applied by gradually increasing the mining rewards.
+
 
 # Discussions of Stablecoins
 
