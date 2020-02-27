@@ -888,68 +888,70 @@ allow users to choose the most trustworthy nodes.
 
 Collateralized stablecoins by definition are pegged currencies. They rely on
 other currencies to provide their stability. Without the stability of the US
-dollar or similar, none of these currencies would work. When it comes to
-inherent stability of blockchain currencies, a lot of academic research is
-available. [TODO]
+dollar or other, none of these currencies would work. When it comes to
+inherent stability of blockchain currencies, a number of academic papers are
+available. Following is a survey of techniques to reduce the volatility of any
+decentralised blockchain based currency.
 
-A number of papers [cite] propose cryptocurrency
-parameters that dynamically respond to changes in supply and demand.
+### Changing proof of work parameters to dampen demand shocks
 
-##AFTER THIS IS OLD
+Taking the quantity theory of money as a given, the price of a currency depends
+on the total supply, velocity of circulation, and the total amount transacted.
+These things are often set by the parameters of a blockchain network.
 
-Saito argues that the absence of a link between newly minted currency and the
-supply and demand leads to unnecessary instability.
-Since miners will increase
-and decrease their mining efforts as the price of bitcoin fluctuated, this
-behaviour can be build upon to respond to both demand and supply shocks.
+In the case of Bitcoin, the total supply is set, and slowly increased at a set
+rate without reacting to supply and demand. However, there is a link between
+the price levels and mining efforts
+[@How_to_make_a_digital_currency_on_a_blockchain_stable]. If the price of
+bitcoin drops below a certain level, the mining reward will no longer outweigh
+the electricity costs. This miner response to the markets gives a natural input
+that somewhat tracks the price.
 
-For now the research into stablecoins mainly aims to model and improve the
-mining algorithms. In "How to make a digital currency on a blockchain stable"
-[@How_to_make_a_digital_currency_on_a_blockchain_stable] Saito et al. describes
-a number of improvements that would make bitcoin more capable of responding to
-fluctuations in price.
+The block speed, and therefore the rate of supply of new coins, increase as the
+price increases. Therefore, if the mining difficulty stays the same, the
+currency will naturally respond to, and dampen, demand shocks
+[@How_to_make_a_digital_currency_on_a_blockchain_stable].
 
+Additionally, if the block speed is changed, the transaction throughput changes
+proportionally. This has the extra benefit of changing the velocity of money,
+which dampens the demand shock even further.
 
-Saito suggests that mining reward should go up when mining rate increases as
-this only happens when the price of bitcoin has risen. Thus increasing the
-supply and absorbing some of the demand shock. Inversely mining reward should go
-down when mining rate decreases.
+It is important to keep in mind that there are both upper and lower technical
+limits to the block speed. Set it too low and the transaction throughput
+suffers. Conversely if the block speed is too high forks are more likely, which
+undermines the security of the network.
 
-According to Saito this should be done by not resetting the block mining time to
-10 minutes unless a minimum/maximum threshold is reached. When the threshold
-blocktime is reached the reward for the block should simply be scaled with the
-mining difficulty.
+### Allowing for inflation
 
-Saito also suggests no halving in mining reward. To cull inflation he suggests a
-mechanism for deflation of the currency every 100 blocks all bitcoins are
-depreciated in value by deleting a percentage of them universally.
+This method of controlling price levels has some implications
+[@How_to_make_a_digital_currency_on_a_blockchain_stable] on long term price. In
+bitcoin, long term inflation is curbed by periodically halving the block reward.
+If these changes were used, this system would unnecessarily lower the mining
+incentives for miners, thus leading to a lower block rate.
 
-In "Elasticoin: Low-Volatility Cryptocurrency with Proofs of Sequential Work"
-[@Elasticoin_Low-Volatility_PoSW] Dong et al. argues that as the mining rate
-should remain constant, a better way to build a more stable currency is as a
-secondary token. Dong argues for using Proofs of Sequential work (PoSW) to
-generate currency at a fixed rate. This allows anyone to mine a coin by putting
-in some work. This leads more mining when the price is high and nearly none when
-it is low.
+One solution is to no longer halve the block rewards, thus turning Bitcoin into
+an inflationary currency. This is very controversial and has large economic
+implications who's details go beyond the scope of this survey.
 
-Dong argues that PoSW will scale much better into the future as the sequential
-speed of processors improves at a much slower rate than parallel speeds. Dong
-presents a non-interactive PoSW. And an algorithm for minting based on this
-Proof.
+As it is not possible to remove currency from the market, some rate of coin
+depreciation might be desirable to allow for absorption of future demand shocks
+[@CanWeStabilize]. A coin depreciation rate can be applied by gradually
+increasing the mining rewards over time.
 
-In "Can we Stabilise the Price of a Cryptocurrency?" [@CanWeStabilize] Iwamura
-et al. preset "Improved Bitcoin" (IBC). A theoretical currency where the reward
-to the miners is adjusted based on the price. Iwamura argues that there is a need
-for a mechanism of reducing circulating supply of the currency in case of a
-negative demand shock. Just like Saito, Iwamura argues for allowing blocktime to
-vary with mining power.
+### Open mining using Proof of Sequential Work
 
-Since it is not possible to withdraw currency directly from the market, Iwamura
-argues for some rate of inflation to absorb demand shocks. Iwamura argues for a
-depreciation rate applied by gradually increasing the mining rewards.
+If block speed should remain constant, a different way to build a more stable
+currency is to build a secondary token. This token would use Proofs of
+Sequential work (PoSW) [@Elasticoin_Low-Volatility_PoSW] to generate currency at
+a fixed rate. This allows anyone to mine a coin by putting in some work. This
+leads more mining when the price is high and less when it is low.
 
+PoSW has the benefit of scaling better into the future as the sequential
+speed of processors improve at a much slower rate than parallel speeds.
 
 # Discussions of Stablecoins
+
+[Bladwijzer - All above is somewhat done, all below is worked on]
 
 ## Discussion on the viability of Centralsed Stablecoins
 

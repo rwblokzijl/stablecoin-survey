@@ -418,9 +418,9 @@ peg needed for trading platform, maintains rollong peg by freezing users coins
 | [augmint](https://docs.google.com/document/d/1IQwGEsImpAv2Nlz5IgU_iCJkEqlM2VUHf5SFkcvb80A/edit?usp=sharing) |
 | [AuroraDAO](https://auroradao.com/whitepaper/Aurora-Labs-Whitepaper-V0.9.7.pdf)                             |
 
-# Paper in few sentences:
 
 # Intro
+
 Stablalising a currency is very useful.
 
 Stablalising a currency is always done through market makers. By incentivising
@@ -468,9 +468,12 @@ Global enforcement based on contracts
 
 
 
-# OLD TEXTS::
+# background notes
 
-
+- Talk about varying therories of money
+    - Quantity
+    - Supply and demand
+    -
 
 # OLD CENTRALISED TEXT
 
@@ -682,7 +685,54 @@ Of course, stablecoins as a pegged currency are only a band aid on the real
 problem. Cryptocurrencies need to be stable on their own if they are ever going
 to replace fiat currencies.
 
+### Practice
+
+In practice we have seen some notable distributed cryptocurrencies attempt to
+create a stable cryptocurrency without collateral.
+
+The first stablecoin to be stable for a year was Nubits[@Nubits:whitepaper].
+Nubits incentivised holders to park currency during low demand periods. They
+successfully recovered from a large demand shock in 2016, but after the crash of
+2017-2018 it lost its peg again and never recovered.
+
+BitBay [@BitBay:whitepaper] is a cryptocurrency by the trading platform BitBay.
+BitBay suggests a "dynamic rolling peg" a system whereby all users of the
+system vote on the inflation and deflation of the supply for an interval. BitBay
+also freezes the fastest assets for a period of time. Going back to the
+quantity theory of money, this corresponds to changing the velocity of the money
+rather than the supply.
+
+Just like Nubits and BitBay, Anchor[@Anchor:whitepaper] incentivises holders of
+the currency ANCT to trade it for DOCT when the currency is listed at under 1
+"MMU". When the price of the currency goes above 1 "MMU" the holders of DOCT are
+incentivised to get their ANCT back. In this way anchor found a way to reduce
+the money supply and thus the price. As opposed to being pegged to the dollar it
+is pegged to the "Global Economic Growth" by MMU oracle (Monetary Measurement
+Unit). Anchor just launched so very little information is available about their
+success or failure.
+
+Ampleforth [@Ampleforth:whitepaper] doesn't call itself a stablecoin. It doesn't
+aim to maintain a stable price, it just aims to be uncorrelated with both Bitcoin
+and the real world financial markets. While Ample does maintain a peg to a
+target, the system does not aim to maintain the value in its holders accounts.
+Say the price of Ample doubles due to high demand. Ampleforth will double all
+existing coins in place to make 1 coin equal to the target again. A rebase of
+the price happens at most every 24 hours.
+
+Basis[@Basis:whitepaper] was a project that aimed to stabilise a currency by
+auctioning bonds for its coin during a time of low prices to decrease the money
+supply. These bonds can then be redeemed at a time of high demand for exactly 1
+basis. This mechanism is similar to that of freezing assets, just that the
+frozen assets are referred as bonds in this case. Basis never launched.
+
+
 ### Theory
+
+#### start old sentences
+A number of papers [cite] propose cryptocurrency parameters that dynamically
+respond to changes in supply and demand.
+
+#### end old sentences
 
 When it comes to algorithmic stability of blockchain currencies, there is a lot
 more academic research available. Most actual working blockchain based
@@ -740,44 +790,4 @@ vary with mining power.
 Since it is not possible to withdraw currency directly from the market, Iwamura
 argues for some rate of inflation to absorb demand shocks. Iwamura argues for a
 depreciation rate applied by gradually increasing the mining rewards.
-
-### Practice
-
-In practice we have seen some notable distributed cryptocurrencies attempt to
-create a stable cryptocurrency without collateral.
-
-The first stablecoin to be stable for a year was Nubits[@Nubits:whitepaper].
-Nubits incentivised holders to park currency during low demand periods. They
-successfully recovered from a large demand shock in 2016, but after the crash of
-2017-2018 it lost its peg again and never recovered.
-
-BitBay [@BitBay:whitepaper] is a cryptocurrency by the trading platform BitBay.
-BitBay suggests a "dynamic rolling peg" a system whereby all users of the
-system vote on the inflation and deflation of the supply for an interval. BitBay
-also freezes the fastest assets for a period of time. Going back to the
-quantity theory of money, this corresponds to changing the velocity of the money
-rather than the supply.
-
-Just like Nubits and BitBay, Anchor[@Anchor:whitepaper] incentivises holders of
-the currency ANCT to trade it for DOCT when the currency is listed at under 1
-"MMU". When the price of the currency goes above 1 "MMU" the holders of DOCT are
-incentivised to get their ANCT back. In this way anchor found a way to reduce
-the money supply and thus the price. As opposed to being pegged to the dollar it
-is pegged to the "Global Economic Growth" by MMU oracle (Monetary Measurement
-Unit). Anchor just launched so very little information is available about their
-success or failure.
-
-Ampleforth [@Ampleforth:whitepaper] doesn't call itself a stablecoin. It doesn't
-aim to maintain a stable price, it just aims to be uncorrelated with both Bitcoin
-and the real world financial markets. While Ample does maintain a peg to a
-target, the system does not aim to maintain the value in its holders accounts.
-Say the price of Ample doubles due to high demand. Ampleforth will double all
-existing coins in place to make 1 coin equal to the target again. A rebase of
-the price happens at most every 24 hours.
-
-Basis[@Basis:whitepaper] was a project that aimed to stabilise a currency by
-auctioning bonds for its coin during a time of low prices to decrease the money
-supply. These bonds can then be redeemed at a time of high demand for exactly 1
-basis. This mechanism is similar to that of freezing assets, just that the
-frozen assets are referred as bonds in this case. Basis never launched.
 

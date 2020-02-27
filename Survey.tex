@@ -1387,50 +1387,113 @@ problem and it is solved in a couple different ways.
 The simplest solution is having a centralised source, this does create a
 central point of control and thus a central point of failure. When there
 is a central party that facilitates the exchange, this is not a problem.
-But when every aspect of the network is decentralised having a
-decentralised oracle will provide more security, which in turn boosts
-investor trust.
 
-The problem of a decentralised oracle is not a trivial one however.
-However, some solutions have emerged that aim to solve this problem.
+Efforts have been made to decentralise the oracles as well. When every
+other aspect of the network is decentralised, a decentralised oracle
+will provide more security, which in turn boosts investor trust as this
+removes the central point of failure.
 
-Since some decentralised currencies have a DAO token or similar that is
-tied to the health of the network, holders of this token are
-incentivised to act trustworthy. As such, one way to get accurate price
-information onto the chain, is to periodically have the token holders
-vote on the price.
+One way to decentralise the network is to have all nodes in the network
+vote on the value of the input. Here a proof of stake system can be used
+that punishes bad inputs to the system. If there are multiple different
+values given, the median can be taken.
 
-This mechanism has the benefit of being more widely applicable that just
-price information. Some stablecoins do not track the price at all, but
-have the token holders vote simply whether the price is too high or too
-low {[}19{]}.
+Some decentralised currencies have a DAO token or similar that is tied
+to the health of the network. Since the value of the DAO token is
+dependent on the health of the network, holders of this token are
+incentivised to act honestly. In addition, some punishment for bad
+behaviour can be added in the form of proof of stake to aid in
+determining the correct price.
 
-This concept can be generalised even further. A long running problem is
-how to get real world information onto the blockchain at all. {[}24{]}
-aims to solve this problem by having a number of nodes vote on the data.
-To incentivise nodes to
+This mechanism also more specifically applicable, just determining
+precise price levels. Some stablecoins do not track the price, but have
+token holders vote whether the price is too high or too low, and based
+on that will trigger either ``inflationary'', or ``deflationary''
+periods {[}19{]}.
 
-\begin{itemize}
-\item
-  examples
-\item
-  Using a centralised source{[}TODO{]}
-\item
-  Using decentralised voting{[}TODO{]} - Specific{[}TODO{]} -
-  Generalised{[}TODO{]}
-\item
-  Using the median of multiple price feeds{[}TODO{]}
-\end{itemize}
+This concept can also generalised even further. A long desired goal is
+to get real world information onto the blockchain in general. Solutions
+have emerged {[}24{]} that aim to solve this problem by creating a
+general infrastructure of nodes that access real world data and record
+this data onto the blockchain. To incentivise honesty of nodes, they
+stake an amount of network tokens that can be taken from them if the
+rest of the network disagrees with their votes. In addition node
+reputation van be tracked on-chain in order to allow users to choose the
+most trustworthy nodes.
 
-\subsection{Techniques for adding stability to any
-currency}\label{techniques-for-adding-stability-to-any-currency}
+\subsection{General techniques for adding stability to any
+currency}\label{general-techniques-for-adding-stability-to-any-currency}
 
 Collateralized stablecoins by definition are pegged currencies. They
 rely on other currencies to provide their stability. Without the
-stability of the US dollar or similar, none of these currencies would
-work.
+stability of the US dollar or other, none of these currencies would
+work. When it comes to inherent stability of blockchain currencies, a
+number of academic papers are available. Following is a survey of
+techniques to reduce the volatility of any decentralised blockchain
+based currency.
+
+\subsubsection{Changing proof of work parameters to dampen demand
+shocks}\label{changing-proof-of-work-parameters-to-dampen-demand-shocks}
+
+Taking the quantity theory of money as a given, the price of a currency
+depends on the total supply, velocity of circulation, and the total
+amount transacted. These things are often set by the parameters of a
+blockchain network.
+
+In the case of Bitcoin, the total supply is set, and slowly increased at
+a set rate without reacting to supply and demand. However, there is a
+link between the price levels and mining efforts {[}25{]}. If the price
+of bitcoin drops below a certain level, the mining reward will no longer
+outweigh the electricity costs. This miner response to the markets gives
+a natural input that somewhat tracks the price.
+
+The block speed, and therefore the rate of supply of new coins, increase
+as the price increases. Therefore, if the mining difficulty stays the
+same, the currency will naturally respond to, and dampen, demand shocks
+{[}25{]}.
+
+Additionally, if the block speed is changed, the transaction throughput
+changes proportionally. This has the extra benefit of changing the
+velocity of money, which dampens the demand shock even further.
+
+It is important to keep in mind that there are both upper and lower
+technical limits to the block speed. Set it too low and the transaction
+throughput suffers. Conversely if the block speed is too high forks are
+more likely, which undermines the security of the network.
+
+\subsubsection{Allowing for inflation}\label{allowing-for-inflation}
+
+This method of controlling price levels has some implications {[}25{]}
+on long term price. In bitcoin, long term inflation is curbed by
+periodically halving the block reward. If these changes were used, this
+system would unnecessarily lower the mining incentives for miners, thus
+leading to a lower block rate.
+
+One solution is to no longer halve the block rewards, thus turning
+Bitcoin into an inflationary currency. This is very controversial and
+has large economic implications who's details go beyond the scope of
+this survey.
+
+As it is not possible to remove currency from the market, some rate of
+coin depreciation might be desirable to allow for absorption of future
+demand shocks {[}26{]}. A coin depreciation rate can be applied by
+gradually increasing the mining rewards over time.
+
+\subsubsection{Open mining using Proof of Sequential
+Work}\label{open-mining-using-proof-of-sequential-work}
+
+If block speed should remain constant, a different way to build a more
+stable currency is to build a secondary token. This token would use
+Proofs of Sequential work (PoSW) {[}27{]} to generate currency at a
+fixed rate. This allows anyone to mine a coin by putting in some work.
+This leads more mining when the price is high and less when it is low.
+
+PoSW has the benefit of scaling better into the future as the sequential
+speed of processors improve at a much slower rate than parallel speeds.
 
 \section{Discussions of Stablecoins}\label{discussions-of-stablecoins}
+
+{[}Bladwijzer - All above is somewhat done, all below is worked on{]}
 
 \subsection{Discussion on the viability of Centralsed
 Stablecoins}\label{discussion-on-the-viability-of-centralsed-stablecoins}
@@ -1451,11 +1514,11 @@ governments wanting to implement a digital currency with the utility
 benefits of cryptocurrencies and the stability of fiat.
 
 Chohan discusses the difficulties in maintaining a properly
-collateralized peg in ``Are Stable Coins Stable?''{[}25{]}. Chohan
+collateralized peg in ``Are Stable Coins Stable?''{[}28{]}. Chohan
 describes how maintaining a true 1:1 peg leads to funding and
 scalability issues.
 
-In ``The State of Stablecoins''{[}26{]} the ``blockchain team'' present
+In ``The State of Stablecoins''{[}29{]} the ``blockchain team'' present
 an empirical study of 57 live and pre-launch stablecoins showing
 adoption, trading volume and market cap. They describe a taxonomy where
 they differentiate between ``traditional'' collateralized, crypto
@@ -1465,22 +1528,22 @@ currencies in terms of their investors, tech, legal structure and
 collateral format.
 
 In ``Stablecoins in Cryptoeconomics. From Initial Coin Offerings (ICOs)
-to Central Bank Digital Currencies''{[}27{]} Erba discusses the
+to Central Bank Digital Currencies''{[}30{]} Erba discusses the
 stablecoins in the context of the law in both the united states and
 Europe. Erba argues for crypto-currencies ``fully backed by Central Bank
 reserves''
 
 In ``Stablecoin: Yet Another Layer of Cryptocurrency
-Complexity''{[}28{]} Lee looks at the way that stablecoins can fit into
+Complexity''{[}31{]} Lee looks at the way that stablecoins can fit into
 the modern legal system. Lee argues for Bankruptcy Courts to treat
 stablecoins as a commodity as opposed to a currency.
 
-In {[}29{]} Koning describes the requirements and considerations for a
+In {[}32{]} Koning describes the requirements and considerations for a
 stable currency controlled by a central bank. Koning describes the
 monetary policy and choices that comes along with implementing a digital
 currency on a large scale.
 
-In {[}30{]} Klages-Mundt et al. look at the existing stablecoins through
+In {[}33{]} Klages-Mundt et al. look at the existing stablecoins through
 a critical lens and describe some ways in which the currency pegs can be
 broken. Klages-Mundt build a generalised model of decentralised
 crypto-collateralized stablecoins. It describes possible attacks on
@@ -1611,29 +1674,43 @@ MONTHH-YEARR.
 {[}24{]} Steve Ellis, ``Chainlink whitepaper.''
 \url{https://link.smartcontract.com/whitepaper}, MONTHH-YEARR.
 
+\hypertarget{ref-How_to_make_a_digital_currency_on_a_blockchain_stable}{}
+{[}25{]} K. Saito and M. Iwamura, ``How to make a digital currency on a
+blockchain stable,'' \emph{Future Generation Computer Systems}, vol.
+100, 2019.
+
+\hypertarget{ref-CanWeStabilize}{}
+{[}26{]} M. Iwamura, Y. Kitamura, T. Matsumoto, and K. Saito, ``Can we
+stabilize the price of a cryptocurrency?: Understanding the design of
+bitcoin and its potential to compete with central bank money.''
+
+\hypertarget{ref-Elasticoin_Low-Volatility_PoSW}{}
+{[}27{]} R. B. Yuhao Dong, ``Elasticoin: Low-volatility posw,'' MONTHH
+YEARR.
+
 \hypertarget{ref-Are_Stable_Coins_Stable}{}
-{[}25{]} U. W. Chohan, ``Are stable coins stable?'' MONTHH YEARR.
+{[}28{]} U. W. Chohan, ``Are stable coins stable?'' MONTHH YEARR.
 
 \hypertarget{ref-THE_STATE_OF_STABLECOINS}{}
-{[}26{]} T. B. Team, ``The state of stablecoins,'' MONTHH YEARR.
+{[}29{]} T. B. Team, ``The state of stablecoins,'' MONTHH YEARR.
 
 \hypertarget{ref-Stablecoins_in_Cryptoeconomics}{}
-{[}27{]} M. Dell'Erba, ``Stablecoins in cryptoeconomics. from initial
+{[}30{]} M. Dell'Erba, ``Stablecoins in cryptoeconomics. from initial
 coin offerings to central bank digital currencies (cbdcs),'' MONTHH
 YEARR.
 
 \hypertarget{ref-Stablecoin:_Yet_Another_Layer_of_Cryptocurrency_Complexity}{}
-{[}28{]} M. Lee, ``Stablecoin: Yet another layer of cryptocurrency
+{[}31{]} M. Lee, ``Stablecoin: Yet another layer of cryptocurrency
 complexity,'' \emph{American Bankruptcy Institute Journal}, vol. 38, no.
 9, pp. 36--37, 64, Sep. 2019.
 
 \hypertarget{ref-Fedcoin}{}
-{[}29{]} J. P. Koning, ``Fedcoin\_Central\_Bank\_R3.pdf,''
+{[}32{]} J. P. Koning, ``Fedcoin\_Central\_Bank\_R3.pdf,''
 \url{https://www.r3.com/reports/fedcoin-a-central-bank-issued-cryptocurrency/},
 MONTHH YEARR.
 
 \hypertarget{ref-In_stability_for_the_Blockchain}{}
-{[}30{]} A. M. Ariah Klages-Mundt, ``(In)stability for the blockchain:
+{[}33{]} A. M. Ariah Klages-Mundt, ``(In)stability for the blockchain:
 Deleveraging spirals and stablecoin attacks,'' MONTHH YEARR.
 
 \end{document}

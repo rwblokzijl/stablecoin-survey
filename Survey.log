@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.6.21)  25 FEB 2020 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.6.21)  27 FEB 2020 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1591,74 +1591,82 @@ Overfull \hbox (18.71915pt too wide) in alignment at lines 1304--1355
 [10
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1518
+] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 1578--1581
 []$\T1/lmr/m/n/10 (+20) https : / / repository . tudelft . nl / islandora / obj
 ect / uuid :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1518
+Underfull \hbox (badness 10000) in paragraph at lines 1578--1581
 \T1/lmr/m/n/10 (+20) c51ac99d-[]3013-[]44b3-[]8ddd-[]fbd951a2454a$[], MONTHH-
  []
 
 
-Underfull \hbox (badness 2495) in paragraph at lines 1541--1544
+Underfull \hbox (badness 2495) in paragraph at lines 1604--1607
 []\T1/lmr/m/n/10 (+20) [8] JP-Mor-gan Chase & Co., ``J.P.Morgan coin an-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1546--1548
+Underfull \hbox (badness 10000) in paragraph at lines 1609--1611
 []\T1/lmr/m/n/10 (+20) [9] ``Li-bra whitepa-per.'' []$https : / / libra . org /
  en-[]US /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1550--1553
+Underfull \hbox (badness 10000) in paragraph at lines 1613--1616
 []$\T1/lmr/m/n/10 (+20) https : / / tether . to / wp-[]content / uploads / 2016
  / 06 /
  []
 
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 1584--1587
+
+Underfull \hbox (badness 10000) in paragraph at lines 1647--1650
 \T1/lmr/m/n/10 (+20) com / wp-[]content / uploads / X8-[]Project-[]TGE-[]Whitep
 aper .
  []
 
-
-Underfull \hbox (badness 1838) in paragraph at lines 1631--1634
-[]\T1/lmr/m/n/10 (+20) [29] J. P. Kon-ing, ``Fed-coin_Central_Bank_R3.pdf,''
+[12]
+Underfull \hbox (badness 1838) in paragraph at lines 1708--1711
+[]\T1/lmr/m/n/10 (+20) [32] J. P. Kon-ing, ``Fed-coin_Central_Bank_R3.pdf,''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1631--1634
+Underfull \hbox (badness 10000) in paragraph at lines 1708--1711
 []$\T1/lmr/m/n/10 (+20) https : / / www . r3 . com / reports /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1639.
-[12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1639.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1716.
+[13
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1716.
  (./Survey.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1639.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1639.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1716.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1716.
 
-Package rerunfilecheck Info: File `Survey.out' has not changed.
-(rerunfilecheck)             Checksum: ACD727EC4D2F19AED5FA98DB03E366C7;6998.
 
+
+Package rerunfilecheck Warning: File `Survey.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Survey.out':
+(rerunfilecheck)             Before: ACD727EC4D2F19AED5FA98DB03E366C7;6998
+(rerunfilecheck)             After:  B1999A882BA19C83E64E16E5915A91D7;7898.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1639.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1716.
  ) 
 Here is how much of TeX's memory you used:
- 13598 strings out of 493013
- 200528 string characters out of 6135682
+ 13615 strings out of 493013
+ 200953 string characters out of 6135682
  318372 words of memory out of 5000000
- 16720 multiletter control sequences out of 15000+600000
- 191514 words of font info for 166 fonts, out of 8000000 for 9000
+ 16724 multiletter control sequences out of 15000+600000
+ 191904 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  32i,8n,38p,445b,420s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
@@ -1672,10 +1680,10 @@ nts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
 1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/
 lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Survey.pdf (12 pages, 488683 bytes).
+Output written on Survey.pdf (13 pages, 493821 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 361 compressed objects within 4 object streams
- 121 named destinations out of 1000 (max. 500000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 372 compressed objects within 4 object streams
+ 128 named destinations out of 1000 (max. 500000)
  12567 words of extra memory for PDF output out of 14400 (max. 10000000)
 
