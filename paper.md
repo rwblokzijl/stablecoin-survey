@@ -82,7 +82,7 @@ Chapter 6 and a conclusion of the survey in Chapter 7.
 # Background
 
 Before we get to the techniques used for stabilisation some concepts and terms
-need to be defined. In this chapter we define the purpose and requirements of
+need to be defined. In this section we define the purpose and requirements of
 money. We define what it means for a currency to be stable, and what it means
 for a currency to be collateralized.
 
@@ -285,9 +285,9 @@ but the theoretical value of having a globally stable coin is hard to dispute.
 
 ### Overview of the largest stablecoins
 
-To provide a glimpse of the usage of the techniques described in this chapter
-the table \ref{TODO} describes the 8 central stablecoins with the highest market
-capitalisation and some of their operational aspects:
+To provide a glimpse of the usage of the techniques described in this
+subsection, Table \ref{TODO} describes the 8 central stablecoins with the
+highest market capitalisation and some of their operational aspects:
 
 | Stablecoin                    | Market Cap      | Pegged asset   | Escrow               | FDIC-insurance | Launch | Notes                                                            |
 |-------------------------------|-----------------|----------------|----------------------|----------------|--------|------------------------------------------------------------------|
@@ -951,26 +951,45 @@ speed of processors improve at a much slower rate than parallel speeds.
 
 # Discussions of Stablecoins
 
+Stablecoins are an even younger development in the young field of
+cryptocurrencies. As such it isn't yet clear how the future of stablecoins will
+look. In addition to the currently existing stablecoins and proposed stablecoin
+concepts, research is being done into the general viability and security of
+stablecoins. This section discusses the viability of stablecoins and aims to
+answer more general question about their future and usefulness.
+
+## Centralised Stablecoins
+
+Centralised stablecoins have so far found their usecase as a stable way to store
+your crypto away from volatility and bear markets. When looking to the future,
+much literature is available exploring where stablecoins can become useful.
+
+When looking at ways cryptocurrencies can improve the current financial system
+centralised stablecoins can be seen as a midway solution [@Fedcoin]. It marries
+the stability and legal security of central trusted organisations, with the
+benefits of fast, programmable and more transparent payment systems
+[@DuffieDigital_and_Fast_Payment_Systems] [@Stablecoins_in_Cryptoeconomics].
+This leads to a system that relies less trust in large banks.
+
+## Crypto Collateralized Stablecoins
+
+Decentralised currencies are more aspirational. Where Bitcoin provided a
+completely trust less currency. Decentralised currencies aim to do the same, but
+with guarantees about price stability. Though this is much more difficult to get
+working securely [@In_stability_for_the_Blockchain], the benefit of these coins
+to society might be much greater than that of any centralised currency.
+
+Separate from the issue of price stable currency, many decentralised stablecoins
+have shown decentralised alternatives to mechanisms like contracts for
+difference [TODO cite something]. Even if these mechanisms don't end up working
+for stablecoins in the long term, they still mark an important step in the world
+of Decentralised Finance (DeFi).
+
+## Related Work
+
 [Bladwijzer - All above is somewhat done, all below is worked on]
 
-## Discussion on the viability of Centralsed Stablecoins
-
-## Discussion on the viability of Crypto Collateralized Stablecoins
-
-## Discussion on the viability of Non Collateralized Stablecoins
-
-Besides the papers describing techniques, some research has been done into
-existing stablecoins, quantifying their prevalence, and discussing their
-criticisms.
-
-In [@DuffieDigital_and_Fast_Payment_Systems] Darrel Duffie describes the use of
-stablecoins for banks aiming to digitise both inter-organisation value transfer
-and governments wanting to implement a digital currency with the utility
-benefits of cryptocurrencies and the stability of fiat.
-
-Chohan discusses the difficulties in maintaining a properly collateralized peg
-in "Are Stable Coins Stable?"[@Are_Stable_Coins_Stable]. Chohan describes how
-maintaining a true 1:1 peg leads to funding and scalability issues.
+### Surveying the stablecoin space
 
 In "The State of Stablecoins"[@THE_STATE_OF_STABLECOINS] the "blockchain team"
 present an empirical study of 57 live and pre-launch stablecoins showing
@@ -980,20 +999,27 @@ algorithmic. They describe many pros and cons of these types of coins. The
 survey is very extensive and describes all 57 currencies in terms of their
 investors, tech, legal structure and collateral format.
 
+### Speculating on the future of stablecoins
+
+In [@DuffieDigital_and_Fast_Payment_Systems] Darrel Duffie describes the use of
+stablecoins for banks aiming to digitise both inter-organisation value transfer
+and governments wanting to implement a digital currency with the utility
+benefits of cryptocurrencies and the stability of fiat.
+
 In "Stablecoins in Cryptoeconomics. From Initial Coin Offerings (ICOs) to
 Central Bank Digital Currencies"[@Stablecoins_in_Cryptoeconomics] Erba discusses
 the stablecoins in the context of the law in both the united states and Europe.
 Erba argues for crypto-currencies "fully backed by Central Bank reserves"
 
-In "Stablecoin: Yet Another Layer of Cryptocurrency
-Complexity"[@Stablecoin:_Yet_Another_Layer_of_Cryptocurrency_Complexity] Lee
-looks at the way that stablecoins can fit into the modern legal system. Lee
-argues for Bankruptcy Courts to treat stablecoins as a commodity as opposed to a
-currency.
-
 In [@Fedcoin] Koning describes the requirements and considerations for a stable
 currency controlled by a central bank. Koning describes the monetary policy and
 choices that comes along with implementing a digital currency on a large scale.
+
+### Critiques of common techniques for cryptocurrency stabilisation
+
+Chohan discusses the difficulties in maintaining a properly collateralized peg
+in "Are Stable Coins Stable?"[@Are_Stable_Coins_Stable]. Chohan describes how
+maintaining a true 1:1 peg leads to funding and scalability issues.
 
 In [@In_stability_for_the_Blockchain] Klages-Mundt et al. look at the existing
 stablecoins through a critical lens and describe some ways in which the currency
@@ -1001,10 +1027,6 @@ pegs can be broken. Klages-Mundt build a generalised model of decentralised
 crypto-collateralized stablecoins. It describes possible attacks on these
 systems where the pegged currency is bid up so an extent where collateral starts
 to get margin-called creating a run-away feedback loop.
-
-## What would be nice to see in the central space
-
-## What would be nice to see in the decentral space
 
 # Conclusion
 

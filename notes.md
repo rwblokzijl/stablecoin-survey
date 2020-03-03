@@ -5,52 +5,7 @@ title: Dirty notes
 
 # Notes to remember when writing:
 
-## intro
-
-Bitcoin (just like gold) is a hedge against the financial system
-Defi is developing out of the stablecoin solutions
-
-## background
-
-Why runaway inflation is bad
-Why runaway deflation is bad
-
-## Discussion
-
-Comparison between the coins, their usefullness and where they apply
-
 # TO Do
-
-## Visuals
-
-- Literature table
-- Explaning some concepts in images (throughout the file)
-    - page 1 intro pic
-        * market share???
-    - general taxonomy
-        - taxonomy describing categories
-        * triangle of stablecoins
-    - centralised
-        - exchange mechanism
-    - decentralised
-        - cdp mechanism for collatoral
-        - demand and supply curve of algorithmic
-
-## Rewrites
-- done
--  centralised (permissioned)
-1. todo
-1. decentralised (permissionless)
-    1.algorithmic
-1. General Theory (Wednesday)
-1. discussion
-    1. Future Research
-1. conclusion
-
-1. background
-1. introduction
-1. abstract
-
 
 # Introduction notes
 
@@ -60,27 +15,6 @@ What to warm people up for:
  - A case study on how to implement a derivitive
 
 In this survey we aim to classify one aspect of this overlay:
-
-# Reading list in order:
-
-|---|--------------------------------------------------------------------|---|
-| 1 | APG Email                                                          | x |
-| 2 | Money Routing by Trusting Strangers with your Funds - 08696786.pdf | x |
-| 3 | How to make a digital currency on a blockchain stable              |   |
-| 4 | Duffie digital payments                                            |   |
-| 5 | Ipv8 paper????                                                     |   |
-| 6 | Wikipedia                                                          |   |
-| 7 | Are Stable Coins Stable? - Usman W. Chohan, MBA, PhD               |   |
-| 8 | Coin whitepapers                                                   |   |
-
-| Have | !Have |
-| Hodl | buy   |
-
-| Positive | Have | !Have |
-| ---      | ---  | ---   |
-| Spend    |      |       |
-| !Spend   |      |       |
-
 
 # Notes per read item
 
@@ -145,8 +79,6 @@ and economic implications of having stablecoins. Duffie claims they can only be
 centrally controlled (in practice) but this is semi-disproven by MakerDAO.
 
 # Questions:
-
- -
 
  Requirements for a good stablecoin:
 
@@ -790,4 +722,49 @@ vary with mining power.
 Since it is not possible to withdraw currency directly from the market, Iwamura
 argues for some rate of inflation to absorb demand shocks. Iwamura argues for a
 depreciation rate applied by gradually increasing the mining rewards.
+
+# OLD DISCUSSION
+
+Besides the papers describing techniques, some research has been done into
+existing stablecoins, quantifying their prevalence, and discussing their
+criticisms.
+
+In [@DuffieDigital_and_Fast_Payment_Systems] Darrel Duffie describes the use of
+stablecoins for banks aiming to digitise both inter-organisation value transfer
+and governments wanting to implement a digital currency with the utility
+benefits of cryptocurrencies and the stability of fiat.
+
+Chohan discusses the difficulties in maintaining a properly collateralized peg
+in "Are Stable Coins Stable?"[@Are_Stable_Coins_Stable]. Chohan describes how
+maintaining a true 1:1 peg leads to funding and scalability issues.
+
+In "The State of Stablecoins"[@THE_STATE_OF_STABLECOINS] the "blockchain team"
+present an empirical study of 57 live and pre-launch stablecoins showing
+adoption, trading volume and market cap. They describe a taxonomy where they
+differentiate between "traditional" collateralized, crypto collateralized and
+algorithmic. They describe many pros and cons of these types of coins. The
+survey is very extensive and describes all 57 currencies in terms of their
+investors, tech, legal structure and collateral format.
+
+In "Stablecoins in Cryptoeconomics. From Initial Coin Offerings (ICOs) to
+Central Bank Digital Currencies"[@Stablecoins_in_Cryptoeconomics] Erba discusses
+the stablecoins in the context of the law in both the united states and Europe.
+Erba argues for crypto-currencies "fully backed by Central Bank reserves"
+
+In "Stablecoin: Yet Another Layer of Cryptocurrency
+Complexity"[@Stablecoin:_Yet_Another_Layer_of_Cryptocurrency_Complexity] Lee
+looks at the way that stablecoins can fit into the modern legal system. Lee
+argues for Bankruptcy Courts to treat stablecoins as a commodity as opposed to a
+currency.
+
+In [@Fedcoin] Koning describes the requirements and considerations for a stable
+currency controlled by a central bank. Koning describes the monetary policy and
+choices that comes along with implementing a digital currency on a large scale.
+
+In [@In_stability_for_the_Blockchain] Klages-Mundt et al. look at the existing
+stablecoins through a critical lens and describe some ways in which the currency
+pegs can be broken. Klages-Mundt build a generalised model of decentralised
+crypto-collateralized stablecoins. It describes possible attacks on these
+systems where the pegged currency is bid up so an extent where collateral starts
+to get margin-called creating a run-away feedback loop.
 
