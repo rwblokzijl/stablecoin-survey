@@ -24,54 +24,70 @@ abstract: |
 
 # Introduction
 
-Centralisation, non-transparency and a trillion dollar lawsuit would normally
-lead to crypto investors avoiding you like the plague. For Tether however it
-lead to a market cap of over 4 Billion dollars. With Tether currently being the
-most the most traded cryptocurrency despite its controversies we are left to
-wonder what makes a coin that trades at 1 dollar so attractive to investors.
+Stablecoins promise to offer all the advantages of the digital world, while
+being as reliable as a briefcase of 100 Dollar bills. The original
+cryptocurrencies are still working to become stable enough to become a viable
+way to store your life savings. Meanwhile, many cryptocurrencies are using a
+collection of stabilisation techniques to become the worlds first digital
+currency to replace your bank account.
 
-Cryptocurrencies have so far been notoriously volatile in price. Making the
-assets unsuited for both investments in the long term, and payments in the short
-term.
+The reward of winning the stablecoin race could be a place at the center of all
+monetary transactions in the world. The promise of this reward draws a number of
+players. Facebook's Libra being the most notable, with their "Blue Eyes Promise"
+to be a trustworthy digital world central bank.
 
-Another need for price-stable currencies exists among crypto traders. When the
-crypto-markets decrease in value, the entire market tends move as a whole. In
-this case traders want to move their assets out of the volatile "new world"
-assets and into traditional currencies like the Dollar to wait out de dip in de
-market. However these transactions are limited by the speed of the old payment
-networks. A coin that is stable with respect to the US Dollar would solve this
-problem by allowing traders to change positions between the Dollar and crypto
-currencies in a quick, decentralised[@Money_as_IOUs_in_Social_Trust_Networks]
-and programmable [@TrustChain] way.
+Facebook was neither the first nor the last to attempt to influence the future
+of money. Some aim to provide intermediary digital currencies by tokenising US
+Dollars[]. Others see these centralised solutions as a danger and aim to build
+fully decentralised currencies by relying on market and blockchain based
+constructions[].
 
-With Tether having proves the need for a stablecoin, many cryptocurrencies have
-followed, some solving problems of those who have come before. MakerDAOs DAI
-[@MakerDAO:whitepaper], currently the 5th biggest stablecoin and the 52th
-biggest cryptocurrency with a market cap of 103 million USD, aims to be a fully
-decentralised stablecoin that maintains a value of 1 USD. Dai provides a coin
-that enables distributed peer-to-peer lending with the stability of the Dollar
-while having no centralised component.
+Regardless of the motivation of the stablecoin creators, all stablecoins are
+subject to the trust of the public as well as market forces. The value of an
+asset follows whatever the public thinks its worth, this means building investor
+confidence is key in stabilising any currency.
 
-[triangle]: img/Triangle.png
-![Inherent trade-offs of stablecoins \label{triangle_label}][triangle]
+Since the publics trust is a heavy factor in the price, this trust must be
+managed and dynamically be responded to by any coin wanting to be stable. What
+differentiates successful stablecoins from any other currency is the ability to
+maintain a stable price, even during turbulent times. Since the public cannot
+directly be made to trade the coin, stablecoins have to respond to the behavior
+of the markets to keep the price stable.
+
+The price of any commodity or market traded asset is subject to supply and
+demand, this includes crypto-currencies. If there is a difference in demand and
+supply at a certain price, the price will move until demand and supply are
+equal.
+
+The only way to make sure the price doesn't move is to influence supply to match
+demand or vice versa. All the stablecoins discussed in this survey will do this
+in a certain way.
 
 [intro]: img/intro.png
 ![Taxonomy of stablecoins \label{intro_label}][intro]
 
-MakerDAO is part of a bigger movement. The Decentralised Finance movement is
-an open community of decentralised financial platforms that aims to
-revolutionise the financial world by replacing many of the worlds financial
-systems. Within this project there are a number of stablecoins and other tokens
-that are pegged to real world assets that use decentralised techniques for
-providing financial derivatives.
+To manage market forces a diverse set of strategies have emerged, which can be
+categorised in the categories visualised in \ref{intro_label}. The easiest way
+to manage the price is through centralisation. This is the permissioned
+category, these stablecoins are generally managed by an organisation that keeps
+a tight leash on the coin and uses themselves as a trusted third party similar
+to a central bank.
 
-This survey presents a history of the significant stablecoins and pegged assets
-invented so far, and classifies and generalises the techniques that are common
-among them.
+The permissionless category has as a primary goal to stay decentralised. This
+comes with larger challenges, but also a greater potential to deliver on the
+promise of a permissionless monetary system.
 
-First we discuss the topic of the purpose of money, the meaning of value and
-stability, and some currency pegs used in our traditional monetary system in
-Chapter 2. We then describe the simplest and most successful stablecoins, namely
+[triangle]: img/Triangle.png
+![Inherent trade-offs of stablecoins \label{triangle_label}][triangle]
+
+Within this survey we will explore the most common techniques to stabilise
+cryptocurrencies, and show the inherent trade-offs between decentralisation,
+collateralization, and capital efficiency as illustrated in
+\ref{triangle_label}.
+
+First, in chapter 2, we discuss the topic of the purpose of money, the meaning
+of value and stability, and some currency pegs used in our traditional monetary
+system. We then describe the simplest and most successful stablecoins, namely
 the centralised coins in Chapter 3. In Chapter 4 we go into the more complex
 topic of decentralised assets and their methods for maintaining pegs to real
 world assets without a central party guaranteeing the peg. We then go deeper
@@ -81,10 +97,12 @@ Chapter 6 and a conclusion of the survey in Chapter 7.
 
 # Background
 
-Before we get to the techniques used for stabilisation some concepts and terms
-need to be defined. In this section we define the purpose and requirements of
-money. We define what it means for a currency to be stable, and what it means
-for a currency to be collateralized.
+[Bladwijzer - All above is somewhat done, all below is worked on]
+
+Before we dive into the techniques for stabilisation, some definitions and
+concepts and terms need to be established. In this section we review the purpose
+and requirements of money. We define what it means for a currency to be stable,
+and what it means for a currency to be collateralized.
 
 ## The purpose of money and the requirements of a stablecoin
 
@@ -92,18 +110,23 @@ In "On the Origin of Money" [@On_the_Origin_of_Money] Karl Menger describes how
 people settle on a currency as a method of exchange. He describes that the
 willingness of people to exchange their goods for a commodity depends:
 
-1. Upon their ability to trade it for goods (demand)
-2. Upon the scarcity of the commodity (supply)
+1. Upon their ability to trade it for goods
+2. Upon the scarcity of the commodity
 3. Upon the divisibility, durability and practicality of the commodity.
-4. Upon the development of the market, and of speculation in particular.
+4. Upon the development of the market, and how others speculate.
 5. Upon the limitations imposed politically and socially upon exchange,
 consumption and transfer from one period of time to another
 
-## The meaning of value and stability,
+All these concerns must be addressed in any currency. Points 2, 3 and possibly 5
+are where cryptocurrencies add value through their digital and decentralised
+natures. Points 1 and 4, the future usefulness of the currency and it's market
+demand, are where cryptocurrencies still fall short of traditional currencies.
+Stablecoins aim to provide the last requirements of a good currency by adding
+much needed certainty about the development of the market. This will in turn
+make merchants more likely to accept the currency, thus providing the ability to
+trade the currency for goods.
 
-An certain configuration of these factors is required for a stable store of
-value, and need to be controlled by some mechanism in order to maintain a stable
-price of the commodity.
+## The meaning of value and stability,
 
 In the value of money [@Value_of_Money] Pigou describes the role of the money
 supply in the Quantity theory of money and its relation to the price. The
@@ -111,8 +134,11 @@ quantity theory of money states:
 
 $$ M \times V = P \times T $$
 
-Where $M$ is the money supply, $V$ is the velocity of circulation, $P$ is the
-price of the coin and $T$ are all transactions done with the currency.
+Where $M$ is the total money supply, $V$ is the velocity of circulation, $P$ is
+the price of the coin and $T$ is the transactions volume.
+
+The velocity of circulation is a measure of how quickly money is spend after
+receiving it, it  [LEFT HERE]
 
 This implies that the price of a currency can be controlled by increasing and
 decreasing the money supply. Indeed this is a technique also currently used by
@@ -121,6 +147,9 @@ central to prevent deflation of their currencies.
 In this survey we will see currencies vary both $M$ and $V$ as a means to keep
 $P$ at a stable level.
 
+An certain configuration of these factors is required for a stable store of
+value, and need to be controlled by some mechanism in order to maintain a
+stable price of the commodity.
 
 ## Making a market
 
@@ -986,8 +1015,6 @@ for stablecoins in the long term, they still mark an important step in the world
 of Decentralised Finance (DeFi).
 
 ## Related Work
-
-[Bladwijzer - All above is somewhat done, all below is worked on]
 
 ### Surveying the stablecoin space
 
