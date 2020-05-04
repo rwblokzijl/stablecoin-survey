@@ -24,6 +24,9 @@ abstract: |
 
 # Introduction
 
+TODO: Quantitative easing, perverse debt reliance, burning savings to fuel the
+debt bubble...
+
 Stablecoins promise to offer all the advantages of the digital world, while
 being as reliable as a briefcase of 100 Dollar bills. The original
 cryptocurrencies are still working to become stable enough to become a viable
@@ -99,12 +102,14 @@ Chapter 6 and a conclusion of the survey in Chapter 7.
 
 [Bladwijzer - All above is somewhat done, all below is worked on]
 
-Before we dive into the techniques for stabilisation, some definitions and
-concepts and terms need to be established. In this section we review the purpose
-and requirements of money. We define what it means for a currency to be stable,
-and what it means for a currency to be collateralized.
+Before we dive into the techniques for stabilisation, some definitions, concepts
+and terms need to be established. In this section we review the purpose and
+requirements of money. A model is described to explain the forces acting upon
+the price of a currency. And some traditional techniques for currency and asset
+stabilisation are reviewed. This will give the necessary background to
+understand the different techniques used by the different stablecoins.
 
-## The purpose of money and the requirements of a stablecoin
+## What is a good currency?
 
 In "On the Origin of Money" [@On_the_Origin_of_Money] Karl Menger describes how
 people settle on a currency as a method of exchange. He describes that the
@@ -117,41 +122,65 @@ willingness of people to exchange their goods for a commodity depends:
 5. Upon the limitations imposed politically and socially upon exchange,
 consumption and transfer from one period of time to another
 
-All these concerns must be addressed in any currency. Points 2, 3 and possibly 5
-are where cryptocurrencies add value through their digital and decentralised
-natures. Points 1 and 4, the future usefulness of the currency and it's market
-demand, are where cryptocurrencies still fall short of traditional currencies.
-Stablecoins aim to provide the last requirements of a good currency by adding
-much needed certainty about the development of the market. This will in turn
-make merchants more likely to accept the currency, thus providing the ability to
-trade the currency for goods.
+All these aspects must be managed in any successful currency. Points 2, 3 and
+possibly 5 are where cryptocurrencies have added value, through their digital
+and decentralised natures.
+Points 1 and 4, the future usefulness of the currency and it's market demand,
+are where cryptocurrencies still fall short of traditional currencies. If
+cryptocurrencies are going to replace traditional currencies, they have to meet
+the last requirements of a good currency.
 
-## The meaning of value and stability,
+Stablecoins aim meet the last requirements, by adding guarantees about the
+development of of the price in any market. This will in turn make merchants more
+willing to accept the currency, thus providing the ability to trade the currency
+for goods.
 
-In the value of money [@Value_of_Money] Pigou describes the role of the money
+## What determines the price of an asset?
+
+The law of supply and demand model how the price of an asset in a market is
+determined by the amount on offer versus the amount requested at any given time.
+This model does a great job explaining and predicting price changes following
+events that impact either. For the purpose of controlling the price however, we
+need a model that gives us inputs that we can affect. As both demand and supply
+are usually controlled by independent actor in a market, we look at the quantity
+theory of money instead.
+
+In The Value of Money [@Value_of_Money] Pigou describes the role of the money
 supply in the Quantity theory of money and its relation to the price. The
 quantity theory of money states:
 
-$$ M \times V = P \times T $$
+$$ M \times V = p \times T $$
 
-Where $M$ is the total money supply, $V$ is the velocity of circulation, $P$ is
-the price of the coin and $T$ is the transactions volume.
+Where $M$ is the total money supply, $V$ is the velocity of circulation, $p$ is
+the price of good and services and $T$ is the total volume of transactions.
 
-The velocity of circulation is a measure of how quickly money is spend after
-receiving it, it  [LEFT HERE]
+Note that $p$ is the price of goods and services, and is thus the inverse of the
+price of the currency. To reduce complexity later on in this paper we will use
+an adapted version of the theory:
 
-This implies that the price of a currency can be controlled by increasing and
-decreasing the money supply. Indeed this is a technique also currently used by
-central to prevent deflation of their currencies.
+$$ M \times V \times P = T $$
 
-In this survey we will see currencies vary both $M$ and $V$ as a means to keep
-$P$ at a stable level.
+Where $P$ is the price of the currency.
 
-An certain configuration of these factors is required for a stable store of
-value, and need to be controlled by some mechanism in order to maintain a
-stable price of the commodity.
+The velocity of circulation $V$ is a measure of how quickly money is spent after
+receiving it. Together with the total money supply $M$ it makes up the supply
+side of the theory. If either of these factors increases, everything else being
+equal, the price $P$ will have to decrease.
 
-## Making a market
+The total amount of transactions $T$ makes up the demand side of the theory. $T$
+is alternatively described as the total amount of goods and services offered.
+Regardless, it is a measure of how much people people want the currency and
+their. If the rate at which people want spend money increases, the demand for
+the money follows. If all supply side factors stay the same, the price will
+follow the demand.
+
+In this survey we will see mechanisms that control the price by influencing the
+total supply $M$, the velocity $V$ and [ TODO: true?] even the total amount of
+transactions.
+
+## Traditional means of stabilising a currency
+
+## Collateralization
 
 The easiest way to keep a currency stable is to simply have it derive its value
 from a different asset that already has the desired stability. This is called
@@ -181,6 +210,35 @@ Any entity or system that facilitates the exchange of the token for the
 collateral is called a market maker. In this survey two main categories of
 market makers will make an appearance, centralised organisations and
 decentralised systems.
+
+## Quantitative easing, interest rates and capital requirements.
+
+TODO: Find a paper to cite for this
+
+Relying on other currencies for your stability doesn't solve the problem as it
+kicks the can down the road. In the end there has to be a currency that is
+stable by itself. Where this used to be gold, in modern times, the biggest most
+sought after currencies have abandoned this gold standard for the fiat way.
+Aiming to take away the cumbersome restrictions that come with a pegged
+currency, while maintaining the social credit system and value intermediary
+money has become.
+
+In the current financial system central banks play with all 3 dials of the
+quantity theory of money to balance the liquidity requirements of the market
+with the value of the currency.
+
+Quantitative easing is the buying of government bonds or other financial assets
+by a central bank, with money that doesn't exist. This is done to increase the
+money supply $M$, which in turn promotes the velocity of money. This is often
+done in times of crisis to provide liquidity into a market.
+
+[LEFT HERE]
+
+limits the deflation of a
+currency and
+
+When the
+
 
 # Stabilisation by Centralisation
 

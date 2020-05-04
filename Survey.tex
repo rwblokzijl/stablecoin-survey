@@ -205,13 +205,15 @@ stablecoins in Chapter 6 and a conclusion of the survey in Chapter 7.
 
 {[}Bladwijzer - All above is somewhat done, all below is worked on{]}
 
-Before we get to the techniques used for stabilisation some concepts and
-terms need to be defined. In this section we define the purpose and
-requirements of money. We define what it means for a currency to be
-stable, and what it means for a currency to be collateralized.
+Before we dive into the techniques for stabilisation, some definitions,
+concepts and terms need to be established. In this section we review the
+purpose and requirements of money. A model is described to explain the
+forces acting upon the price of a currency. And some traditional
+techniques for currency and asset stabilisation are reviewed. This will
+give the necessary background to understand the different techniques
+used by the different stablecoins.
 
-\subsection{The purpose of money and the requirements of a
-stablecoin}\label{the-purpose-of-money-and-the-requirements-of-a-stablecoin}
+\subsection{What is a good currency?}\label{what-is-a-good-currency}
 
 In ``On the Origin of Money'' {[}1{]} Karl Menger describes how people
 settle on a currency as a method of exchange. He describes that the
@@ -221,34 +223,65 @@ willingness of people to exchange their goods for a commodity depends:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Upon their ability to trade it for goods (demand)
+  Upon their ability to trade it for goods
 \item
-  Upon the scarcity of the commodity (supply)
+  Upon the scarcity of the commodity
 \item
   Upon the divisibility, durability and practicality of the commodity.
 \item
-  Upon the development of the market, and of speculation in particular.
+  Upon the development of the market, and how others speculate.
 \item
   Upon the limitations imposed politically and socially upon exchange,
   consumption and transfer from one period of time to another
 \end{enumerate}
 
-\subsection{The meaning of value and
-stability,}\label{the-meaning-of-value-and-stability}
+All these aspects must be managed in any successful currency. Points 2,
+3 and possibly 5 are where cryptocurrencies have added value, through
+their digital and decentralised natures. Points 1 and 4, the future
+usefulness of the currency and it's market demand, are where
+cryptocurrencies still fall short of traditional currencies. If
+cryptocurrencies are going to replace traditional currencies, they have
+to meet the last requirements of a good currency.
 
-An certain configuration of these factors is required for a stable store
-of value, and need to be controlled by some mechanism in order to
-maintain a stable price of the commodity.
+Stablecoins aim meet the last requirements, by adding guarantees about
+the development of of the price in any market. This will in turn make
+merchants more willing to accept the currency, thus providing the
+ability to trade the currency for goods.
 
-In the value of money {[}2{]} Pigou describes the role of the money
+\subsection{What determines the price of an
+asset?}\label{what-determines-the-price-of-an-asset}
+
+The law of supply and demand model how the price of an asset in a market
+is determined by the amount on offer versus the amount requested at any
+given time. This model does a great job explaining and predicting price
+changes following events that impact either. For the purpose of
+controlling the price however, we need a model that gives us inputs that
+we can affect. As both demand and supply are usually controlled by
+independent actor in a market, we look at the quantity theory of money
+instead.
+
+In The Value of Money {[}2{]} Pigou describes the role of the money
 supply in the Quantity theory of money and its relation to the price.
 The quantity theory of money states:
 
-\[ M \times V = P \times T \]
+\[ M \times V = p \times T \]
 
-Where \(M\) is the money supply, \(V\) is the velocity of circulation,
-\(P\) is the price of the coin and \(T\) are all transactions done with
-the currency.
+Where \(M\) is the total money supply, \(V\) is the velocity of
+circulation, \(p\) is the price of good and services and \(T\) is the
+total volume of transactions.
+
+Note that \(p\) is the price of goods and services, and is thus the
+inverse of the price of the currency. For easy of understanding we will
+use an adapted version of the theory:
+
+\[ M \times V \times P = T \]
+
+Where \(P\) is the price of the currency.
+
+The velocity of circulation \(V\) is a measure of how quickly money is
+spent after receiving it. Together with the total money supply \(M\) it
+makes up the supply side of the theory. If the total money supply goes
+up, everything else being equal, the
 
 This implies that the price of a currency can be controlled by
 increasing and decreasing the money supply. Indeed this is a technique
@@ -256,6 +289,13 @@ also currently used by central to prevent deflation of their currencies.
 
 In this survey we will see currencies vary both \(M\) and \(V\) as a
 means to keep \(P\) at a stable level.
+
+An certain configuration of these factors is required for a stable store
+of value, and need to be controlled by some mechanism in order to
+maintain a stable price of the commodity.
+
+\subsection{Traditional means of stabilising a
+currency}\label{traditional-means-of-stabilising-a-currency}
 
 \subsection{Making a market}\label{making-a-market}
 
