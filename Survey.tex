@@ -121,41 +121,46 @@ stable value.
 
 \section{Introduction}\label{introduction}
 
-Centralisation, non-transparency and a trillion dollar lawsuit would
-normally lead to crypto investors avoiding you like the plague. For
-Tether however it lead to a market cap of over 4 Billion dollars. With
-Tether currently being the most the most traded cryptocurrency despite
-its controversies we are left to wonder what makes a coin that trades at
-1 dollar so attractive to investors.
+Stablecoins promise to offer all the advantages of the digital world,
+while being as reliable as a briefcase of 100 Dollar bills. The original
+cryptocurrencies are still working to become stable enough to become a
+viable way to store your life savings. Meanwhile, many cryptocurrencies
+are using a collection of stabilisation techniques to become the worlds
+first digital currency to replace your bank account.
 
-Cryptocurrencies have so far been notoriously volatile in price. Making
-the assets unsuited for both investments in the long term, and payments
-in the short term.
+The reward of winning the stablecoin race could be a place at the center
+of all monetary transactions in the world. The promise of this reward
+draws a number of players. Facebook's Libra being the most notable, with
+their ``Blue Eyes Promise'' to be a trustworthy digital world central
+bank.
 
-Another need for price-stable currencies exists among crypto traders.
-When the crypto-markets decrease in value, the entire market tends move
-as a whole. In this case traders want to move their assets out of the
-volatile ``new world'' assets and into traditional currencies like the
-Dollar to wait out de dip in de market. However these transactions are
-limited by the speed of the old payment networks. A coin that is stable
-with respect to the US Dollar would solve this problem by allowing
-traders to change positions between the Dollar and crypto currencies in
-a quick, decentralised{[}1{]} and programmable {[}2{]} way.
+Facebook was neither the first nor the last to attempt to influence the
+future of money. Some aim to provide intermediary digital currencies by
+tokenising US Dollars{[}{]}. Others see these centralised solutions as a
+danger and aim to build fully decentralised currencies by relying on
+market and blockchain based constructions{[}{]}.
 
-With Tether having proves the need for a stablecoin, many
-cryptocurrencies have followed, some solving problems of those who have
-come before. MakerDAOs DAI {[}3{]}, currently the 5th biggest stablecoin
-and the 52th biggest cryptocurrency with a market cap of 103 million
-USD, aims to be a fully decentralised stablecoin that maintains a value
-of 1 USD. Dai provides a coin that enables distributed peer-to-peer
-lending with the stability of the Dollar while having no centralised
-component.
+Regardless of the motivation of the stablecoin creators, all stablecoins
+are subject to the trust of the public as well as market forces. The
+value of an asset follows whatever the public thinks its worth, this
+means building investor confidence is key in stabilising any currency.
 
-\begin{figure}[htbp]
-\centering
-\includegraphics{img/Triangle.png}
-\caption{Inherent trade-offs of stablecoins \label{triangle_label}}
-\end{figure}
+Since the publics trust is a heavy factor in the price, this trust must
+be managed and dynamically be responded to by any coin wanting to be
+stable. What differentiates successful stablecoins from any other
+currency is the ability to maintain a stable price, even during
+turbulent times. Since the public cannot directly be made to trade the
+coin, stablecoins have to respond to the behavior of the markets to keep
+the price stable.
+
+The price of any commodity or market traded asset is subject to supply
+and demand, this includes crypto-currencies. If there is a difference in
+demand and supply at a certain price, the price will move until demand
+and supply are equal.
+
+The only way to make sure the price doesn't move is to influence supply
+to match demand or vice versa. All the stablecoins discussed in this
+survey will do this in a certain way.
 
 \begin{figure}[htbp]
 \centering
@@ -163,29 +168,42 @@ component.
 \caption{Taxonomy of stablecoins \label{intro_label}}
 \end{figure}
 
-MakerDAO is part of a bigger movement. The Decentralised Finance
-movement is an open community of decentralised financial platforms that
-aims to revolutionise the financial world by replacing many of the
-worlds financial systems. Within this project there are a number of
-stablecoins and other tokens that are pegged to real world assets that
-use decentralised techniques for providing financial derivatives.
+To manage market forces a diverse set of strategies have emerged, which
+can be categorised in the categories visualised in \ref{intro_label}.
+The easiest way to manage the price is through centralisation. This is
+the permissioned category, these stablecoins are generally managed by an
+organisation that keeps a tight leash on the coin and uses themselves as
+a trusted third party similar to a central bank.
 
-This survey presents a history of the significant stablecoins and pegged
-assets invented so far, and classifies and generalises the techniques
-that are common among them.
+The permissionless category has as a primary goal to stay decentralised.
+This comes with larger challenges, but also a greater potential to
+deliver on the promise of a permissionless monetary system.
 
-First we discuss the topic of the purpose of money, the meaning of value
-and stability, and some currency pegs used in our traditional monetary
-system in Chapter 2. We then describe the simplest and most successful
-stablecoins, namely the centralised coins in Chapter 3. In Chapter 4 we
-go into the more complex topic of decentralised assets and their methods
-for maintaining pegs to real world assets without a central party
-guaranteeing the peg. We then go deeper into the theory in Chapter 5
-where we look at the research into the viability of stablecoins. We then
-end with a discussion of the research on stablecoins in Chapter 6 and a
-conclusion of the survey in Chapter 7.
+\begin{figure}[htbp]
+\centering
+\includegraphics{img/Triangle.png}
+\caption{Inherent trade-offs of stablecoins \label{triangle_label}}
+\end{figure}
+
+Within this survey we will explore the most common techniques to
+stabilise cryptocurrencies, and show the inherent trade-offs between
+decentralisation, collateralization, and capital efficiency as
+illustrated in \ref{triangle_label}.
+
+First, in chapter 2, we discuss the topic of the purpose of money, the
+meaning of value and stability, and some currency pegs used in our
+traditional monetary system. We then describe the simplest and most
+successful stablecoins, namely the centralised coins in Chapter 3. In
+Chapter 4 we go into the more complex topic of decentralised assets and
+their methods for maintaining pegs to real world assets without a
+central party guaranteeing the peg. We then go deeper into the theory in
+Chapter 5 where we look at the research into the viability of
+stablecoins. We then end with a discussion of the research on
+stablecoins in Chapter 6 and a conclusion of the survey in Chapter 7.
 
 \section{Background}\label{background}
+
+{[}Bladwijzer - All above is somewhat done, all below is worked on{]}
 
 Before we get to the techniques used for stabilisation some concepts and
 terms need to be defined. In this section we define the purpose and
@@ -195,7 +213,7 @@ stable, and what it means for a currency to be collateralized.
 \subsection{The purpose of money and the requirements of a
 stablecoin}\label{the-purpose-of-money-and-the-requirements-of-a-stablecoin}
 
-In ``On the Origin of Money'' {[}4{]} Karl Menger describes how people
+In ``On the Origin of Money'' {[}1{]} Karl Menger describes how people
 settle on a currency as a method of exchange. He describes that the
 willingness of people to exchange their goods for a commodity depends:
 
@@ -222,7 +240,7 @@ An certain configuration of these factors is required for a stable store
 of value, and need to be controlled by some mechanism in order to
 maintain a stable price of the commodity.
 
-In the value of money {[}5{]} Pigou describes the role of the money
+In the value of money {[}2{]} Pigou describes the role of the money
 supply in the Quantity theory of money and its relation to the price.
 The quantity theory of money states:
 
@@ -251,7 +269,7 @@ involve the trade of a secondary asset as intermediary store of value.
 
 The first pegs were tracking the value of gold. Every unit of a currency
 could be exchanged for a certain amount of gold. As described in ``The
-Gold Standard'' {[}6{]} by Cooper, the US dollar has been pegged to Gold
+Gold Standard'' {[}3{]} by Cooper, the US dollar has been pegged to Gold
 for some of its years to maintain the confidence of the public.
 
 The most common way to guarantee an exchange rate is to hold some form
@@ -291,8 +309,8 @@ reserve, and pegged stablecoins.
 stablecoin}\label{the-reserve-bank-stablecoin}
 
 Combining the proven success of central banks with the benefits of fast
-payment systems {[}7{]}, organisations like JPMorgan {[}8{]} and the
-Libra Association {[}9{]} aim to create a stable currency by using their
+payment systems {[}4{]}, organisations like JPMorgan {[}5{]} and the
+Libra Association {[}6{]} aim to create a stable currency by using their
 reputation as established financial institutions. So far, no coin has
 managed to be stable off of its reputation alone, and whether this will
 ever happen is yet to be seen.
@@ -384,7 +402,7 @@ factor is the fact that fiat-currencies need to be held by some party.
 
 Some argue the price guarantees of pegging to a fiat-currency outweighs
 the sacrifice of decentralisation. The success of currencies like Tether
-{[}10{]}, Centres USDC {[}11{]}, PAXos {[}12{]}, and TrueUSD{[}13{]}
+{[}7{]}, Centres USDC {[}8{]}, PAXos {[}9{]}, and TrueUSD{[}10{]}
 illustrate this with their combined market capitalization of 5 Billion
 USD.
 
@@ -403,14 +421,14 @@ to improve investor confidence include:
 \def\labelenumi{\arabic{enumi}.}
 \tightlist
 \item
-  Regular audits providing proof of collateral (Tether {[}10{]}, USDC
-  {[}11{]}, PAXos {[}12{]}, TrueUSD {[}13{]})
+  Regular audits providing proof of collateral (Tether {[}7{]}, USDC
+  {[}8{]}, PAXos {[}9{]}, TrueUSD {[}10{]})
 \item
   Multiple independent collateral trust accounts (TrueUSD
-  {[}TrueUSD:whitepaper{]}, Stasis Euro {[}14{]})
+  {[}TrueUSD:whitepaper{]}, Stasis Euro {[}11{]})
 \item
   Subjecting themselves to established regulations and providing FDIC-
-  insurance. (PAXos {[}12{]})
+  insurance. (PAXos {[}9{]})
 \end{enumerate}
 
 Through these means stablecoin organisations aim to counteract the lack
@@ -424,8 +442,8 @@ tokenised fiat-currency. This concept can be expanded to more than just
 traditional currencies. Using tokenisation and central storage it is
 possible to peg the value of a crypto coin to anything that has value in
 the real world. As such some stablecoins peg their value to the original
-form of money: Gold. Today, stablecoins like PAX Gold {[}15{]} and
-DigixDAO {[}16{]} hold gold in trust for their crypto holders. Though
+form of money: Gold. Today, stablecoins like PAX Gold {[}12{]} and
+DigixDAO {[}13{]} hold gold in trust for their crypto holders. Though
 the gold provides a strong guarantee that the stablecoin will hold its
 value, the coins are still less stable than the Dollar as there is no
 central agency stabilising gold.
@@ -435,7 +453,7 @@ stablecoins, any collection of assets that is stable on average can
 provide a stablecoin. Even though the US Dollar is seen as the most
 stable currency world-wide, it is still dependent on the stability of
 the United States economy. To address this stablecoins like Globcoin
-{[}17{]} and x8currency {[}18{]} aim to create an asset that tracks
+{[}14{]} and x8currency {[}15{]} aim to create an asset that tracks
 multiple currencies as well as gold. Thus creating a coin that is ``more
 stable'' than the US Dollar. Whether these coins will ever have a
 mainstream appeal is impossible to predict, but the theoretical value of
@@ -468,7 +486,7 @@ Notes\strut
 \midrule
 \endhead
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-Tether{[}10{]}\strut
+Tether{[}7{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 4 Trillion USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -483,7 +501,7 @@ No\strut
 Largest Stablecoin, 4th largest cryptocurrency\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-USDC{[}11{]}\strut
+USDC{[}8{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 464 Million USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -498,7 +516,7 @@ Some exchanges\strut
 Created and owned by various crypto exchanges\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-PAXos{[}12{]}\strut
+PAXos{[}9{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 238 Million USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -513,7 +531,7 @@ Yes\strut
 Regulated by the New York State Department of Financial Services\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-TrueUSD{[}13{]}\strut
+TrueUSD{[}10{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 161 Million USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -528,7 +546,7 @@ Some escrows\strut
 Distributes risk with multiple independent escrows\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-Stasis{[}14{]}\strut
+Stasis{[}11{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 35 Million USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -543,7 +561,7 @@ No\strut
 Largest Euro Stablecoin\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-BUSD{[}12{]}\strut
+BUSD{[}9{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 18 Million USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -573,7 +591,7 @@ No\strut
 Owned and operated by the oklink exchange\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
-PAX Gold{[}15{]}\strut
+PAX Gold{[}12{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
 12 Million USD\strut
 \end{minipage} & \begin{minipage}[t]{0.08\columnwidth}\raggedright\strut
@@ -1316,7 +1334,7 @@ Voted\strut
 DAO (NuShares)\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-BitBay {[}19{]}\strut
+BitBay {[}16{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
 None\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
@@ -1329,12 +1347,12 @@ None\strut
 DAO (BitBay)\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Anchor{[}20{]}\strut
+Anchor{[}17{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Basis{[}21{]}\strut
+Basis{[}18{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
 USD\strut
 \end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
@@ -1347,14 +1365,14 @@ Voted\strut
 DAO\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.27\columnwidth}\raggedright\strut
-Ampleforth {[}22{]}\strut
+Ampleforth {[}19{]}\strut
 \end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedright\strut
 \strut
 \end{minipage}\tabularnewline
 \bottomrule
 \end{longtable}
 
-The first stablecoin to be stable for a year was NuBits{[}23{]}. NuBits
+The first stablecoin to be stable for a year was NuBits{[}20{]}. NuBits
 stabilised by using a bond mechanism as well as voted in ``guardians''
 who would get newly printed NuBits and would in turn provide liquidity
 to the market. These guardians would sell and buy the NuBits on the
@@ -1409,11 +1427,11 @@ This mechanism also more specifically applicable, just determining
 precise price levels. Some stablecoins do not track the price, but have
 token holders vote whether the price is too high or too low, and based
 on that will trigger either ``inflationary'', or ``deflationary''
-periods {[}19{]}.
+periods {[}16{]}.
 
 This concept can also generalised even further. A long desired goal is
 to get real world information onto the blockchain in general. Solutions
-have emerged {[}24{]} that aim to solve this problem by creating a
+have emerged {[}21{]} that aim to solve this problem by creating a
 general infrastructure of nodes that access real world data and record
 this data onto the blockchain. To incentivise honesty of nodes, they
 stake an amount of network tokens that can be taken from them if the
@@ -1442,7 +1460,7 @@ blockchain network.
 
 In the case of Bitcoin, the total supply is set, and slowly increased at
 a set rate without reacting to supply and demand. However, there is a
-link between the price levels and mining efforts {[}25{]}. If the price
+link between the price levels and mining efforts {[}22{]}. If the price
 of bitcoin drops below a certain level, the mining reward will no longer
 outweigh the electricity costs. This miner response to the markets gives
 a natural input that somewhat tracks the price.
@@ -1450,7 +1468,7 @@ a natural input that somewhat tracks the price.
 The block speed, and therefore the rate of supply of new coins, increase
 as the price increases. Therefore, if the mining difficulty stays the
 same, the currency will naturally respond to, and dampen, demand shocks
-{[}25{]}.
+{[}22{]}.
 
 Additionally, if the block speed is changed, the transaction throughput
 changes proportionally. This has the extra benefit of changing the
@@ -1463,7 +1481,7 @@ more likely, which undermines the security of the network.
 
 \subsubsection{Allowing for inflation}\label{allowing-for-inflation}
 
-This method of controlling price levels has some implications {[}25{]}
+This method of controlling price levels has some implications {[}22{]}
 on long term price. In bitcoin, long term inflation is curbed by
 periodically halving the block reward. If these changes were used, this
 system would unnecessarily lower the mining incentives for miners, thus
@@ -1476,7 +1494,7 @@ this survey.
 
 As it is not possible to remove currency from the market, some rate of
 coin depreciation might be desirable to allow for absorption of future
-demand shocks {[}26{]}. A coin depreciation rate can be applied by
+demand shocks {[}23{]}. A coin depreciation rate can be applied by
 gradually increasing the mining rewards over time.
 
 \subsubsection{Open mining using Proof of Sequential
@@ -1484,7 +1502,7 @@ Work}\label{open-mining-using-proof-of-sequential-work}
 
 If block speed should remain constant, a different way to build a more
 stable currency is to build a secondary token. This token would use
-Proofs of Sequential work (PoSW) {[}27{]} to generate currency at a
+Proofs of Sequential work (PoSW) {[}24{]} to generate currency at a
 fixed rate. This allows anyone to mine a coin by putting in some work.
 This leads more mining when the price is high and less when it is low.
 
@@ -1510,9 +1528,9 @@ can become useful.
 
 When looking at ways cryptocurrencies can improve the current financial
 system centralised stablecoins can be seen as a midway solution
-{[}28{]}. It marries the stability and legal security of central trusted
+{[}25{]}. It marries the stability and legal security of central trusted
 organisations, with the benefits of fast, programmable and more
-transparent payment systems {[}7{]} {[}29{]}. This leads to a system
+transparent payment systems {[}4{]} {[}26{]}. This leads to a system
 that relies less trust in large banks.
 
 \subsection{Crypto Collateralized
@@ -1521,7 +1539,7 @@ Stablecoins}\label{crypto-collateralized-stablecoins-1}
 Decentralised currencies are more aspirational. Where Bitcoin provided a
 completely trust less currency. Decentralised currencies aim to do the
 same, but with guarantees about price stability. Though this is much
-more difficult to get working securely {[}30{]}, the benefit of these
+more difficult to get working securely {[}27{]}, the benefit of these
 coins to society might be much greater than that of any centralised
 currency.
 
@@ -1534,12 +1552,10 @@ still mark an important step in the world of Decentralised Finance
 
 \subsection{Related Work}\label{related-work}
 
-{[}Bladwijzer - All above is somewhat done, all below is worked on{]}
-
 \subsubsection{Surveying the stablecoin
 space}\label{surveying-the-stablecoin-space}
 
-In ``The State of Stablecoins''{[}31{]} the ``blockchain team'' present
+In ``The State of Stablecoins''{[}28{]} the ``blockchain team'' present
 an empirical study of 57 live and pre-launch stablecoins showing
 adoption, trading volume and market cap. They describe a taxonomy where
 they differentiate between ``traditional'' collateralized, crypto
@@ -1551,18 +1567,18 @@ collateral format.
 \subsubsection{Speculating on the future of
 stablecoins}\label{speculating-on-the-future-of-stablecoins}
 
-In {[}7{]} Darrel Duffie describes the use of stablecoins for banks
+In {[}4{]} Darrel Duffie describes the use of stablecoins for banks
 aiming to digitise both inter-organisation value transfer and
 governments wanting to implement a digital currency with the utility
 benefits of cryptocurrencies and the stability of fiat.
 
 In ``Stablecoins in Cryptoeconomics. From Initial Coin Offerings (ICOs)
-to Central Bank Digital Currencies''{[}29{]} Erba discusses the
+to Central Bank Digital Currencies''{[}26{]} Erba discusses the
 stablecoins in the context of the law in both the united states and
 Europe. Erba argues for crypto-currencies ``fully backed by Central Bank
 reserves''
 
-In {[}28{]} Koning describes the requirements and considerations for a
+In {[}25{]} Koning describes the requirements and considerations for a
 stable currency controlled by a central bank. Koning describes the
 monetary policy and choices that comes along with implementing a digital
 currency on a large scale.
@@ -1571,11 +1587,11 @@ currency on a large scale.
 stabilisation}\label{critiques-of-common-techniques-for-cryptocurrency-stabilisation}
 
 Chohan discusses the difficulties in maintaining a properly
-collateralized peg in ``Are Stable Coins Stable?''{[}32{]}. Chohan
+collateralized peg in ``Are Stable Coins Stable?''{[}29{]}. Chohan
 describes how maintaining a true 1:1 peg leads to funding and
 scalability issues.
 
-In {[}30{]} Klages-Mundt et al. look at the existing stablecoins through
+In {[}27{]} Klages-Mundt et al. look at the existing stablecoins through
 a critical lens and describe some ways in which the currency pegs can be
 broken. Klages-Mundt build a generalised model of decentralised
 crypto-collateralized stablecoins. It describes possible attacks on
@@ -1596,143 +1612,130 @@ spectacularly go up in a ball of fire. Only time will tell.
 \addcontentsline{toc}{section}{References}
 
 \hypertarget{refs}{}
-\hypertarget{ref-Money_as_IOUs_in_Social_Trust_Networks}{}
-{[}1{]} R. Fugger, ``Money as ious in social trust networks,'' MONTHH
-YEARR.
-
-\hypertarget{ref-TrustChain}{}
-{[}2{]} Martijn de Vos and Johan Pouwelse, ``TrustChain.''
-\url{https://repository.tudelft.nl/islandora/object/uuid:c51ac99d-3013-44b3-8ddd-fbd951a2454a},
-MONTHH-YEARR.
-
-\hypertarget{ref-MakerDAO:whitepaper}{}
-{[}3{]} The Maker Team, ``MakerDAO whitepaper.''
-\url{https://makerdao.com/whitepaper/DaiDec17WP.pdf}, MONTHH-YEARR.
-
 \hypertarget{ref-On_the_Origin_of_Money}{}
-{[}4{]} K. Menger, ``On the Origin of Money,'' \emph{The Economic
+{[}1{]} K. Menger, ``On the Origin of Money,'' \emph{The Economic
 Journal}, vol. 2, no. 6, pp. 239--255, Jun. 1892.
 
 \hypertarget{ref-Value_of_Money}{}
-{[}5{]} A. C. Pigou, ``The Value of Money,'' \emph{The Quarterly Journal
+{[}2{]} A. C. Pigou, ``The Value of Money,'' \emph{The Quarterly Journal
 of Economics}, vol. 32, no. 1, pp. 38--65, Nov. 1917.
 
 \hypertarget{ref-The_Gold_Standard}{}
-{[}6{]} R. N. Cooper, R. Dornbusch, and R. E. Hall, ``The gold standard:
+{[}3{]} R. N. Cooper, R. Dornbusch, and R. E. Hall, ``The gold standard:
 Historical facts and future prospects,'' \emph{Brookings Papers on
 Economic Activity}, vol. 1982, no. 1, pp. 1--56, 1982.
 
 \hypertarget{ref-DuffieDigital_and_Fast_Payment_Systems}{}
-{[}7{]} D. Duffie, ``DuffieDigital and fast payment systems,'' MONTHH
+{[}4{]} D. Duffie, ``DuffieDigital and fast payment systems,'' MONTHH
 YEARR.
 
 \hypertarget{ref-JPMorgan_Coin:whitepaper}{}
-{[}8{]} JPMorgan Chase \& Co., ``J.P.Morgan coin announcement.''
+{[}5{]} JPMorgan Chase \& Co., ``J.P.Morgan coin announcement.''
 \url{https://www.jpmorgan.com/global/news/digital-coin-payments},
 MONTHH-YEARR.
 
 \hypertarget{ref-Libra:whitepaper}{}
-{[}9{]} ``Libra whitepaper.''
+{[}6{]} ``Libra whitepaper.''
 \url{https://libra.org/en-US/white-paper/}, MONTHH-YEARR.
 
 \hypertarget{ref-Tether:whitepaper}{}
-{[}10{]} Tether International Limited, ``Tether whitepaper.''
+{[}7{]} Tether International Limited, ``Tether whitepaper.''
 \url{https://tether.to/wp-content/uploads/2016/06/TetherWhitePaper.pdf},
 MONTHH-YEARR.
 
 \hypertarget{ref-Centre:whitepaper}{}
-{[}11{]} CENTRE Consortium, ``Centre whitepaper.''
+{[}8{]} CENTRE Consortium, ``Centre whitepaper.''
 \url{https://www.centre.io/pdfs/centre-whitepaper.pdf}, MONTHH-YEARR.
 
 \hypertarget{ref-PAXos:whitepaper}{}
-{[}12{]} Charles Cascarilla, ``PAXos whitepaper.''
+{[}9{]} Charles Cascarilla, ``PAXos whitepaper.''
 \url{https://account.paxos.com/whitepaper.pdf}, MONTHH-YEARR.
 
 \hypertarget{ref-TrueUSD:whitepaper}{}
-{[}13{]} LLC TrueCoin, ``Trust token.''
+{[}10{]} LLC TrueCoin, ``Trust token.''
 \url{https://www.trusttoken.com/trueusd}, MONTHH-YEARR.
 
 \hypertarget{ref-Stasis:whitepaper}{}
-{[}14{]} STASIS Foundation, ``Stasis whitepaper.''
+{[}11{]} STASIS Foundation, ``Stasis whitepaper.''
 \url{https://stasis.net/}, MONTHH-YEARR.
 
 \hypertarget{ref-PAXGold:whitepaper}{}
-{[}15{]} Charles Cascarilla, ``PAX gold whitepaper.''
+{[}12{]} Charles Cascarilla, ``PAX gold whitepaper.''
 \url{https://www.paxos.com/paxgold/}, Sept-2019.
 
 \hypertarget{ref-DigixDAO:whitepaper}{}
-{[}16{]} Anthony C. Eufemio, ``DigixDAO whitepaper.''
+{[}13{]} Anthony C. Eufemio, ``DigixDAO whitepaper.''
 \url{https://digix.global/whitepaper.pdf}, MONTHH-YEARR.
 
 \hypertarget{ref-globcoin:whitepaper}{}
-{[}17{]} Reserve Currency Solutions, ``Globcoin whitepaper.''
+{[}14{]} Reserve Currency Solutions, ``Globcoin whitepaper.''
 \url{https://globcoin.io/assets/pdf/whitepaper-Globcoin-v3.1.0.pdf},
 MONTHH-YEARR.
 
 \hypertarget{ref-x8currency:whitepaper}{}
-{[}18{]} X8 AG, ``X8currency whitepaper.''
+{[}15{]} X8 AG, ``X8currency whitepaper.''
 \url{https://x8currency.com/wp-content/uploads/X8-Project-TGE-Whitepaper.pdf},
 MONTHH-YEARR.
 
 \hypertarget{ref-BitBay:whitepaper}{}
-{[}19{]} David Zimbeck, ``BitBay whitepaper.''
+{[}16{]} David Zimbeck, ``BitBay whitepaper.''
 \url{https://bitbay.market/downloads/whitepapers/bitbay-dynamic-peg.pdf},
 MONTHH-YEARR.
 
 \hypertarget{ref-Anchor:whitepaper}{}
-{[}20{]} Anchor AG, ``Anchor whitepaper.''
+{[}17{]} Anchor AG, ``Anchor whitepaper.''
 \url{https://theanchor.io/whitepaper/}, MONTHH-YEARR.
 
 \hypertarget{ref-Basis:whitepaper}{}
-{[}21{]} Josh Chen Nader Al-Naji and Lawrence Diao, ``Basis
+{[}18{]} Josh Chen Nader Al-Naji and Lawrence Diao, ``Basis
 whitepaper.'' \url{https://www.basis.io/basis_whitepaper_en.pdf},
 MONTHH-YEARR.
 
 \hypertarget{ref-Ampleforth:whitepaper}{}
-{[}22{]} Brandon Iles Evan Kuo and Manny Rincon Cruz, ``Ampleforth.''
+{[}19{]} Brandon Iles Evan Kuo and Manny Rincon Cruz, ``Ampleforth.''
 \url{https://www.ampleforth.org/paper/}, MONTHH-YEARR.
 
 \hypertarget{ref-Nubits:whitepaper}{}
-{[}23{]} Jordan Lee, ``Nubits whitepaper.''
+{[}20{]} Jordan Lee, ``Nubits whitepaper.''
 \url{https://nubits.com/whitepaper}, MONTHH-YEARR.
 
 \hypertarget{ref-Chainlink:whitepaper}{}
-{[}24{]} Steve Ellis, ``Chainlink whitepaper.''
+{[}21{]} Steve Ellis, ``Chainlink whitepaper.''
 \url{https://link.smartcontract.com/whitepaper}, MONTHH-YEARR.
 
 \hypertarget{ref-How_to_make_a_digital_currency_on_a_blockchain_stable}{}
-{[}25{]} K. Saito and M. Iwamura, ``How to make a digital currency on a
+{[}22{]} K. Saito and M. Iwamura, ``How to make a digital currency on a
 blockchain stable,'' \emph{Future Generation Computer Systems}, vol.
 100, 2019.
 
 \hypertarget{ref-CanWeStabilize}{}
-{[}26{]} M. Iwamura, Y. Kitamura, T. Matsumoto, and K. Saito, ``Can we
+{[}23{]} M. Iwamura, Y. Kitamura, T. Matsumoto, and K. Saito, ``Can we
 stabilize the price of a cryptocurrency?: Understanding the design of
 bitcoin and its potential to compete with central bank money.''
 
 \hypertarget{ref-Elasticoin_Low-Volatility_PoSW}{}
-{[}27{]} R. B. Yuhao Dong, ``Elasticoin: Low-volatility posw,'' MONTHH
+{[}24{]} R. B. Yuhao Dong, ``Elasticoin: Low-volatility posw,'' MONTHH
 YEARR.
 
 \hypertarget{ref-Fedcoin}{}
-{[}28{]} J. P. Koning, ``Fedcoin\_Central\_Bank\_R3.pdf,''
+{[}25{]} J. P. Koning, ``Fedcoin\_Central\_Bank\_R3.pdf,''
 \url{https://www.r3.com/reports/fedcoin-a-central-bank-issued-cryptocurrency/},
 MONTHH YEARR.
 
 \hypertarget{ref-Stablecoins_in_Cryptoeconomics}{}
-{[}29{]} M. Dell'Erba, ``Stablecoins in cryptoeconomics. from initial
+{[}26{]} M. Dell'Erba, ``Stablecoins in cryptoeconomics. from initial
 coin offerings to central bank digital currencies (cbdcs),'' MONTHH
 YEARR.
 
 \hypertarget{ref-In_stability_for_the_Blockchain}{}
-{[}30{]} A. M. Ariah Klages-Mundt, ``(In)stability for the blockchain:
+{[}27{]} A. M. Ariah Klages-Mundt, ``(In)stability for the blockchain:
 Deleveraging spirals and stablecoin attacks,'' MONTHH YEARR.
 
 \hypertarget{ref-THE_STATE_OF_STABLECOINS}{}
-{[}31{]} T. B. Team, ``The state of stablecoins,'' MONTHH YEARR.
+{[}28{]} T. B. Team, ``The state of stablecoins,'' MONTHH YEARR.
 
 \hypertarget{ref-Are_Stable_Coins_Stable}{}
-{[}32{]} U. W. Chohan, ``Are stable coins stable?'' MONTHH YEARR.
+{[}29{]} U. W. Chohan, ``Are stable coins stable?'' MONTHH YEARR.
 
 \end{document}
 

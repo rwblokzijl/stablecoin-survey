@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.6.21)  3 MAR 2020 13:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Debian) (preloaded format=pdflatex 2019.6.21)  30 MAR 2020 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,51 +1088,53 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/lmr/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<img/Triangle.png, id=140, 583.17876pt x 377.41pt>
-File: img/Triangle.png Graphic file (type png)
- <use img/Triangle.png>
-Package pdftex.def Info: img/Triangle.png used on input line 156.
-(pdftex.def)             Requested size: 201.59732pt x 130.46573pt.
-
-<img/intro.png, id=142, 849.1725pt x 737.75626pt>
+<img/intro.png, id=144, 849.1725pt x 737.75626pt>
 File: img/intro.png Graphic file (type png)
  <use img/intro.png>
-Package pdftex.def Info: img/intro.png used on input line 162.
+Package pdftex.def Info: img/intro.png used on input line 167.
 (pdftex.def)             Requested size: 201.60281pt x 175.15138pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+<img/Triangle.png, id=147, 583.17876pt x 377.41pt>
+File: img/Triangle.png Graphic file (type png)
+ <use img/Triangle.png>
+Package pdftex.def Info: img/Triangle.png used on input line 184.
+(pdftex.def)             Requested size: 201.59732pt x 130.46573pt.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
- <./img/Triangle.png> <./img/intro.png>]
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 229.
+ <./img/intro.png>]
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 247.
 
- (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 229.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 247.
 
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 229
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 247
 .
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 229
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 247
 .
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 229.
+(Font)              <10> on input line 247.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 229.
+(Font)              <7> on input line 247.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 229.
-LaTeX Font Info:    Try loading font information for U+msa on input line 229.
+(Font)              <5> on input line 247.
+LaTeX Font Info:    Try loading font information for U+msa on input line 247.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1140,454 +1142,450 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 229.
+LaTeX Font Info:    Try loading font information for U+msb on input line 247.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [2]
-<img/Centralised_create.png, id=173, 353.32pt x 278.03876pt>
+) [2 <./img/Triangle.png>] <img/Centralised_create.png, id=179, 353.32pt x 278.
+03876pt>
 File: img/Centralised_create.png Graphic file (type png)
 
 <use img/Centralised_create.png>
-Package pdftex.def Info: img/Centralised_create.png used on input line 312.
+Package pdftex.def Info: img/Centralised_create.png used on input line 330.
 (pdftex.def)             Requested size: 201.59935pt x 158.64494pt.
 
-<img/Centralised_destroy.png, id=175, 354.32375pt x 277.035pt>
+<img/Centralised_destroy.png, id=181, 354.32375pt x 277.035pt>
 File: img/Centralised_destroy.png Graphic file (type png)
 
 <use img/Centralised_destroy.png>
-Package pdftex.def Info: img/Centralised_destroy.png used on input line 337.
+Package pdftex.def Info: img/Centralised_destroy.png used on input line 355.
 (pdftex.def)             Requested size: 201.60439pt x 157.62836pt.
-
-Underfull \hbox (badness 3849) in paragraph at lines 409--412
+ [3 <./img/Centralised_create.png> <./img/Centralised_destroy.png>]
+Underfull \hbox (badness 3849) in paragraph at lines 427--430
 []\T1/lmr/m/n/10 (+20) Multiple in-de-pen-dent col-lat-eral trust ac-counts
  []
 
-[3 <./img/Centralised_create.png> <./img/Centralised_destroy.png>]
 
-LaTeX Warning: Reference `TODO' on page 4 undefined on input line 448.
+LaTeX Warning: Reference `TODO' on page 4 undefined on input line 466.
 
 
-Overfull \hbox (7.98016pt too wide) in paragraph at lines 453--455
+Overfull \hbox (7.98016pt too wide) in paragraph at lines 471--473
 []|\T1/lmr/m/n/10 (-20) Stablecoin|  
  []
 
 
-Overfull \hbox (9.873pt too wide) in paragraph at lines 455--457
+Overfull \hbox (9.873pt too wide) in paragraph at lines 473--475
 []|\T1/lmr/m/n/10 (-20) Market 
  []
 
 
-Overfull \hbox (9.70674pt too wide) in paragraph at lines 457--459
+Overfull \hbox (9.70674pt too wide) in paragraph at lines 475--477
 []|\T1/lmr/m/n/10 (-20) Pegged 
  []
 
 
-Overfull \hbox (4.62714pt too wide) in paragraph at lines 459--461
+Overfull \hbox (4.62714pt too wide) in paragraph at lines 477--479
 []|\T1/lmr/m/n/10 (-20) Escrow|  
  []
 
 
-Overfull \hbox (5.45618pt too wide) in paragraph at lines 461--463
+Overfull \hbox (5.45618pt too wide) in paragraph at lines 479--481
 []|\T1/lmr/m/n/10 (-20) FDIC- 
  []
 
 
-Overfull \hbox (19.73004pt too wide) in paragraph at lines 461--463
+Overfull \hbox (19.73004pt too wide) in paragraph at lines 479--481
 \T1/lmr/m/n/10 (-20) insurance|  
  []
 
 
-Overfull \hbox (21.1177pt too wide) in paragraph at lines 463--465
+Overfull \hbox (21.1177pt too wide) in paragraph at lines 481--483
 []|\T1/lmr/m/n/10 (-20) Launch|  
  []
 
 
-Overfull \hbox (25.562pt too wide) in alignment at lines 451--469
+Overfull \hbox (25.562pt too wide) in alignment at lines 469--487
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (7.17395pt too wide) in paragraph at lines 470--472
-[]|\T1/lmr/m/n/10 (-20) Tether[10]|  
+Overfull \hbox (2.27396pt too wide) in paragraph at lines 488--490
+[]|\T1/lmr/m/n/10 (-20) Tether[7]|  
  []
 
 
-Overfull \hbox (26.54672pt too wide) in paragraph at lines 476--478
+Overfull \hbox (26.54672pt too wide) in paragraph at lines 494--496
 \T1/lmr/m/n/10 (-20) organisation|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 480--482
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 498--500
 []|\T1/lmr/m/n/10 (-20) 2014|  
  []
 
 
-Overfull \hbox (6.48271pt too wide) in paragraph at lines 485--487
-[]|\T1/lmr/m/n/10 (-20) USDC[11]|  
+Overfull \hbox (1.58272pt too wide) in paragraph at lines 503--505
+[]|\T1/lmr/m/n/10 (-20) USDC[8]|  
  []
 
 
-Overfull \hbox (26.54672pt too wide) in paragraph at lines 491--493
+Overfull \hbox (26.54672pt too wide) in paragraph at lines 509--511
 \T1/lmr/m/n/10 (-20) organisation|  
  []
 
 
-Overfull \hbox (2.22586pt too wide) in paragraph at lines 493--495
+Overfull \hbox (2.22586pt too wide) in paragraph at lines 511--513
 []|\T1/lmr/m/n/10 (-20) Some 
  []
 
 
-Overfull \hbox (21.87538pt too wide) in paragraph at lines 493--495
+Overfull \hbox (21.87538pt too wide) in paragraph at lines 511--513
 \T1/lmr/m/n/10 (-20) exchanges|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 495--497
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 513--515
 []|\T1/lmr/m/n/10 (-20) 2018|  
  []
 
 
-Overfull \hbox (8.4262pt too wide) in paragraph at lines 500--502
-[]|\T1/lmr/m/n/10 (-20) PAXos[12]|  
+Overfull \hbox (3.5262pt too wide) in paragraph at lines 518--520
+[]|\T1/lmr/m/n/10 (-20) PAXos[9]|  
  []
 
 
-Overfull \hbox (26.54672pt too wide) in paragraph at lines 506--508
+Overfull \hbox (26.54672pt too wide) in paragraph at lines 524--526
 \T1/lmr/m/n/10 (-20) organisation|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 510--512
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 528--530
 []|\T1/lmr/m/n/10 (-20) 2018|  
  []
 
 
-Overfull \hbox (19.2877pt too wide) in paragraph at lines 515--517
-[]|\T1/lmr/m/n/10 (-20) TrueUSD[13]|  
+Overfull \hbox (19.2877pt too wide) in paragraph at lines 533--535
+[]|\T1/lmr/m/n/10 (-20) TrueUSD[10]|  
  []
 
 
-Overfull \hbox (10.4043pt too wide) in paragraph at lines 521--523
+Overfull \hbox (10.4043pt too wide) in paragraph at lines 539--541
 []|\T1/lmr/m/n/10 (-20) Multiple 
  []
 
 
-Overfull \hbox (26.46501pt too wide) in paragraph at lines 521--523
+Overfull \hbox (26.46501pt too wide) in paragraph at lines 539--541
 \T1/lmr/m/n/10 (-20) independent|  
  []
 
 
-Overfull \hbox (2.22586pt too wide) in paragraph at lines 523--525
+Overfull \hbox (2.22586pt too wide) in paragraph at lines 541--543
 []|\T1/lmr/m/n/10 (-20) Some 
  []
 
 
-Overfull \hbox (11.34007pt too wide) in paragraph at lines 523--525
+Overfull \hbox (11.34007pt too wide) in paragraph at lines 541--543
 \T1/lmr/m/n/10 (-20) escrows|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 525--527
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 543--545
 []|\T1/lmr/m/n/10 (-20) 2018|  
  []
 
 
-Overfull \hbox (3.73355pt too wide) in paragraph at lines 530--532
-[]|\T1/lmr/m/n/10 (-20) Stasis[14]|  
+Overfull \hbox (3.73355pt too wide) in paragraph at lines 548--550
+[]|\T1/lmr/m/n/10 (-20) Stasis[11]|  
  []
 
 
-Overfull \hbox (10.4043pt too wide) in paragraph at lines 536--538
+Overfull \hbox (10.4043pt too wide) in paragraph at lines 554--556
 []|\T1/lmr/m/n/10 (-20) Multiple 
  []
 
 
-Overfull \hbox (26.46501pt too wide) in paragraph at lines 536--538
+Overfull \hbox (26.46501pt too wide) in paragraph at lines 554--556
 \T1/lmr/m/n/10 (-20) independent|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 540--542
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 558--560
 []|\T1/lmr/m/n/10 (-20) 2018|  
  []
 
 
-Overfull \hbox (6.34648pt too wide) in paragraph at lines 545--547
-[]|\T1/lmr/m/n/10 (-20) BUSD[12]|  
+Overfull \hbox (1.44649pt too wide) in paragraph at lines 563--565
+[]|\T1/lmr/m/n/10 (-20) BUSD[9]|  
  []
 
 
-Overfull \hbox (26.54672pt too wide) in paragraph at lines 551--553
+Overfull \hbox (26.54672pt too wide) in paragraph at lines 569--571
 \T1/lmr/m/n/10 (-20) organisation|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 555--557
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 573--575
 []|\T1/lmr/m/n/10 (-20) 2019|  
  []
 
 
-Overfull \hbox (26.54672pt too wide) in paragraph at lines 566--568
+Overfull \hbox (26.54672pt too wide) in paragraph at lines 584--586
 \T1/lmr/m/n/10 (-20) organisation|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 570--572
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 588--590
 []|\T1/lmr/m/n/10 (-20) 2019|  
  []
 
 
-Overfull \hbox (7.67076pt too wide) in paragraph at lines 579--581
+Overfull \hbox (7.67076pt too wide) in paragraph at lines 597--599
 \T1/lmr/m/n/10 (-20) ounce)|  
  []
 
 
-Overfull \hbox (26.54672pt too wide) in paragraph at lines 581--583
+Overfull \hbox (26.54672pt too wide) in paragraph at lines 599--601
 \T1/lmr/m/n/10 (-20) organisation|  
  []
 
 
-Overfull \hbox (9.28171pt too wide) in paragraph at lines 585--587
+Overfull \hbox (9.28171pt too wide) in paragraph at lines 603--605
 []|\T1/lmr/m/n/10 (-20) 2019|  
  []
 
 
-Overfull \hbox (25.562pt too wide) in alignment at lines 469--591
+Overfull \hbox (25.562pt too wide) in alignment at lines 487--609
  [] [] [] [] [] [] [] 
  []
 
 [4
 
 
-] <img/CDP_create.png, id=208, 319.1925pt x 487.8225pt>
+] <img/CDP_create.png, id=212, 319.1925pt x 487.8225pt>
 File: img/CDP_create.png Graphic file (type png)
 
 <use img/CDP_create.png>
-Package pdftex.def Info: img/CDP_create.png used on input line 708.
+Package pdftex.def Info: img/CDP_create.png used on input line 726.
 (pdftex.def)             Requested size: 201.59886pt x 308.10393pt.
  [5 <./img/CDP_create.png>]
-<img/CDP_destroy.png, id=225, 332.24126pt x 487.8225pt>
+<img/CDP_destroy.png, id=228, 332.24126pt x 487.8225pt>
 File: img/CDP_destroy.png Graphic file (type png)
 
 <use img/CDP_destroy.png>
-Package pdftex.def Info: img/CDP_destroy.png used on input line 797.
+Package pdftex.def Info: img/CDP_destroy.png used on input line 815.
 (pdftex.def)             Requested size: 201.60225pt x 296.00813pt.
  [6 <./img/CDP_destroy.png>] [7] [8]
 
-LaTeX Warning: Reference `TODO' on page 9 undefined on input line 1088.
+LaTeX Warning: Reference `TODO' on page 9 undefined on input line 1106.
 
 
-Overfull \hbox (13.14127pt too wide) in paragraph at lines 1093--1095
+Overfull \hbox (13.14127pt too wide) in paragraph at lines 1111--1113
 []|\T1/lmr/m/n/10 (-20) Stablecoin 
  []
 
 
-Overfull \hbox (6.30933pt too wide) in paragraph at lines 1093--1095
+Overfull \hbox (6.30933pt too wide) in paragraph at lines 1111--1113
 \T1/lmr/m/n/10 (-20) (System)|  
  []
 
 
-Overfull \hbox (5.32895pt too wide) in paragraph at lines 1095--1097
+Overfull \hbox (5.32895pt too wide) in paragraph at lines 1113--1115
 []|\T1/lmr/m/n/10 (-20) Peg|  
  []
 
 
-Overfull \hbox (16.14775pt too wide) in paragraph at lines 1097--1099
+Overfull \hbox (16.14775pt too wide) in paragraph at lines 1115--1117
 []|\T1/lmr/m/n/10 (-20) Collateral|  
  []
 
 
-Overfull \hbox (2.45306pt too wide) in paragraph at lines 1099--1101
+Overfull \hbox (2.45306pt too wide) in paragraph at lines 1117--1119
 []|\T1/lmr/m/n/10 (-20) Min. 
  []
 
 
-Overfull \hbox (17.24149pt too wide) in paragraph at lines 1101--1103
+Overfull \hbox (17.24149pt too wide) in paragraph at lines 1119--1121
 []|\T1/lmr/m/n/10 (-20) Matchmaking|  
  []
 
 
-Overfull \hbox (18.94212pt too wide) in paragraph at lines 1105--1107
+Overfull \hbox (18.94212pt too wide) in paragraph at lines 1123--1125
 []|\T1/lmr/m/n/10 (-20) Governance 
  []
 
 
-Overfull \hbox (20.39696pt too wide) in alignment at lines 1091--1109
+Overfull \hbox (20.39696pt too wide) in alignment at lines 1109--1127
  [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (24.36905pt too wide) in paragraph at lines 1110--1112
+Overfull \hbox (24.36905pt too wide) in paragraph at lines 1128--1130
 \T1/lmr/m/n/10 (-20) (MakerDAO)|  
  []
 
 
-Overfull \hbox (9.96234pt too wide) in paragraph at lines 1112--1114
+Overfull \hbox (9.96234pt too wide) in paragraph at lines 1130--1132
 []|\T1/lmr/m/n/10 (-20) USD|  
  []
 
 
-Overfull \hbox (7.38695pt too wide) in paragraph at lines 1116--1118
+Overfull \hbox (7.38695pt too wide) in paragraph at lines 1134--1136
 []|\T1/lmr/m/n/10 (-20) 150%|  
  []
 
 
-Overfull \hbox (9.62968pt too wide) in paragraph at lines 1125--1127
+Overfull \hbox (9.62968pt too wide) in paragraph at lines 1143--1145
 []|\T1/lmr/m/n/10 (-20) BitAssets 
  []
 
 
-Overfull \hbox (16.8168pt too wide) in paragraph at lines 1125--1127
+Overfull \hbox (16.8168pt too wide) in paragraph at lines 1143--1145
 \T1/lmr/m/n/10 (-20) (BitShares)|  
  []
 
 
-Overfull \hbox (13.3654pt too wide) in paragraph at lines 1127--1129
+Overfull \hbox (13.3654pt too wide) in paragraph at lines 1145--1147
 []|\T1/lmr/m/n/10 (-20) Multi|  
  []
 
 
-Overfull \hbox (7.38695pt too wide) in paragraph at lines 1131--1133
+Overfull \hbox (7.38695pt too wide) in paragraph at lines 1149--1151
 []|\T1/lmr/m/n/10 (-20) 300%|  
  []
 
 
-Overfull \hbox (16.59422pt too wide) in paragraph at lines 1140--1142
+Overfull \hbox (16.59422pt too wide) in paragraph at lines 1158--1160
 \T1/lmr/m/n/10 (-20) (Synthetix)|  
  []
 
 
-Overfull \hbox (13.3654pt too wide) in paragraph at lines 1142--1144
+Overfull \hbox (13.3654pt too wide) in paragraph at lines 1160--1162
 []|\T1/lmr/m/n/10 (-20) Multi|  
  []
 
 
-Overfull \hbox (7.38695pt too wide) in paragraph at lines 1146--1148
+Overfull \hbox (7.38695pt too wide) in paragraph at lines 1164--1166
 []|\T1/lmr/m/n/10 (-20) 750%|  
  []
 
 
-Overfull \hbox (15.9106pt too wide) in paragraph at lines 1152--1154
+Overfull \hbox (15.9106pt too wide) in paragraph at lines 1170--1172
 []|\T1/lmr/m/n/10 (-20) Centralsed, 
  []
 
 
-Overfull \hbox (5.01923pt too wide) in paragraph at lines 1155--1157
+Overfull \hbox (5.01923pt too wide) in paragraph at lines 1173--1175
 \T1/lmr/m/n/10 (-20) (QDAO)|  
  []
 
 
-Overfull \hbox (9.96234pt too wide) in paragraph at lines 1157--1159
+Overfull \hbox (9.96234pt too wide) in paragraph at lines 1175--1177
 []|\T1/lmr/m/n/10 (-20) USD|  
  []
 
 
-Overfull \hbox (5.09538pt too wide) in paragraph at lines 1159--1161
+Overfull \hbox (5.09538pt too wide) in paragraph at lines 1177--1179
 []|\T1/lmr/m/n/10 (-20) Bitcoin|  
  []
 
 
-Overfull \hbox (7.38695pt too wide) in paragraph at lines 1161--1163
+Overfull \hbox (7.38695pt too wide) in paragraph at lines 1179--1181
 []|\T1/lmr/m/n/10 (-20) 200%|  
  []
 
 
-Overfull \hbox (5.01923pt too wide) in paragraph at lines 1167--1169
+Overfull \hbox (5.01923pt too wide) in paragraph at lines 1185--1187
 \T1/lmr/m/n/10 (-20) (QDAO)|  
  []
 
 
-Overfull \hbox (20.39696pt too wide) in alignment at lines 1109--1171
+Overfull \hbox (20.39696pt too wide) in alignment at lines 1127--1189
  [] [] [] [] [] [] [] 
  []
 
-
-Underfull \vbox (badness 1584) has occurred while \output is active []
-
- [9
+[9
 
 
 ]
-Overfull \hbox (12.57002pt too wide) in paragraph at lines 1292--1294
+Overfull \hbox (12.57002pt too wide) in paragraph at lines 1310--1312
 []|\T1/lmr/m/n/10 (-20) Target|  
  []
 
 
-Overfull \hbox (4.38936pt too wide) in paragraph at lines 1294--1296
+Overfull \hbox (4.38936pt too wide) in paragraph at lines 1312--1314
 []|\T1/lmr/m/n/10 (-20) Stabilisation 
  []
 
 
-Overfull \hbox (15.32768pt too wide) in paragraph at lines 1296--1298
+Overfull \hbox (15.32768pt too wide) in paragraph at lines 1314--1316
 []|\T1/lmr/m/n/10 (-20) Duration|  
  []
 
 
-Overfull \hbox (12.10254pt too wide) in paragraph at lines 1298--1300
+Overfull \hbox (12.10254pt too wide) in paragraph at lines 1316--1318
 []|\T1/lmr/m/n/10 (-20) Interest|  
  []
 
 
-Overfull \hbox (11.20244pt too wide) in paragraph at lines 1300--1302
+Overfull \hbox (11.20244pt too wide) in paragraph at lines 1318--1320
 []|\T1/lmr/m/n/10 (-20) Governance 
  []
 
 
-Overfull \hbox (18.71915pt too wide) in alignment at lines 1288--1304
+Overfull \hbox (18.71915pt too wide) in alignment at lines 1306--1322
  [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (4.80124pt too wide) in paragraph at lines 1307--1309
+Overfull \hbox (4.80124pt too wide) in paragraph at lines 1325--1327
 []|\T1/lmr/m/n/10 (-20) USD|  
  []
 
 
-Overfull \hbox (1.80884pt too wide) in paragraph at lines 1311--1313
+Overfull \hbox (1.80884pt too wide) in paragraph at lines 1329--1331
 []|\T1/lmr/m/n/10 (-20) Voted|  
  []
 
 
-Overfull \hbox (4.38742pt too wide) in paragraph at lines 1313--1315
+Overfull \hbox (4.38742pt too wide) in paragraph at lines 1331--1333
 []|\T1/lmr/m/n/10 (-20) Voted|  
  []
 
 
-Overfull \hbox (8.39674pt too wide) in paragraph at lines 1315--1317
+Overfull \hbox (8.39674pt too wide) in paragraph at lines 1333--1335
 \T1/lmr/m/n/10 (-20) (NuShares)|  
  []
 
 
-Overfull \hbox (6.57063pt too wide) in paragraph at lines 1320--1322
+Overfull \hbox (6.57063pt too wide) in paragraph at lines 1338--1340
 []|\T1/lmr/m/n/10 (-20) None|  
  []
 
 
-Overfull \hbox (19.5195pt too wide) in paragraph at lines 1324--1326
+Overfull \hbox (19.5195pt too wide) in paragraph at lines 1342--1344
 []|\T1/lmr/m/n/10 (-20) Unlimited|  
  []
 
 
-Overfull \hbox (1.40953pt too wide) in paragraph at lines 1326--1328
+Overfull \hbox (1.40953pt too wide) in paragraph at lines 1344--1346
 []|\T1/lmr/m/n/10 (-20) None|  
  []
 
 
-Overfull \hbox (4.80124pt too wide) in paragraph at lines 1338--1340
+Overfull \hbox (4.80124pt too wide) in paragraph at lines 1356--1358
 []|\T1/lmr/m/n/10 (-20) USD|  
  []
 
 
-Overfull \hbox (4.38742pt too wide) in paragraph at lines 1344--1346
+Overfull \hbox (4.38742pt too wide) in paragraph at lines 1362--1364
 []|\T1/lmr/m/n/10 (-20) Voted|  
  []
 
 
-Overfull \hbox (18.71915pt too wide) in alignment at lines 1304--1355
+Overfull \hbox (18.71915pt too wide) in alignment at lines 1322--1373
  [] [] [] [] [] [] 
  []
 
@@ -1595,107 +1593,87 @@ Overfull \hbox (18.71915pt too wide) in alignment at lines 1304--1355
 
 
 ] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 1604--1607
-[]$\T1/lmr/m/n/10 (+20) https : / / repository . tudelft . nl / islandora / obj
-ect / uuid :
+Underfull \hbox (badness 2495) in paragraph at lines 1633--1636
+[]\T1/lmr/m/n/10 (+20) [5] JP-Mor-gan Chase & Co., ``J.P.Morgan coin an-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1604--1607
-\T1/lmr/m/n/10 (+20) c51ac99d-[]3013-[]44b3-[]8ddd-[]fbd951a2454a$[], MONTHH-
- []
-
-
-Underfull \vbox (badness 2409) has occurred while \output is active []
-
-
-Underfull \hbox (badness 2495) in paragraph at lines 1630--1633
-[]\T1/lmr/m/n/10 (+20) [8] JP-Mor-gan Chase & Co., ``J.P.Morgan coin an-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1635--1637
-[]\T1/lmr/m/n/10 (+20) [9] ``Li-bra whitepa-per.'' []$https : / / libra . org /
+Underfull \hbox (badness 10000) in paragraph at lines 1638--1640
+[]\T1/lmr/m/n/10 (+20) [6] ``Li-bra whitepa-per.'' []$https : / / libra . org /
  en-[]US /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1639--1642
+Underfull \hbox (badness 10000) in paragraph at lines 1642--1645
 []$\T1/lmr/m/n/10 (+20) https : / / tether . to / wp-[]content / uploads / 2016
  / 06 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1673--1676
+Underfull \hbox (badness 1360) in paragraph at lines 1651--1653
+[]\T1/lmr/m/n/10 (+20) [9] Charles Cas-car-illa, ``PAXos whitepa-per.'' []$http
+s : / /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1676--1679
 \T1/lmr/m/n/10 (+20) com / wp-[]content / uploads / X8-[]Project-[]TGE-[]Whitep
 aper .
  []
 
 [12]
-Underfull \hbox (badness 1838) in paragraph at lines 1718--1721
-[]\T1/lmr/m/n/10 (+20) [28] J. P. Kon-ing, ``Fed-coin_Central_Bank_R3.pdf,''
+Underfull \hbox (badness 1838) in paragraph at lines 1721--1724
+[]\T1/lmr/m/n/10 (+20) [25] J. P. Kon-ing, ``Fed-coin_Central_Bank_R3.pdf,''
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1718--1721
+Underfull \hbox (badness 10000) in paragraph at lines 1721--1724
 []$\T1/lmr/m/n/10 (+20) https : / / www . r3 . com / reports /
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1737.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1740.
 [13
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1737.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1740.
  (./Survey.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1737.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1737.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1740.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1740.
 
+Package rerunfilecheck Info: File `Survey.out' has not changed.
+(rerunfilecheck)             Checksum: 2045C89A41F0D39FFC3D62BF013879D9;7571.
 
-
-Package rerunfilecheck Warning: File `Survey.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Survey.out':
-(rerunfilecheck)             Before: B1999A882BA19C83E64E16E5915A91D7;7898
-(rerunfilecheck)             After:  2045C89A41F0D39FFC3D62BF013879D9;7571.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1737.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1740.
  ) 
 Here is how much of TeX's memory you used:
- 13625 strings out of 493013
- 201177 string characters out of 6135682
- 318633 words of memory out of 5000000
- 16732 multiletter control sequences out of 15000+600000
+ 13616 strings out of 493013
+ 200819 string characters out of 6135682
+ 320619 words of memory out of 5000000
+ 16728 multiletter control sequences out of 15000+600000
  191904 words of font info for 169 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,8n,38p,445b,424s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.5.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.5.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm/l
-mbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/f
-onts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
-Output written on Survey.pdf (13 pages, 495061 bytes).
+ 32i,8n,38p,452b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/type1/public/lm
+/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcs
+c10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sha
+re/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
+Output written on Survey.pdf (13 pages, 495038 bytes).
 PDF statistics:
- 427 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
- 130 named destinations out of 1000 (max. 500000)
- 12591 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 422 PDF objects out of 1000 (max. 8388607)
+ 378 compressed objects within 4 object streams
+ 125 named destinations out of 1000 (max. 500000)
+ 12599 words of extra memory for PDF output out of 14400 (max. 10000000)
 
