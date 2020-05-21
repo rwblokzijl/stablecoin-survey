@@ -125,6 +125,7 @@ consumption and transfer from one period of time to another
 All these aspects must be managed in any successful currency. Points 2, 3 and
 possibly 5 are where cryptocurrencies have added value, through their digital
 and decentralised natures.
+
 Points 1 and 4, the future usefulness of the currency and it's market demand,
 are where cryptocurrencies still fall short of traditional currencies. If
 cryptocurrencies are going to replace traditional currencies, they have to meet
@@ -180,7 +181,7 @@ transactions.
 
 ## Traditional means of stabilising a currency
 
-## Collateralization
+### Collateralization
 
 The easiest way to keep a currency stable is to simply have it derive its value
 from a different asset that already has the desired stability. This is called
@@ -211,26 +212,36 @@ collateral is called a market maker. In this survey two main categories of
 market makers will make an appearance, centralised organisations and
 decentralised systems.
 
-## Quantitative easing, interest rates and capital requirements.
+### Open market operations, interest rates and capital requirements.
 
 TODO: Find a paper to cite for this
+TODO: Reorganise this chapter
 
-Relying on other currencies for your stability doesn't solve the problem as it
-kicks the can down the road. In the end there has to be a currency that is
-stable by itself. Where this used to be gold, in modern times, the biggest most
-sought after currencies have abandoned this gold standard for the fiat way.
-Aiming to take away the cumbersome restrictions that come with a pegged
-currency, while maintaining the social credit system and value intermediary
-money has become.
+In order to harness the full power of monetary policy, and to be able to expand
+the money supply beyond it's gold reserves, governments took their currency of
+the gold standard. After the great depression many countries saw no other way to
+get their economies back on track and save their failing banks, then expanding
+the money supply beyond it's gold reserves.
 
-In the current financial system central banks play with all 3 dials of the
-quantity theory of money to balance the liquidity requirements of the market
-with the value of the currency.
+Relying on other currencies for stability doesn't solve the problem as it just
+kicks the can down the road. At the bottom of the stack there has to be a
+currency that is stable by itself.
+
+In the current financial system central banks user all 3 dials of the quantity
+theory of money to balance the liquidity requirements of the market with the
+value of the currency.
+
+Where this used to be gold, in modern times,
+the biggest most sought after currencies have abandoned this gold standard for
+the fiat way. They aim to take away the cumbersome restrictions that come with a
+pegged currency, while maintaining the social credit system and value
+intermediary money has become.
+
 
 Quantitative easing is the buying of government bonds or other financial assets
 by a central bank, with money that doesn't exist. This is done to increase the
-money supply $M$, which in turn promotes the velocity of money. This is often
-done in times of crisis to provide liquidity into a market.
+money supply $M$, which in turn promotes the velocity of money $V$. This is
+often done in times of crisis to provide liquidity into a market.
 
 [LEFT HERE]
 
