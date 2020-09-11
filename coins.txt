@@ -1,0 +1,75 @@
+AAA Reserve
+Bridgecoin
+Digix Gold Token
+Gemini Dollar
+Globcoin
+HelloGold
+Kowala
+Monerium
+NOS
+Paxos
+Standard
+
+Phi
+SAGA
+STASIS
+Stronghold
+USD
+Tether
+
+Token
+TrueUSD
+White
+Standard
+x8c
+
+---
+
+Augmint
+BitUSD
+Boreal (Aurora)
+Celo
+DAI (Maker)
+
+FiatPeg
+Goldmint
+LibreCash
+Nomins
+OnRamp
+
+Peblik
+////Pier
+StatiCoin
+SwissRealCoin
+
+---
+
+Basis
+BitBay
+Carbon
+Corion
+Fragments
+
+NuBits
+Reserve
+Stable
+Stableunit
+SteemDollars
+
+Terra
+Unum
+Xank
+
+Coin Payment Processor
+Jibrel
+
+Alchemint
+(TBD)CryptoPeg
+(TBD)Freedium
+MinexCoin
+Moxey
+
+(TBD)Polys (Topl)
+(TBD)Stably (StableUSD)
+(TBD)Standard.One
+USD Coin (CENTRE)
