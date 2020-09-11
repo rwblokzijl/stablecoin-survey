@@ -3,84 +3,14 @@ title: Dirty notes
 
 ---
 
-# Notes to remember when writing:
-
-## intro
-
-Bitcoin (just like gold) is a hedge against the financial system
-Defi is developing out of the stablecoin solutions
-
-## background
-
-Why runaway inflation is bad
-Why runaway deflation is bad
-
-## Discussion
-
-Comparison between the coins, their usefullness and where they apply
-
-# TO Do
-
-## Visuals
-
-- Literature table
-- Explaning some concepts in images (throughout the file)
-    - page 1 intro pic
-        * market share???
-    - general taxonomy
-        - taxonomy describing categories
-        * triangle of stablecoins
-    - centralised
-        - exchange mechanism
-    - decentralised
-        - cdp mechanism for collatoral
-        - demand and supply curve of algorithmic
-
-## Rewrites
-- done
--  centralised (permissioned)
-1. todo
-1. decentralised (permissionless)
-    1.algorithmic
-1. General Theory (Wednesday)
-1. discussion
-    1. Future Research
-1. conclusion
-
-1. background
-1. introduction
-1. abstract
-
-
 # Introduction notes
 
 What to warm people up for:
  - A fully trustless and decentralised market for derivitives stabalising
- currencies.
+   currencies.
  - A case study on how to implement a derivitive
 
 In this survey we aim to classify one aspect of this overlay:
-
-# Reading list in order:
-
-|---|--------------------------------------------------------------------|---|
-| 1 | APG Email                                                          | x |
-| 2 | Money Routing by Trusting Strangers with your Funds - 08696786.pdf | x |
-| 3 | How to make a digital currency on a blockchain stable              |   |
-| 4 | Duffie digital payments                                            |   |
-| 5 | Ipv8 paper????                                                     |   |
-| 6 | Wikipedia                                                          |   |
-| 7 | Are Stable Coins Stable? - Usman W. Chohan, MBA, PhD               |   |
-| 8 | Coin whitepapers                                                   |   |
-
-| Have | !Have |
-| Hodl | buy   |
-
-| Positive | Have | !Have |
-| ---      | ---  | ---   |
-| Spend    |      |       |
-| !Spend   |      |       |
-
 
 # Notes per read item
 
@@ -145,8 +75,6 @@ and economic implications of having stablecoins. Duffie claims they can only be
 centrally controlled (in practice) but this is semi-disproven by MakerDAO.
 
 # Questions:
-
- -
 
  Requirements for a good stablecoin:
 
@@ -247,9 +175,6 @@ https://github.com/Tribler/tribler/issues/4044
 
 # Sources
 
-
-
-
 | Defunct:    |
 |-------------|
 | Kowala      |
@@ -263,9 +188,6 @@ https://github.com/Tribler/tribler/issues/4044
 | TrueUSD                   | 35         | Dollar    | No             |
 | Dai (MakerDAO)            | 59         | Dollar    | Yes            |
 | Stasis Euro               | 96         | Euro      | No             |
-
-
-
 
 # Centralised
 
@@ -418,9 +340,9 @@ peg needed for trading platform, maintains rollong peg by freezing users coins
 | [augmint](https://docs.google.com/document/d/1IQwGEsImpAv2Nlz5IgU_iCJkEqlM2VUHf5SFkcvb80A/edit?usp=sharing) |
 | [AuroraDAO](https://auroradao.com/whitepaper/Aurora-Labs-Whitepaper-V0.9.7.pdf)                             |
 
-# Paper in few sentences:
 
 # Intro
+
 Stablalising a currency is very useful.
 
 Stablalising a currency is always done through market makers. By incentivising
@@ -468,9 +390,12 @@ Global enforcement based on contracts
 
 
 
-# OLD TEXTS::
+# background notes
 
-
+- Talk about varying therories of money
+    - Quantity
+    - Supply and demand
+    -
 
 # OLD CENTRALISED TEXT
 
@@ -682,7 +607,54 @@ Of course, stablecoins as a pegged currency are only a band aid on the real
 problem. Cryptocurrencies need to be stable on their own if they are ever going
 to replace fiat currencies.
 
+### Practice
+
+In practice we have seen some notable distributed cryptocurrencies attempt to
+create a stable cryptocurrency without collateral.
+
+The first stablecoin to be stable for a year was Nubits[@Nubits:whitepaper].
+Nubits incentivised holders to park currency during low demand periods. They
+successfully recovered from a large demand shock in 2016, but after the crash of
+2017-2018 it lost its peg again and never recovered.
+
+BitBay [@BitBay:whitepaper] is a cryptocurrency by the trading platform BitBay.
+BitBay suggests a "dynamic rolling peg" a system whereby all users of the
+system vote on the inflation and deflation of the supply for an interval. BitBay
+also freezes the fastest assets for a period of time. Going back to the
+quantity theory of money, this corresponds to changing the velocity of the money
+rather than the supply.
+
+Just like Nubits and BitBay, Anchor[@Anchor:whitepaper] incentivises holders of
+the currency ANCT to trade it for DOCT when the currency is listed at under 1
+"MMU". When the price of the currency goes above 1 "MMU" the holders of DOCT are
+incentivised to get their ANCT back. In this way anchor found a way to reduce
+the money supply and thus the price. As opposed to being pegged to the dollar it
+is pegged to the "Global Economic Growth" by MMU oracle (Monetary Measurement
+Unit). Anchor just launched so very little information is available about their
+success or failure.
+
+Ampleforth [@Ampleforth:whitepaper] doesn't call itself a stablecoin. It doesn't
+aim to maintain a stable price, it just aims to be uncorrelated with both Bitcoin
+and the real world financial markets. While Ample does maintain a peg to a
+target, the system does not aim to maintain the value in its holders accounts.
+Say the price of Ample doubles due to high demand. Ampleforth will double all
+existing coins in place to make 1 coin equal to the target again. A rebase of
+the price happens at most every 24 hours.
+
+Basis[@Basis:whitepaper] was a project that aimed to stabilise a currency by
+auctioning bonds for its coin during a time of low prices to decrease the money
+supply. These bonds can then be redeemed at a time of high demand for exactly 1
+basis. This mechanism is similar to that of freezing assets, just that the
+frozen assets are referred as bonds in this case. Basis never launched.
+
+
 ### Theory
+
+#### start old sentences
+A number of papers [cite] propose cryptocurrency parameters that dynamically
+respond to changes in supply and demand.
+
+#### end old sentences
 
 When it comes to algorithmic stability of blockchain currencies, there is a lot
 more academic research available. Most actual working blockchain based
@@ -741,43 +713,192 @@ Since it is not possible to withdraw currency directly from the market, Iwamura
 argues for some rate of inflation to absorb demand shocks. Iwamura argues for a
 depreciation rate applied by gradually increasing the mining rewards.
 
-### Practice
+# OLD DISCUSSION
 
-In practice we have seen some notable distributed cryptocurrencies attempt to
-create a stable cryptocurrency without collateral.
+Besides the papers describing techniques, some research has been done into
+existing stablecoins, quantifying their prevalence, and discussing their
+criticisms.
 
-The first stablecoin to be stable for a year was Nubits[@Nubits:whitepaper].
-Nubits incentivised holders to park currency during low demand periods. They
-successfully recovered from a large demand shock in 2016, but after the crash of
-2017-2018 it lost its peg again and never recovered.
+In [@DuffieDigital_and_Fast_Payment_Systems] Darrel Duffie describes the use of
+stablecoins for banks aiming to digitise both inter-organisation value transfer
+and governments wanting to implement a digital currency with the utility
+benefits of cryptocurrencies and the stability of fiat.
 
-BitBay [@BitBay:whitepaper] is a cryptocurrency by the trading platform BitBay.
-BitBay suggests a "dynamic rolling peg" a system whereby all users of the
-system vote on the inflation and deflation of the supply for an interval. BitBay
-also freezes the fastest assets for a period of time. Going back to the
-quantity theory of money, this corresponds to changing the velocity of the money
-rather than the supply.
+Chohan discusses the difficulties in maintaining a properly collateralized peg
+in "Are Stable Coins Stable?"[@Are_Stable_Coins_Stable]. Chohan describes how
+maintaining a true 1:1 peg leads to funding and scalability issues.
 
-Just like Nubits and BitBay, Anchor[@Anchor:whitepaper] incentivises holders of
-the currency ANCT to trade it for DOCT when the currency is listed at under 1
-"MMU". When the price of the currency goes above 1 "MMU" the holders of DOCT are
-incentivised to get their ANCT back. In this way anchor found a way to reduce
-the money supply and thus the price. As opposed to being pegged to the dollar it
-is pegged to the "Global Economic Growth" by MMU oracle (Monetary Measurement
-Unit). Anchor just launched so very little information is available about their
-success or failure.
+In "The State of Stablecoins"[@THE_STATE_OF_STABLECOINS] the "blockchain team"
+present an empirical study of 57 live and pre-launch stablecoins showing
+adoption, trading volume and market cap. They describe a taxonomy where they
+differentiate between "traditional" collateralized, crypto collateralized and
+algorithmic. They describe many pros and cons of these types of coins. The
+survey is very extensive and describes all 57 currencies in terms of their
+investors, tech, legal structure and collateral format.
 
-Ampleforth [@Ampleforth:whitepaper] doesn't call itself a stablecoin. It doesn't
-aim to maintain a stable price, it just aims to be uncorrelated with both Bitcoin
-and the real world financial markets. While Ample does maintain a peg to a
-target, the system does not aim to maintain the value in its holders accounts.
-Say the price of Ample doubles due to high demand. Ampleforth will double all
-existing coins in place to make 1 coin equal to the target again. A rebase of
-the price happens at most every 24 hours.
+In "Stablecoins in Cryptoeconomics. From Initial Coin Offerings (ICOs) to
+Central Bank Digital Currencies"[@Stablecoins_in_Cryptoeconomics] Erba discusses
+the stablecoins in the context of the law in both the united states and Europe.
+Erba argues for crypto-currencies "fully backed by Central Bank reserves"
 
-Basis[@Basis:whitepaper] was a project that aimed to stabilise a currency by
-auctioning bonds for its coin during a time of low prices to decrease the money
-supply. These bonds can then be redeemed at a time of high demand for exactly 1
-basis. This mechanism is similar to that of freezing assets, just that the
-frozen assets are referred as bonds in this case. Basis never launched.
+In "Stablecoin: Yet Another Layer of Cryptocurrency
+Complexity"[@Stablecoin:_Yet_Another_Layer_of_Cryptocurrency_Complexity] Lee
+looks at the way that stablecoins can fit into the modern legal system. Lee
+argues for Bankruptcy Courts to treat stablecoins as a commodity as opposed to a
+currency.
+
+In [@Fedcoin] Koning describes the requirements and considerations for a stable
+currency controlled by a central bank. Koning describes the monetary policy and
+choices that comes along with implementing a digital currency on a large scale.
+
+In [@In_stability_for_the_Blockchain] Klages-Mundt et al. look at the existing
+stablecoins through a critical lens and describe some ways in which the currency
+pegs can be broken. Klages-Mundt build a generalised model of decentralised
+crypto-collateralized stablecoins. It describes possible attacks on these
+systems where the pegged currency is bid up so an extent where collateral starts
+to get margin-called creating a run-away feedback loop.
+
+# OLD INTRODUCTION
+
+Centralisation, non-transparency and a trillion dollar lawsuit would normally
+lead to crypto investors avoiding you like the plague. For Tether however it
+lead to a market cap of over 4 Billion dollars. With Tether currently being the
+most the most traded cryptocurrency despite its controversies we are left to
+wonder what makes a coin that trades at 1 dollar so attractive to investors.
+
+Cryptocurrencies have so far been notoriously volatile in price. Making the
+assets unsuited for both investments in the long term, and payments in the short
+term.
+
+Another need for price-stable currencies exists among crypto traders. When the
+crypto-markets decrease in value, the entire market tends move as a whole. In
+this case traders want to move their assets out of the volatile "new world"
+assets and into traditional currencies like the Dollar to wait out de dip in de
+market. However these transactions are limited by the speed of the old payment
+networks. A coin that is stable with respect to the US Dollar would solve this
+problem by allowing traders to change positions between the Dollar and crypto
+currencies in a quick, decentralised[@Money_as_IOUs_in_Social_Trust_Networks]
+and programmable [@TrustChain] way.
+
+With Tether having proves the need for a stablecoin, many cryptocurrencies have
+followed, some solving problems of those who have come before. MakerDAOs DAI
+[@MakerDAO:whitepaper], currently the 5th biggest stablecoin and the 52th
+biggest cryptocurrency with a market cap of 103 million USD, aims to be a fully
+decentralised stablecoin that maintains a value of 1 USD. Dai provides a coin
+that enables distributed peer-to-peer lending with the stability of the Dollar
+while having no centralised component.
+
+[triangle]: img/Triangle.png
+![Inherent trade-offs of stablecoins \label{triangle_label}][triangle]
+
+[intro]: img/intro.png
+![Taxonomy of stablecoins \label{intro_label}][intro]
+
+MakerDAO is part of a bigger movement. The Decentralised Finance movement is
+an open community of decentralised financial platforms that aims to
+revolutionise the financial world by replacing many of the worlds financial
+systems. Within this project there are a number of stablecoins and other tokens
+that are pegged to real world assets that use decentralised techniques for
+providing financial derivatives.
+
+This survey presents a history of the significant stablecoins and pegged assets
+invented so far, and classifies and generalises the techniques that are common
+among them.
+
+First we discuss the topic of the purpose of money, the meaning of value and
+stability, and some currency pegs used in our traditional monetary system in
+Chapter 2. We then describe the simplest and most successful stablecoins, namely
+the centralised coins in Chapter 3. In Chapter 4 we go into the more complex
+topic of decentralised assets and their methods for maintaining pegs to real
+world assets without a central party guaranteeing the peg. We then go deeper
+into the theory in Chapter 5 where we look at the research into the viability of
+stablecoins. We then end with a discussion of the research on stablecoins in
+Chapter 6 and a conclusion of the survey in Chapter 7.
+
+# Johan notes
+
+## total
+(johan brief remarks: writing style, remove negativities, citations, "immature?"
+and first table; then discuss it)
+
+* "mostly theoretical way of creating a stablecoin is to simply promise as
+ an organisation that your coin is going to be stable"; Great point. Make
+ this a bit more principled by giving it a fitting name: "Blue Eyes
+ Backed", for instance.
+
+## intro
+
+ - 1st line intro stuff: stable coins are a promise to offer all the advantages
+ of the digital world, while being as reliable as a briefcase of 500 Euro notes.
+ (easy on the content, easy to read, easy to understand)
+ -
+
+ - intro not yet re- written
+ - Rewrite intro of Facebook Libra dominance, instead of Tether
+
+ * consider making the tone boring and solid:
+    + Replace Tether with ECB and German bank club
+    * [Central bank digital currencies by European Central Bank](
+      https://www.ecb.europa.eu/press/key/date/2018/html/ecb.sp180514_4.en.html)
+    * [German bankenverband.de : crypto-based Euro](
+      https://bankenverband.de/newsroom/comments/programmable-digital-euro/)
+
+
+## Layout:
+
+- Catchy intro
+    - What are stablecoins and what do they promise
+    - fixes the shortcoming of earlier cryptos
+    - with the potential that comes with it
+
+- who are the players in the game
+    - Rewrite intro of Facebook Libra dominance, instead of Tether
+    - Mention tether, and makerdao
+
+- what are the central themes of stablecoins
+    - a stable exchange price needs to be guaranteed
+    - price follows guarantees on exchange
+
+- how to the different branches of stablecoins emerge from this
+    - Centralised stablecoins offer the guarantees by centralisation
+        - This allows for high stability
+        - trust is dependent by reputation (Blue eyes promise)
+    - Decentralised stablecoins create guarantees by market forces
+        - trust is cultuvated by decentralisation and technology (idealistic promise)
+    - Include images
+
+- Inherent tradeoffs between the systems
+
+- How is this paper structured to capture this
+    - Background, centralisation, decentralisation, discussion, conclusion
+
+In this paper we first discuss the topic of the purpose of money, the meaning of
+value and stability, and some currency pegs used in our traditional monetary
+system in Chapter 2. We then describe the simplest and most successful
+stablecoins, namely the centralised coins in Chapter 3. In Chapter 4 we go into
+the more complex topic of decentralised assets and their methods for maintaining
+pegs to real world assets without a central party guaranteeing the peg. We then
+go deeper into the theory in Chapter 5 where we look at the research into the
+viability of stablecoins. We then end with a discussion of the research on
+stablecoins in Chapter 6 and a conclusion of the survey in Chapter 7.
+
+## Discussion
+ * systemic pegging risks (discussion):
+    + first define term
+    * counter-party risk around collateral
+    * capacity limits, no operational layer 1 can support 22% of the world economy (e.g. The Euro)
+    * then layer 1 attacks: transaction spam on Ethereum, each Tx costs \$1000?
+    * technical design flaw, current SHA1 end-of-life show what may happen
+    * We discover other system risk in the architecture itself [like pre-computation using Rainbow table](https://en.wikipedia.org/wiki/Rainbow_table)
+    + are crypto-pegged currencies as dangerous as sub-prime mortgages or can they be made safe?
+    * During a financial crisis the evaporation of value in MakerDAO erodes all
+      "Tier 1" capital. Instant correlated need for capital by all players in
+      the pegged crypto market. "capital run". Explain this principle and give
+      it a gloomy name: _**sub-prime cypto**_.
+    * _using a volatile crypto and an atomic swap to simulate a a stable
+      currency is inherently unstable_
+    * @Bloodyfool _since the whole crypto industry is correlated and
+      self-amplifying, they all go down together_
+    * the need for Tesla, Nike, thorium-ore, and Apple stock to de-correlate
+      collateral
 
