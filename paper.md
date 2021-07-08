@@ -14,11 +14,34 @@ numbersections: yes
 lang: en
 babel-lang: english
 abstract: |
-  Stablecoins are hot in the crypto space. With the 5th largest cryptocurrency
-  and stablecoin Tether, now the subject of a trillion dollar lawsuit, many look
-  to other stablecoins as a safe store of value. The techniques used by these
-  coins vary massively. This survey discusses techniques used by the largest and
-  most promising stablecoins to hold a stable value.
+
+    Stablecoins are a hot topic in the crypto space. With the original
+    cryptocurrencies like Bitcoin and Ethereum garnering a lot of interest
+    because of their volatile natures and consequently exiting investment
+    opportunities, other cryptocurrencies fill the opposite niche in the market.
+
+    Today many stablecoins are exploring the techical and financial
+    opportunities of providing a currency that maintains its value over time
+    independent of the movements in the crypto space.
+
+    With the 3th largest cryptocurrency and stablecoin Tether breaking a market
+    cap of 63 Billion Dollars lawsuit, it is becoming clear thatstablecoins are
+    a real contender in the race for the future of money.
+
+    Systems like MakerDAO are combining financial derivatives with smart
+    contracts to create a completely distributed and open market that
+    dynamically stabilises a token.
+
+    Other initiatives like Facebooks Diem (previously Libra), are presenting
+    themselves as the next world currency providing a stable store of value and
+    medium of exchange to the world, all the while being controlled by a
+    handfull of multinational companies.
+
+    It is clear that not all stablecoins are created equal, the techniques used
+    and their implications on security, privacy and control, vary massively. In
+    this paper we survey the techniques used by the largest and most prominent
+    stablecoins and organise them into a taxonomy based on their features and
+    implications.
 
 ---
 
@@ -387,18 +410,29 @@ To provide a glimpse of the usage of the techniques described in this
 subsection, Table \ref{TODO} describes the 8 central stablecoins with the
 highest market capitalisation and some of their operational aspects:
 
-| Stablecoin                    | Market Cap      | Pegged asset   | Escrow               | FDIC-insurance | Launch | Notes                                                            |
-|-------------------------------|-----------------|----------------|----------------------|----------------|--------|------------------------------------------------------------------|
-| Tether[@Tether:whitepaper]    | 4 Trillion USD  | USD            | Single organisation  | No             | 2014   | Largest Stablecoin, 4th largest cryptocurrency                   |
-| USDC[@Centre:whitepaper]      | 464 Million USD | USD            | Single organisation  | Some exchanges | 2018   | Created and owned by various crypto exchanges                    |
-| PAXos[@PAXos:whitepaper]      | 238 Million USD | USD            | Single organisation  | Yes            | 2018   | Regulated by the New York State Department of Financial Services |
-| TrueUSD[@TrueUSD:whitepaper]  | 161 Million USD | USD            | Multiple independent | Some escrows   | 2018   | Distributes risk with multiple independent escrows               |
-| Stasis[@Stasis:whitepaper]    | 35 Million USD  | Euro           | Multiple independent | No             | 2018   | Largest Euro Stablecoin                                          |
-| BUSD[@PAXos:whitepaper]       | 18 Million USD  | USD            | Single organisation  | Yes            | 2019   | Issued by PAXos for the Binance exchange                         |
-| USDK                          | 28 Million USD  | USD            | Single organisation  | No             | 2019   | Owned and operated by the oklink exchange                        |
-| PAX Gold[@PAXGold:whitepaper] | 12 Million USD  | Gold (1 ounce) | Single organisation  | No             | 2019   | Gold held in custody by PAXos Trust Company                      |
+\begin{table*}[t]
+\caption{8 largest stablecoins by marketcap}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l l}
+\toprule
+Stablecoin                    & Market Cap      & Pegged asset   & Escrow               & FDIC-insurance & Launch & Notes                                                            \\
+\midrule
+Tether[@Tether:whitepaper]    & 4 Trillion USD  & USD            & Single organisation  & No             & 2014   & Largest Stablecoin, 4th largest cryptocurrency                   \\
+USDC[@Centre:whitepaper]      & 464 Million USD & USD            & Single organisation  & Some exchanges & 2018   & Created and owned by various crypto exchanges                    \\
+PAXos[@PAXos:whitepaper]      & 238 Million USD & USD            & Single organisation  & Yes            & 2018   & Regulated by the New York State Department of Financial Services \\
+TrueUSD[@TrueUSD:whitepaper]  & 161 Million USD & USD            & Multiple independent & Some escrows   & 2018   & Distributes risk with multiple independent escrows               \\
+Stasis[@Stasis:whitepaper]    & 35 Million USD  & Euro           & Multiple independent & No             & 2018   & Largest Euro Stablecoin                                          \\
+BUSD[@PAXos:whitepaper]       & 18 Million USD  & USD            & Single organisation  & Yes            & 2019   & Issued by PAXos for the Binance exchange                         \\
+USDK                          & 28 Million USD  & USD            & Single organisation  & No             & 2019   & Owned and operated by the oklink exchange                        \\
+PAX Gold[@PAXGold:whitepaper] & 12 Million USD  & Gold (1 ounce) & Single organisation  & No             & 2019   & Gold held in custody by PAXos Trust Company                      \\
+\bottomrule
+\end{tabularx}
+\label{table-tab2}
+\end{center}
+\end{table*}
 
-<!-- Table: 8 largest stablecoins by marketcap -->
+
+
 
 Some interesting observations can be made from the table.
 
@@ -805,13 +839,39 @@ allows easy movement between them.
 
 As can be seen in \ref{TODO} There are a few large players in the crypto collateralized stablecoin scene.
 
+\begin{table*}[t]
+\caption{A second table}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l l}
+\toprule
+Stablecoin (System)   & Peg   & Collateral       & Min. col. & Matchmaking                   & Interest paid                        & Governance (token)   \\
+\midrule
+DAI (MakerDAO)        & USD   & Ether (and more) & $150\%$      & Reserve bank speculator model & To Speculator (external)             & DAO (MKR)            \\
+BitAssets (BitShares) & Multi & BTS              & $300\%$      & Margin Trading                & Variable premium, once to speculator & DAO (BTS)            \\
+Synths (Synthetix)    & Multi & SNX              & $750\%$      & Debt-Pool Tracker             & Global interest calculation          & Centralsed, DAO soon \\
+USDQ (QDAO)           & USD   & Bitcoin          & $200\%$      & Reserve bank speculator model & To Speculator (external)             & DAO (QDAO)           \\
+\bottomrule
+\end{tabularx}
+\label{table-tab2}
+\end{center}
+\end{table*}
 
-| Stablecoin (System)   | Peg   | Collateral       | Min. col. | Matchmaking                   | Interest paid                        | Governance (token)   |
-|-----------------------|-------|------------------|-----------|-------------------------------|--------------------------------------|----------------------|
-| DAI (MakerDAO)        | USD   | Ether (and more) | 150%      | Reserve bank speculator model | To Speculator (external)             | DAO (MKR)            |
-| BitAssets (BitShares) | Multi | BTS              | 300%      | Margin Trading                | Variable premium, once to speculator | DAO (BTS)            |
-| Synths (Synthetix)    | Multi | SNX              | 750%      | Debt-Pool Tracker             | Global interest calculation          | Centralsed, DAO soon |
-| USDQ (QDAO)           | USD   | Bitcoin          | 200%      | Reserve bank speculator model | To Speculator (external)             | DAO (QDAO)           |
+\begin{table*}[t]
+\caption{A second table}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l l}
+\toprule
+Stablecoin (System)   & Peg   & Collateral       & Min. col. & Matchmaking                   & Interest paid                        & Governance (token)   \\
+\midrule
+DAI (MakerDAO)        & USD   & Ether (and more) & $150\%$      & Reserve bank speculator model & To Speculator (external)             & DAO (MKR)            \\
+BitAssets (BitShares) & Multi & BTS              & $300\%$      & Margin Trading                & Variable premium, once to speculator & DAO (BTS)            \\
+Synths (Synthetix)    & Multi & SNX              & $750\%$      & Debt-Pool Tracker             & Global interest calculation          & Centralsed, DAO soon \\
+USDQ (QDAO)           & USD   & Bitcoin          & $200\%$      & Reserve bank speculator model & To Speculator (external)             & DAO (QDAO)           \\
+\bottomrule
+\end{tabularx}
+\label{table-tab2}
+\end{center}
+\end{table*}
 
 MakerDAO is currently the largest most trusted system. They now allow for
 multiple different types of collateral, including Ether, BAT, REP and X0. They
@@ -911,13 +971,25 @@ function that maps price target mismatch to bond parameters.
 
 ### Overview of real world non-collateralized stabilising
 
-| Stablecoin (System)                 | Target | Stabilisation Mechanism | Duration  | Interest | Governance (token) |
-|-------------------------------------|--------|-------------------------|-----------|----------|--------------------|
-| Nubits                              | USD    | Voting                  | Voted     | Voted    | DAO (NuShares)     |
-| BitBay [@BitBay:whitepaper]         | None   | Voting                  | Unlimited | None     | DAO (BitBay)       |
-| Anchor[@Anchor:whitepaper]          |
-| Basis[@Basis:whitepaper]            | USD    | Oracle                  | 5 years   | Voted    | DAO                |
-| Ampleforth [@Ampleforth:whitepaper] |
+\begin{table*}[t]
+\caption{A second table}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l}
+\toprule
+Stablecoin (System)                 & Target & Stabilisation Mechanism & Duration  & Interest & Governance (token) \\
+\midrule
+Nubits                              & USD    & Voting                  & Voted     & Voted    & DAO (NuShares)     \\
+BitBay [@BitBay:whitepaper]         & None   & Voting                  & Unlimited & None     & DAO (BitBay)       \\
+Anchor[@Anchor:whitepaper]          &        &                         &           &          &                    \\
+Basis[@Basis:whitepaper]            & USD    & Oracle                  & 5 years   & Voted    & DAO                \\
+Ampleforth [@Ampleforth:whitepaper] &        &                         &           &          &                    \\
+\bottomrule
+\end{tabularx}
+\label{table-tab2}
+\end{center}
+\end{table*}
+
+
 
 
 The first stablecoin to be stable for a year was NuBits[@Nubits:whitepaper].
