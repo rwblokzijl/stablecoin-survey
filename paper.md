@@ -98,11 +98,9 @@ use various digital versions of these techniques to achieve price stability.
 
 We first explain an economic model by which we can understand the various
 methods employed by different currencies. Then we explain the oldest concept of
-stabilisation, namely collateralisation. Finally, we explore open market
-operations utilised by modern central banks in order to stabilise the fiat
-currencies of today. This will define the relevant terms and give the necessary
-background to understand the different techniques used by the different
-stablecoins.
+stabilisation, namely collateralisation. This will define the relevant terms and
+give the necessary background to understand the different techniques used by the
+different stablecoins.
 
 ## The quantity theory of money
 
@@ -200,61 +198,6 @@ maintained even during harsh economic times.
 The concept of collatoralisations is highly utilised in stablecoins. It is the
 methods of storing and managing the collatoral that differentiates the
 currencies.
-
-## Open market operations
-
-Central banks of today no longer keep collatoral in order to stabilise their
-currencies. Instead they use a number of monetary policy options to react to
-large economic changes. The total set of monetary policy options are left out of
-scope, but 2 in particular are relevant to this paper.
-
-The first is by variying interest rates. This indirectly
-interest rates
-capital requirements
-
-TODO: Find a paper to cite for this
-TODO: Reorganise this chapter
-
-In order to harness the full power of monetary policy, and to be able to expand
-the money supply beyond it's gold reserves, governments took their currency of
-the gold standard. After the great depression many countries saw no other way to
-get their economies back on track and save their failing banks, then expanding
-the money supply beyond it's gold reserves.
-
-Relying on other currencies for stability doesn't solve the problem as it just
-kicks the can down the road. At the bottom of the stack there has to be a
-currency that is stable by itself.
-
-In the current financial system central banks user all 3 dials of the quantity
-theory of money to balance the liquidity requirements of the market with the
-value of the currency.
-
-Where this used to be gold, in modern times,
-the biggest most sought after currencies have abandoned this gold standard for
-the fiat way. They aim to take away the cumbersome restrictions that come with a
-pegged currency, while maintaining the social credit system and value
-intermediary money has become.
-
-Quantitative easing is the buying of government bonds or other financial assets
-by a central bank, with money that doesn't exist. This is done to increase the
-money supply $M$, which in turn promotes the velocity of money $V$. This is
-often done in times of crisis to provide liquidity into a market.
-
-[LEFT HERE]
-
-limits the deflation of a
-currency and
-
-When the
-
-The price of any asset is dependent on supply and demand, this makes the publics
-trust an important factor in the price, this trust must be managed and
-dynamically be responded to by any coin wanting to be stable. What
-differentiates successful stablecoins from any other currency is the ability to
-maintain a stable price, even during turbulent times. Since the public cannot
-directly be made to trade the coin, stablecoins have to respond to the behavior
-of the markets to keep the price stable.
-
 
 # Taxonomy of stablecoins
 
