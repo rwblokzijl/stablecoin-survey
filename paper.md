@@ -201,20 +201,19 @@ currencies.
 
 # Taxonomy of stablecoins
 
+\begin{figure}
+\centering
+\includegraphics{img/Triangle.png}
+\caption{Inherent trade-offs of stablecoins}
+\label{triangle_label}
+\end{figure}
+
 The price of any commodity or market traded asset is subject to supply and
 demand, this includes crypto-currencies. If there is a difference in demand and
 supply at a certain price, the price will move until demand and supply are
-equal.
-
-The only way to make sure the price doesn't move is to influence supply to match
-demand or vice versa. All the stablecoins discussed in this survey will do this
-in a certain way.
-
-\begin{figure*}
-\centering
-\includegraphics{img/intro.png}
-\caption{Taxonomy of stablecoins \label{intro_label}}
-\end{figure*}
+equal. The only way to make sure the price doesn't move is to influence supply
+to match demand or vice versa. All the stablecoins discussed in this survey will
+do this in a certain way.
 
 To manage market forces a diverse set of strategies have emerged, which can be
 categorised in the categories visualised in \ref{intro_label}. The easiest way
@@ -223,12 +222,15 @@ category, these stablecoins are generally managed by an organisation that keeps
 a tight leash on the coin and uses themselves as a trusted third party similar
 to a central bank.
 
+\begin{figure*}
+\centering
+\includegraphics{img/taxonomy.png}
+\caption{Taxonomy of stablecoins \label{intro_label}}
+\end{figure*}
+
 The permissionless category has as a primary goal to stay decentralised. This
 comes with larger challenges, but also a greater potential to deliver on the
 promise of a permissionless monetary system.
-
-[triangle]: img/Triangle.png
-![Inherent trade-offs of stablecoins \label{triangle_label}][triangle]
 
 Figure \ref{triangle_label}.
 
@@ -948,9 +950,6 @@ Ampleforth [@Ampleforth:whitepaper] &        &                         &        
 \label{table-tab2}
 \end{center}
 \end{table*}
-
-
-
 
 The first stablecoin to be stable for a year was NuBits[@Nubits:whitepaper].
 NuBits stabilised by using a bond mechanism as well as voted in "guardians" who

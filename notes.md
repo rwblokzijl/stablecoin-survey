@@ -6,10 +6,11 @@ title: Dirty notes
 # Plan
 
 1. Pass 1 to read for correctness
-2. Fix graphs
-3. Incorporate feedback Johan
-4. Fix taxonomy image
-5. Final pass
+2. Rewrite paper is structure at end of intro
+3. Fix graphs
+4. Incorporate feedback Johan
+5. Fix taxonomy image
+6. Final pass
 
 # Introduction notes
 
