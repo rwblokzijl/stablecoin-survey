@@ -7,9 +7,12 @@ author:
     location: Delft, The Netherlands
     email: R.W.Blokzijl@student.tudelft.nl
 keywords:
-  - Stablecoin
+  - Stablecoins
   - Blockchain
   - Cryptocurrencies
+  - Tether
+  - MakerDAO
+  - Diem
 numbersections: yes
 lang: en
 babel-lang: english
@@ -19,98 +22,64 @@ abstract: |
     cryptocurrencies like Bitcoin and Ethereum garnering a lot of interest
     because of their volatile natures and consequently exiting investment
     opportunities, other cryptocurrencies fill the opposite niche in the market.
-
     Today many stablecoins are exploring the techical and financial
     opportunities of providing a currency that maintains its value over time
-    independent of the movements in the crypto space.
-
-    With the 3th largest cryptocurrency and stablecoin Tether breaking a market
-    cap of 63 Billion Dollars lawsuit, it is becoming clear thatstablecoins are
-    a real contender in the race for the future of money.
-
-    Systems like MakerDAO are combining financial derivatives with smart
-    contracts to create a completely distributed and open market that
-    dynamically stabilises a token.
-
+    independent of the movements in the crypto space. With the 3th largest
+    cryptocurrency and stablecoin Tether breaking a market cap of 63 Billion
+    Dollars, it is becoming clear that stablecoins are a noteworthy contender in
+    the race for the future of money. Decentralised stablecoins like MakerDAO
+    are combining financial derivatives with smart contracts and create a
+    completely distributed and open market that dynamically stabilises a token.
     Other initiatives like Facebooks Diem (previously Libra), are presenting
     themselves as the next world currency providing a stable store of value and
-    medium of exchange to the world, all the while being controlled by a
-    handfull of multinational companies.
-
-    It is clear that not all stablecoins are created equal, the techniques used
-    and their implications on security, privacy and control, vary massively. In
-    this paper we survey the techniques used by the largest and most prominent
-    stablecoins and organise them into a taxonomy based on their features and
-    implications.
+    medium of exchange to the world, while being controlled by a handfull of
+    opaque multinational corporations. It is clear that not all stablecoins are
+    created equal, the techniques used and their implications on security,
+    privacy and control, vary massively. In this paper we survey the techniques
+    used by the largest and most prominent stablecoins and organise them into a
+    taxonomy based on their features and implications.
 
 ---
 
 # Introduction
 
-TODO: Quantitative easing, perverse debt reliance, burning savings to fuel the
-debt bubble...
+While the original cryptocurrencies are struggling to become stable enough to
+become a viable store of value, some currencies are using a collection of
+stabilisation techniques to become the worlds first digital currency to replace
+your bank account. Stablecoins promise to offer all the advantages of the
+digital world, while being as reliable as a briefcase of 100 Dollar bills. The
+market appetite for this has been proven in the success of Tether, now the 3rd
+largest cryptocurrency in the world by market cap at 63 Billion Dollars. While
+their success is undeniably, they have been criticised for their methods as
+Tether is a centrally controlled stablecoin that derives its stability from the
+collateral managed by the Tether Holdings Limited company.
 
-Stablecoins promise to offer all the advantages of the digital world, while
-being as reliable as a briefcase of 100 Dollar bills. The original
-cryptocurrencies are still working to become stable enough to become a viable
-way to store your life savings. Meanwhile, many cryptocurrencies are using a
-collection of stabilisation techniques to become the worlds first digital
-currency to replace your bank account.
+With Tethers success showcasing the potential of price stable currencies, other
+organisations have started similar initiatives using various methods of
+stabilisation. Facebook's Diem being the most notable, with their stability
+dependent on their reputation rather than some collateral. This essentially
+makes them a world wide fiat currency, with the benefits of programmability, but
+lacking the guarantees of government run central banks.
 
-The reward of winning the stablecoin race could be a place at the center of all
-monetary transactions in the world. The promise of this reward draws a number of
-players. Facebook's Libra being the most notable, with their "Blue Eyes Promise"
-to be a trustworthy digital world central bank.
+Both Tether and Diem effectively create a privately managed central bank that
+used their centralised control to keep their currencies stable. Some argue that
+this centralisation is counter to the mission of cryptocurrencies: to require
+no corruptible third party to manage the management and exchange of money. In
+response to this centralisation and to solve the stability issued plaguing the
+original cryptocurrency, fully decentralised cryptocurrencies have been created.
+Tracking the US dollar only as a reference value, currencies like MakerDAO have
+found ways to stabilise their currency through a smart contract controlled
+system of financial derives that influence the market forces to stabilise a
+token.
 
-Facebook was neither the first nor the last to attempt to influence the future
-of money. Some aim to provide intermediary digital currencies by tokenising US
-Dollars[]. Others see these centralised solutions as a danger and aim to build
-fully decentralised currencies by relying on market and blockchain based
-constructions[].
+Regardless of the motivation of the creators, all stablecoins are subject to the
+trust of the public as well as traditional market forces. The value of an asset
+follows whatever the public thinks its worth, this means that influencing the
+price means that aligning investor incentives is key in stabilising any
+currency.
 
-Regardless of the motivation of the stablecoin creators, all stablecoins are
-subject to the trust of the public as well as market forces. The value of an
-asset follows whatever the public thinks its worth, this means building investor
-confidence is key in stabilising any currency.
-
-Since the publics trust is a heavy factor in the price, this trust must be
-managed and dynamically be responded to by any coin wanting to be stable. What
-differentiates successful stablecoins from any other currency is the ability to
-maintain a stable price, even during turbulent times. Since the public cannot
-directly be made to trade the coin, stablecoins have to respond to the behavior
-of the markets to keep the price stable.
-
-The price of any commodity or market traded asset is subject to supply and
-demand, this includes crypto-currencies. If there is a difference in demand and
-supply at a certain price, the price will move until demand and supply are
-equal.
-
-The only way to make sure the price doesn't move is to influence supply to match
-demand or vice versa. All the stablecoins discussed in this survey will do this
-in a certain way.
-
-[intro]: img/intro.png
-![Taxonomy of stablecoins \label{intro_label}][intro]
-
-To manage market forces a diverse set of strategies have emerged, which can be
-categorised in the categories visualised in \ref{intro_label}. The easiest way
-to manage the price is through centralisation. This is the permissioned
-category, these stablecoins are generally managed by an organisation that keeps
-a tight leash on the coin and uses themselves as a trusted third party similar
-to a central bank.
-
-The permissionless category has as a primary goal to stay decentralised. This
-comes with larger challenges, but also a greater potential to deliver on the
-promise of a permissionless monetary system.
-
-[triangle]: img/Triangle.png
-![Inherent trade-offs of stablecoins \label{triangle_label}][triangle]
-
-Within this survey we will explore the most common techniques to stabilise
-cryptocurrencies, and show the inherent trade-offs between decentralisation,
-collateralization, and capital efficiency as illustrated in
-\ref{triangle_label}.
-
+Within this paper we will survey the most common techniques to stabilise
+cryptocurrencies, and show the inherent trade-offs between various methods.
 First, in chapter 2, we discuss the topic of the purpose of money, the meaning
 of value and stability, and some currency pegs used in our traditional monetary
 system. We then describe the simplest and most successful stablecoins, namely
@@ -123,51 +92,27 @@ Chapter 6 and a conclusion of the survey in Chapter 7.
 
 # Background
 
-[Bladwijzer - All above is somewhat done, all below is worked on]
+Before we present out taxonomy we will explore the background of asset
+stabilisation. In further chapters we then explain how the various currencies
+use various digital versions of these techniques to achieve price stability.
 
-Before we dive into the techniques for stabilisation, some definitions, concepts
-and terms need to be established. In this section we review the purpose and
-requirements of money. A model is described to explain the forces acting upon
-the price of a currency. And some traditional techniques for currency and asset
-stabilisation are reviewed. This will give the necessary background to
-understand the different techniques used by the different stablecoins.
+We first explain an economic model by which we can understand the various
+methods employed by different currencies. Then we explain the oldest concept of
+stabilisation, namely collateralisation. Finally, we explore open market
+operations utilised by modern central banks in order to stabilise the fiat
+currencies of today. This will define the relevant terms and give the necessary
+background to understand the different techniques used by the different
+stablecoins.
 
-## What is a good currency?
+## The quantity theory of money
 
-In "On the Origin of Money" [@On_the_Origin_of_Money] Karl Menger describes how
-people settle on a currency as a method of exchange. He describes that the
-willingness of people to exchange their goods for a commodity depends:
-
-1. Upon their ability to trade it for goods
-2. Upon the scarcity of the commodity
-3. Upon the divisibility, durability and practicality of the commodity.
-4. Upon the development of the market, and how others speculate.
-5. Upon the limitations imposed politically and socially upon exchange,
-consumption and transfer from one period of time to another
-
-All these aspects must be managed in any successful currency. Points 2, 3 and
-possibly 5 are where cryptocurrencies have added value, through their digital
-and decentralised natures.
-
-Points 1 and 4, the future usefulness of the currency and it's market demand,
-are where cryptocurrencies still fall short of traditional currencies. If
-cryptocurrencies are going to replace traditional currencies, they have to meet
-the last requirements of a good currency.
-
-Stablecoins aim meet the last requirements, by adding guarantees about the
-development of of the price in any market. This will in turn make merchants more
-willing to accept the currency, thus providing the ability to trade the currency
-for goods.
-
-## What determines the price of an asset?
-
-The law of supply and demand model how the price of an asset in a market is
-determined by the amount on offer versus the amount requested at any given time.
-This model does a great job explaining and predicting price changes following
-events that impact either. For the purpose of controlling the price however, we
-need a model that gives us inputs that we can affect. As both demand and supply
-are usually controlled by independent actor in a market, we look at the quantity
-theory of money instead.
+The laws of supply and demand model how the price of an asset in a market is
+determined by the amount on offer versus the amount required at any given time.
+This model does a good job explaining price changes following events that impact
+either. For the purpose of controlling the price however, we need a model that
+gives us inputs that we can affect. As both demand and supply are usually
+controlled by independent actors in a market, we look at the quantity theory of
+money instead.
 
 In The Value of Money [@Value_of_Money] Pigou describes the role of the money
 supply in the Quantity theory of money and its relation to the price. The
@@ -184,58 +129,88 @@ an adapted version of the theory:
 
 $$ M \times V \times P = T $$
 
-Where $P$ is the price of the currency.
+Where $P$ is the price of a unit of currency.
 
 The velocity of circulation $V$ is a measure of how quickly money is spent after
 receiving it. Together with the total money supply $M$ it makes up the supply
 side of the theory. If either of these factors increases, everything else being
-equal, the price $P$ will have to decrease.
+equal, the price $P$ will have to decrease. These two variables therefore make
+up the supply side of the quantity theory of money.
 
-The total amount of transactions $T$ makes up the demand side of the theory. $T$
-is alternatively described as the total amount of goods and services offered.
-Regardless, it is a measure of how much people people want the currency and
-their. If the rate at which people want spend money increases, the demand for
-the money follows. If all supply side factors stay the same, the price will
-follow the demand.
+The amount of transactions $T$ makes up the demand side of the theory. $T$ is
+alternatively described as the total amount of goods and services offered.
+Regardless, it is a measure of the desire of people to aquire the currency. If
+the rate at which people want spend money increases, the demand for the money
+follows. If all supply side factors stay the same, the price will follow this
+demand.
 
 In this survey we will see mechanisms that control the price by influencing the
-total supply $M$, the velocity $V$ and [ TODO: true?] even the total amount of
-transactions.
+total supply $M$, the velocity $V$ in order to respond to the changes in the
+demand $T$.
 
-## Traditional means of stabilising a currency
+## Collateralisation
 
-### Collateralization
+The easiest way to keep a token stable is to simply have it derive its value
+from a different asset that is already stable. This is called pegging. The
+pegging of a token to another asset can be achieved by allowing investors to one
+asset for the other at any time for a set exchange rate.
 
-The easiest way to keep a currency stable is to simply have it derive its value
-from a different asset that already has the desired stability. This is called
-pegging.
+The guarantee of a set exchange rate $E$ allows a single party to control the
+price of the currency in the market $R$. If the price on the market is below the
+set exchange rate ($R<E$), it becomes favorable for any investor to buy the
+asset on the market and sell it to the centralised party for a direct profit of
+$E-R$. Conversely, if $R>E$, an investor can buy the currency at the exchange
+and sell it on the market for a direct profit of $R-E$. This effectively reacts
+to all market changes by varying the total supply $M$.
 
-The pegging of a token to an asset can be achieved by allowing investors to
-trade the token for the asset at any time. Note that a this may involve the
-trade of a secondary asset as intermediary store of value.
+Additionally, this mechanism provides a guarantee about the minimum value of a
+currency. Even if noone is interested in buying the currency, the single
+exchange will always accept it for a known value. This increases the addoption
+and trust in a currency.
 
-The first pegs were tracking the value of gold. Every unit of a currency could
-be exchanged for a certain amount of gold. As described in "The Gold Standard"
-[@The_Gold_Standard] by Cooper, the US dollar has been pegged to Gold for some
-of its years to maintain the confidence of the public.
+This guarantee in times of crisis is ofcourse dependent on the trustworthiness
+and ability of the single exchange to provide the exchange rate. Unless the
+exchange always has enough collateral available, the guarantee will not be
+maintainable in all economic conditions. Non-collatoralised exchange rate
+systems are also vulnerable to attacks like on black wednesday [@soros1995].
+This happened in 1992, when the European Exchange Rate Mechanism (ERM), an
+exchange rate agreement between most of the nations of the European Economic
+Community, was famously attacked by George Soros. By taking on huge amounts of
+debt denominated in british pounds, he was able to weaken the Brittish Pound to
+the point where they had to leave the ERM, and allowing the currency to quickly
+drop in value, making Soros over 1 Billion Pounds.
 
-The most common way to guarantee an exchange rate is to hold some form of
-collateral. The most obvious collateral for the token, is the asset it is pegged
-to, but this can also be another commodity that can be traded for the asset at
-any time. Of course this requires some guarantees or assumptions about the price
-stability of this commodity to ensure that all outstanding tokens can be
-redeemed. If the amount of collateral, or the value of the collateral, is such
-that less that 100% of tokens can be redeemed for the original asset, the token
-is considered under-collateralized. This can have large ramifications to
-investor trust, and might thus undermine the stability of the coin and the
-viability of the network.
+The most common way to guarantee the exchange rate even at times of great
+economic stress is to hold some form of collateral. Collateralised currencies
+are not vulnerable to the Soros attack. If the total value of the collateral,
+more than 100% of the outstanding currency, that means in the hypothetical event
+of a total shutdown of the currency, everyone can be made whole with the stored
+collateral. This makes it immune from bank runs, which greatly increases
+confidence. If the total value of the collateral is less than 100%, the token is
+considered under-collateralized. This can have large ramifications to investor
+trust, and may thus undermine the stability of the coin itself.
 
-Any entity or system that facilitates the exchange of the token for the
-collateral is called a market maker. In this survey two main categories of
-market makers will make an appearance, centralised organisations and
-decentralised systems.
+The first collatoralised pegs were tracking the value of gold. Every unit of a
+currency could be exchanged for a certain amount of gold. As described in "The
+Gold Standard" [@The_Gold_Standard] by Cooper, the US dollar has been pegged to
+Gold for many years. By allowing the public to trade their Dollars for a
+predetermined amount of gold, confidence in the value of the currency was
+maintained even during harsh economic times.
 
-### Open market operations, interest rates and capital requirements.
+The concept of collatoralisations is highly utilised in stablecoins. It is the
+methods of storing and managing the collatoral that differentiates the
+currencies.
+
+## Open market operations
+
+Central banks of today no longer keep collatoral in order to stabilise their
+currencies. Instead they use a number of monetary policy options to react to
+large economic changes. The total set of monetary policy options are left out of
+scope, but 2 in particular are relevant to this paper.
+
+The first is by variying interest rates. This indirectly
+interest rates
+capital requirements
 
 TODO: Find a paper to cite for this
 TODO: Reorganise this chapter
@@ -260,7 +235,6 @@ the fiat way. They aim to take away the cumbersome restrictions that come with a
 pegged currency, while maintaining the social credit system and value
 intermediary money has become.
 
-
 Quantitative easing is the buying of government bonds or other financial assets
 by a central bank, with money that doesn't exist. This is done to increase the
 money supply $M$, which in turn promotes the velocity of money $V$. This is
@@ -273,8 +247,51 @@ currency and
 
 When the
 
+The price of any asset is dependent on supply and demand, this makes the publics
+trust an important factor in the price, this trust must be managed and
+dynamically be responded to by any coin wanting to be stable. What
+differentiates successful stablecoins from any other currency is the ability to
+maintain a stable price, even during turbulent times. Since the public cannot
+directly be made to trade the coin, stablecoins have to respond to the behavior
+of the markets to keep the price stable.
 
-# Stabilisation by Centralisation
+
+# Taxonomy of stablecoins
+
+The price of any commodity or market traded asset is subject to supply and
+demand, this includes crypto-currencies. If there is a difference in demand and
+supply at a certain price, the price will move until demand and supply are
+equal.
+
+The only way to make sure the price doesn't move is to influence supply to match
+demand or vice versa. All the stablecoins discussed in this survey will do this
+in a certain way.
+
+\begin{figure*}
+\centering
+\includegraphics{img/intro.png}
+\caption{Taxonomy of stablecoins \label{intro_label}}
+\end{figure*}
+
+To manage market forces a diverse set of strategies have emerged, which can be
+categorised in the categories visualised in \ref{intro_label}. The easiest way
+to manage the price is through centralisation. This is the permissioned
+category, these stablecoins are generally managed by an organisation that keeps
+a tight leash on the coin and uses themselves as a trusted third party similar
+to a central bank.
+
+The permissionless category has as a primary goal to stay decentralised. This
+comes with larger challenges, but also a greater potential to deliver on the
+promise of a permissionless monetary system.
+
+[triangle]: img/Triangle.png
+![Inherent trade-offs of stablecoins \label{triangle_label}][triangle]
+
+Figure \ref{triangle_label}.
+
+# Stabilisation techniques
+
+## CentralisationS
 
 With more control over the supply of a currency, the price stabilisation of a
 currency is significantly simplified. Minting more in times of high demand,
@@ -289,7 +306,7 @@ collateralization, transparency, risk, and the meaning of value.
 In this section we explore the techniques employed by both central reserve, and
 pegged stablecoins.
 
-## The reserve bank stablecoin
+### The reserve bank stablecoin
 
 Combining the proven success of central banks with the benefits of fast payment
 systems [@DuffieDigital_and_Fast_Payment_Systems], organisations like JPMorgan
@@ -298,7 +315,7 @@ create a stable currency by using their reputation as established financial
 institutions. So far, no coin has managed to be stable off of its reputation
 alone, and whether this will ever happen is yet to be seen.
 
-## Pegged by currency reserves
+### Pegged by currency reserves
 
 Since stabilisation by reputation is often not good enough for investors looking
 for a safe store of value, a stablecoin with stringer guarantees about its
@@ -350,7 +367,7 @@ market, anyone can make an instant profit by buying the coins on the open
 market, and immediately burning them. This process will continue to decrease the
 supply of the asset until the price is back up to 1 dollar.
 
-### Benefits of Centralisation
+#### Benefits of Centralisation
 Like illustrated in figure \ref{triangle_label}, fiat-collateralized pegs can
 not be maintained by a fully decentralised system. The limiting factor is the
 fact that fiat-currencies need to be held by some party.
@@ -361,7 +378,7 @@ sacrifice of decentralisation. The success of currencies like Tether
 [@PAXos:whitepaper], and TrueUSD[@TrueUSD:whitepaper] illustrate this with their
 combined market capitalization of 5 Billion USD.
 
-### Critiques of Centralisation and solutions
+#### Critiques of Centralisation and solutions
 
 It goes without saying that having a centralised storage of anything creates a
 central point of failure and control. Since trust in the crypto space has long
@@ -381,7 +398,7 @@ insurance. (PAXos [@PAXos:whitepaper])
 Through these means stablecoin organisations aim to counteract the lack of
 transparency and the risk of under-collateralization.
 
-### Expansions on fiat-currency pegging
+#### Expansions on fiat-currency pegging
 
 Essentially, a centralised currency-pegged stablecoin is just a tokenised
 fiat-currency. This concept can be expanded to more than just traditional
@@ -404,7 +421,7 @@ as well as gold. Thus creating a coin that is "more stable" than the US Dollar.
 Whether these coins will ever have a mainstream appeal is impossible to predict,
 but the theoretical value of having a globally stable coin is hard to dispute.
 
-### Overview of the largest stablecoins
+#### Overview of the largest stablecoins
 
 To provide a glimpse of the usage of the techniques described in this
 subsection, Table \ref{TODO} describes the 8 central stablecoins with the
@@ -417,7 +434,7 @@ highest market capitalisation and some of their operational aspects:
 \toprule
 Stablecoin                    & Market Cap      & Pegged asset   & Escrow               & FDIC-insurance & Launch & Notes                                                            \\
 \midrule
-Tether[@Tether:whitepaper]    & 4 Trillion USD  & USD            & Single organisation  & No             & 2014   & Largest Stablecoin, 4th largest cryptocurrency                   \\
+Tether[@Tether:whitepaper]    & 4 Billion USD  & USD            & Single organisation  & No             & 2014   & Largest Stablecoin, 4th largest cryptocurrency                   \\
 USDC[@Centre:whitepaper]      & 464 Million USD & USD            & Single organisation  & Some exchanges & 2018   & Created and owned by various crypto exchanges                    \\
 PAXos[@PAXos:whitepaper]      & 238 Million USD & USD            & Single organisation  & Yes            & 2018   & Regulated by the New York State Department of Financial Services \\
 TrueUSD[@TrueUSD:whitepaper]  & 161 Million USD & USD            & Multiple independent & Some escrows   & 2018   & Distributes risk with multiple independent escrows               \\
@@ -442,7 +459,7 @@ largest stablecoin USDC.
 1. Gold based stablecoins still make up a small portion of the market with PAX
 Gold being the largest with a market cap of 12 million.
 
-# Stabilised while Decentralised
+## Stabilised while Decentralised
 
 Though many centralised stablecoins are becoming more diversified in their
 collateralization, the organisations that run them remain a central point of
@@ -461,7 +478,7 @@ This section explains the mechanisms that keep these coins stable, provides a
 comparison of their advantages and disadvantages, and a general overview of
 the largest decentralised stablecoins on the market right now in each category.
 
-## Crypto-Collateralized Stablecoins
+### Crypto-Collateralized Stablecoins
 
 The success of the centralised stablecoins shows that the backing of a
 stablecoin with 100% collateral is a reliable way to keep a currency price
@@ -594,7 +611,7 @@ The triggers for a global settlement differ per stablecoin, but mechanisms
 include: global collateralization under a minimum ratio, high price instability,
 a decision by holders of some governance token.
 
-### Governance
+#### Governance
 
 In addition to triggering global settlement in the case of some black swan
 event, decisions need to be made about the network in general. Examples of this
@@ -608,7 +625,7 @@ incentivises the holders of the governance tokens to remain invested in the
 network and to vote for parameters and mechanisms that improve the utility and
 stability of the stablecoin.
 
-### Minimum Collateralization Ratio
+#### Minimum Collateralization Ratio
 
 The minimum collateral required varies between systems. It is the responsibility
 of the speculator to maintain a collateralization ratio above the minimum
@@ -623,7 +640,7 @@ This means that network doesn't lose any collateral as long as the collateral
 doesn't drop to $1/c$ within the time it takes to margin call a contract. Where
 $c$ is the minimum collateralization ratio.
 
-### Mechanism for speculator to investor match making
+#### Mechanism for speculator to investor match making
 
 Stablecoins that utilise these derivative contracts are usually built with a
 system that aligns the incentives of the stablecoins within some structure.
@@ -638,7 +655,7 @@ To explain the variation between the systems we use some examples. We show how
 defences in the purpose of the system leads to differences in the features, and
 how the price keeps stabilising.
 
-#### Reserve bank speculator model
+**Reserve bank speculator model**
 
 In the first type of system the speculators collectively act like a reserve
 bank.
@@ -705,7 +722,7 @@ a price crash in one collateral category, as speculators are incentivised to
 exchange the collateral that is dropping in value for more price-stable
 collateral.
 
-#### Speculation market model
+** Speculation market model **
 
 In this model the stablecoin can still be bought by the investor to offload risk
 to a speculator on some market. On the other side of the coin, the speculator
@@ -802,7 +819,7 @@ it back to one dollar and remains relatively volatile.
 Other BitShares stablecoins like BitCNY also use this mechanism and are stable,
 likely because of a larger, thus more resilient, market.
 
-#### Debt-pool Tracker service
+** Debt-pool Tracker service **
 
 The final matchmaking system is very similar to the reserve bank system, but
 abstracts away from the concept of having a single stablecoin, and just aims to
@@ -835,7 +852,7 @@ speculators as incentive for the speculators to collateralize the system.
 This system can provide a whole ecosystem for tracking real world assets and
 allows easy movement between them.
 
-### Overview
+#### Overview
 
 As can be seen in \ref{TODO} There are a few large players in the crypto collateralized stablecoin scene.
 
@@ -894,7 +911,7 @@ assets like: iBTC, and iETH. Currently they also support commodities like sXAU
 which tracks the Philadelphia Gold and Silver Index, and they plan to add
 trackers for various company stocks.
 
-## Non-collateralized Stablecoins
+### Non-collateralized Stablecoins
 
 Crypto collateralized stablecoins are dependent on the overall stability of
 their collateral currency. If the price of the collateral drops fast enough in
@@ -910,7 +927,7 @@ this section we describe the securities model for expanding and contracting the
 money supply, as well as some more theoretical techniques and currency
 parameters for reducing volatility.
 
-### Securities model
+#### Securities model
 
 The stabilisation of currencies is much older than cryptocurrencies. So to see
 how cryptocurrencies can be stabilised, some have taken inspiration from the way
@@ -946,7 +963,7 @@ expanded or retracted still needs to be made in a decentralised way.
 Consequently this is where the largest differences between the existing
 stablecoins lie.
 
-#### Self stabilisation mechanisms
+** Self stabilisation mechanisms **
 
 By tweaking bond lifetime and interest rates a currency can be stabilised.
 However there still needs to be some decentralised mechanism that triggers
@@ -969,7 +986,7 @@ risk takers.
 Note that even oracle based stablecoins are usually DAO's that vote on the
 function that maps price target mismatch to bond parameters.
 
-### Overview of real world non-collateralized stabilising
+#### Overview of real world non-collateralized stabilising
 
 \begin{table*}[t]
 \caption{A second table}
@@ -1013,7 +1030,7 @@ its price guarantee, and the peg could no longer be maintained.
 NuBits provides an example of the main flaw of the securities model, it requires
 trust in the mechanism, which lacks when it is needed most: in a down market.
 
-## Oracles
+### Oracles
 
 All stablecoins that peg to a fiat currency need some information about the
 price of that currency at any point in time. So far we have referred to Oracles
@@ -1054,7 +1071,7 @@ tokens that can be taken from them if the rest of the network disagrees with
 their votes. In addition node reputation van be tracked on-chain in order to
 allow users to choose the most trustworthy nodes.
 
-## General techniques for adding stability to any currency
+### General techniques for adding stability to any currency
 
 Collateralized stablecoins by definition are pegged currencies. They rely on
 other currencies to provide their stability. Without the stability of the US
@@ -1063,7 +1080,7 @@ inherent stability of blockchain currencies, a number of academic papers are
 available. Following is a survey of techniques to reduce the volatility of any
 decentralised blockchain based currency.
 
-### Changing proof of work parameters to dampen demand shocks
+#### Changing proof of work parameters to dampen demand shocks
 
 Taking the quantity theory of money as a given, the price of a currency depends
 on the total supply, velocity of circulation, and the total amount transacted.
@@ -1091,7 +1108,7 @@ limits to the block speed. Set it too low and the transaction throughput
 suffers. Conversely if the block speed is too high forks are more likely, which
 undermines the security of the network.
 
-### Allowing for inflation
+#### Allowing for inflation
 
 This method of controlling price levels has some implications
 [@How_to_make_a_digital_currency_on_a_blockchain_stable] on long term price. In
@@ -1108,7 +1125,7 @@ depreciation might be desirable to allow for absorption of future demand shocks
 [@CanWeStabilize]. A coin depreciation rate can be applied by gradually
 increasing the mining rewards over time.
 
-### Open mining using Proof of Sequential Work
+#### Open mining using Proof of Sequential Work
 
 If block speed should remain constant, a different way to build a more stable
 currency is to build a secondary token. This token would use Proofs of
