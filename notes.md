@@ -5,12 +5,13 @@ title: Dirty notes
 
 # Plan
 
-1. Pass 1 to read for correctness
-2. Rewrite paper is structure at end of intro
-3. Fix graphs
-4. Incorporate feedback Johan
-5. Fix taxonomy image
-6. Final pass
+1. Rewrite centralised
+2. Rewrite decentralised colatoralised
+3. Rewrite algorithmic
+4. Write taxonomy
+5. Rewrite paper structure at end of intro
+6. Final pass for quality
+7. Remove unused citations
 
 # Introduction notes
 
@@ -474,6 +475,7 @@ viability of stablecoins. We then end with a discussion of the research on
 stablecoins in Chapter 6 and a conclusion of the survey in Chapter 7.
 
 ## Discussion
+
  * systemic pegging risks (discussion):
     + first define term
     * counter-party risk around collateral
