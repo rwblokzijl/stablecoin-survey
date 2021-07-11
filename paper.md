@@ -195,7 +195,7 @@ Gold for many years. By allowing the public to trade their Dollars for a
 predetermined amount of gold, confidence in the value of the currency was
 maintained even during harsh economic times.
 
-The concept of collatoralisations is highly utilised in stablecoins. It is the
+The concept of collatoralizations is highly utilised in stablecoins. It is the
 methods of storing and managing the collatoral that differentiates the
 currencies.
 
@@ -464,7 +464,7 @@ Crypto-collateralized stablecoins build on the idea that a holder of a
 stablecoin can always get their share of the collateral back, but in a fully
 automated and decentralised manner. They allow the exchange of the pegged
 currency such that even the organisation that created the stablecoin has no
-power over the collateral. The easies way to collatoralise a decentralised
+power over the collateral. The easies way to collateralize a decentralised
 stablecoin is with a currency that is:
 
 1. Stable - to stabilise the stablecoin
@@ -485,23 +485,25 @@ market value of the collateral drops such that there is no longer enough
 collateral to back all outstanding stablecoins. This could lead investors to
 scramble to get their share of the collateral out before its gone, rapidly
 undermining the price of the stablecoin. The solution to this is
-over-collateralisation. In order to guarantee that there is always enough
+over-collateralization. In order to guarantee that there is always enough
 collateral in the system for every investor to be made whole, the minting of the
 token has to be paired with the deposit of **more** than 100% collateral.
-
-This mechanism can be implemented in many ways, but there are always 2 ends to
-this trade.
 
 This mechanism is interesting for those who want to speculate on the collateral.
 Instead of buying the collateral and just saving it, they can exchange it for
 the stablecoin, which allows them to get some of the value of the currency back.
 This can then either be loaned out, or be reinvested into more collateral.
 
-The solution to this is found in the concept of a swap. A financial swap is a
-derivative contract where two parties swap some properties of some underlying
-assets. In the case of our stablecoin, one party, lets call them the investor,
-offloads the risk associated with the price instability of the collateral to
-our second party, lets call them the speculator.
+This mechanism can be implemented in many ways, but there are always 2 ends to
+this trade. There is the speculator, who invests the collateral, and is expected
+to act if the collateral loses its value. And the investor, who is looking to
+store their wealth in a stable token.
+
+This concept is effectively a financial swap. A swap is a contract where two
+parties swap some properties of some underlying assets. In the case of our
+stablecoin, one party, the investor, offloads the risk associated with the price
+instability of the collateral to the second party, the speculator. For this, the
+speculator is usually rewarded in some way.
 
 [cdp_create]: img/CDP_create.png
 ![Stablecoin minting through debt creation
@@ -511,85 +513,87 @@ Figure \ref{cdp_destroy_label} describes the process of minting a decentralised
 stablecoin that uses the swap mechanic:
 
 0. Some agreement is reached between the investor and the speculator. This might
-happen on an individual basis, but sometimes the terms of the agreement are
-pre-defined by parameters of the network.
+   happen on an individual basis, but sometimes the terms of the agreement are
+   pre-defined by parameters of the network.
 1. Some crypto, lets say Ether, is sent as collateral to a smart-contract. Some
-of this, usually 100%, might come from the investor, white the speculator
-provides the rest of the collateral, lets say 50%, for the stablecoin to remain
-over-collateralized by some ratio, in this case 150%.
+   of this, usually 100% of the value of the stablecoin, might come from the
+   investor, white the speculator provides the remaining collateral necessary
+   for the over-collateralization, lets say 50%.
 2. A smart-contract checks the price of the Ether in terms of the pegged
-currency, lets say dollars. Mechanisms for the decentralised lookup of Ether
-prices vary between systems. We explore these differences later in this section.
+   currency, lets say dollars. Mechanisms for the decentralised lookup of Ether
+   prices vary between systems. We explore these differences later in this
+   section.
 3. The stablecoin is minted and issued to the investor, while the speculator
-gets some proof of deposit for their collateral. Lets call this the
-debt-contract.
+   gets some proof of deposit for their collateral. We call this a
+   collateralized debt position (CDP).
 4. Some interest might be payed from the investor to the speculator or vise
-versa.
+   versa.
 
 The investor might pay interest to the speculator as a reward for providing the
-capital for over-collateralisation and taking on the risk of the collateral
+capital for over-collateralization and taking on the risk of the collateral
 dropping in value while the stablecoin is in circulation. On the other hand, the
 speculator might pay the investor as a reward for providing extra capital for
 the speculator to leverage their bet on Ether. The direction of interest depends
 on the design of the stablecoin and sometimes the market conditions.
 
 While the stablecoin is in circulation the speculator is responsible for
-maintaining the collateral of debt-contract. Should the value of Ether drop,
-they must deposit more Ether to the smart contract, or risk getting margin
-called.
+maintaining the collateral of the CDP. Should the value of Ether drop, they must
+deposit more Ether to the smart contract, or risk getting margin called. A
+margin call is the automatic closing of a CDP. A margin call happens when the
+value of the collateral drops below the minimum collateral requirement of the
+system. In the case of our example this means there is not enough Ether in the
+CDP to cover 150% of the outstanding stablecoins of the contract. A margin call
+opens the CDP to be closed by anyone that pays its outstanding stablecoins back
+into the system. Say the collateralization-ratio of the contract is 140%, the
+person that buys out the contract will get 100% to pay them back for the
+stablecoins, plus some portion of what is left for their trouble.
 
-A margin call is the automatic closing of a debt contract. A margin call
-happens when the value of the collateral drops below the minimum collateral
-requirement of the system. In the case of our example this means there is not
-enough Ether in the debt-contract to cover 150% of the outstanding
-stablecoins of the contract. A margin call opens the debt-position to be closed
-by anyone, and incentivises this by providing a reward for whoever closes it.
-
-The closing of a contract is the burning of the stablecoin and the recovery of
-the underlying collateral. The process for this is illustrated in figure
-\label{cdp_destroy_label} and includes the following steps:
+The settlement of an contract burns the same amount of stablecoin that it
+initially created and the releases all the underlying collateral. The process
+for this is illustrated in figure \label{cdp_destroy_label} and includes the
+following steps:
 
 0. Some agreement is reached between an investor willing to sell a stablecoin,
-and a someone willing to close out a debt-contract. This agreement could come be
-in the form of a speculator simply buying the coins from an investor at market
-rate, an investor acting on a margin call, or by some other matching mechanism
-between stablecoin and debt-contract.
+   and a someone willing to close out a CDP. This agreement could come
+   be in the form of a speculator simply buying the coins from an investor at
+   market rate, an investor acting on a margin call, or by some other matching
+   mechanism between stablecoin and CDP.
 1. The stablecoin is sent to a smart-contract, which burns the coin.
 2. The oracle is consulted for the current price level of Ether in dollars.
 3. The collateral is provided back to the speculator and investor at some
-defined ratio. Ususally 100% of the stablecoin value goes to the investor while
-the remaining 50% or more goes back to the speculator.
+   defined ratio. Usually 100% of the stablecoin value goes to the investor
+   while the remaining 50% or more goes back to the speculator.
 4. Some settlement may be done, this could be the payment of interest between
-the two parties or some fee to the blockchain.
+   the two parties or some fee to the blockchain.
 
 [cdp_destroy]: img/CDP_destroy.png
-![Stablecoin burning through debt-position closage
+![Stablecoin burning through CDP settlement
 \label{cdp_destroy_label}][cdp_destroy]
 
 As an extra line of defence against the falling of the collateral value or some
 attack against the system, crypto-collateralized stablecoins often have a
 mechanism for global settlement implemented. In the case of a global settlement
-event, the underlying collateral gets returned to the investors without any
-conditions. All debt contracts will be locked, allowing all holders of the
+event, the underlying collateral gets returned to the stablecoin holders without
+any conditions. All CDPs will be locked, allowing all holders of the
 stablecoin to trade in their tokens for 1 dollars worth of collateral. After a
-period of time, the contracts will be released and return all collateral left
-back the the speculators.
+period of time, the contracts will be released and return all collateral left in
+the contracts back the speculators.
 
 The triggers for a global settlement differ per stablecoin, but mechanisms
 include: global collateralization under a minimum ratio, high price instability,
-a decision by holders of some governance token.
+or a decision by holders of some governance token.
 
 ## Governance
 
-In addition to triggering global settlement in the case of some black swan
-event, decisions need to be made about the network in general. Examples of this
-can be parameter tweaking like the collateralization ratio or network fees, as
-well as network upgrades. For this reason most decentralised stablecoins are
-part of a Distributed Autonomous Organisation (DAO). Shares in the DAO, or
-governance tokens, allow the holders some say over the inner workings of the
-network, as well as some claim of the profits of the network. This ties the
+In addition to triggering global settlement in the case of some "black swan"
+event, decisions often need to be made about the network in general. Examples of
+this can be parameter tweaking like the collateralization ratio or network fees,
+as well as network upgrades. For this reason most decentralised stablecoins are
+managed using a Distributed Autonomous Organisation (DAO). Shares in the DAO, or
+governance tokens, allow the holders to collectively control inner workings of
+the network, as well as some claim of the profits of the network. This ties the
 value of the tokens to the to the performance of the network, which in turn
-incentivises the holders of the governance tokens to remain invested in the
+incentivised the holders of the governance tokens to remain invested in the
 network and to vote for parameters and mechanisms that improve the utility and
 stability of the stablecoin.
 
@@ -597,57 +601,51 @@ stability of the stablecoin.
 
 The minimum collateral required varies between systems. It is the responsibility
 of the speculator to maintain a collateralization ratio above the minimum
-requirement, or they get margin called.
-
-The collateralization requirement depends on the volatility of the collateral
-used. Since the margin call of a contract takes time to find an investor someone
-willing to close it, there needs to be a buffer for the price of the collateral
-to fall even further. This buffer is the gap between the minimum ratio and 100%.
-
-This means that network doesn't lose any collateral as long as the collateral
-doesn't drop to $1/c$ within the time it takes to margin call a contract. Where
-$c$ is the minimum collateralization ratio.
+requirement, or they get margin called. The collateralization requirement
+depends on the volatility of the collateral used, as well as how the network is
+intended to be used. Since the margin call of a contract takes time to find an
+investor someone willing to close it, there needs to be a buffer for the price
+of the collateral to fall even further. This buffer is the gap between the
+minimum ratio and 100%. Networks with faster methods of margin calling, can have
+lower collateralization ratios, thus allowing investors to leveraging their bets
+even higher.
 
 ## Mechanisms for speculator to investor match making
 
-Stablecoins that utilise these derivative contracts are usually built with a
-system that aligns the incentives of the stablecoins within some structure.
-Variations in these systems leads to differences in features like:
+Stablecoins that utilise the CDP model are part of a system that aligns the
+incentives of the markets. Variations in these incentives these systems
+lead to differences in features like:
 
- - the direction of interest payments,
- - the matching of investor to speculator,
+ - the direction of interest payments
+ - the investor to speculator matchmaking,
  - the amount of collateral put up by each party,
- - the mechanism of a margin call or forced-settlement.
+ - the mechanism for handling under-collateralized CDPs
 
 To explain the variation between the systems we use some examples. We show how
-defences in the purpose of the system leads to differences in the features, and
-how the price keeps stabilising.
+differences in the purpose of the system leads to differences in the features,
+and parameters of the network.
 
 ### Reserve bank speculator model
 
 In the first type of system the speculators collectively act like a reserve
-bank.
+bank. The creation and destruction of stablecoins are controlled by the
+speculators. Anyone can create a debt-contract, deposit collateral and mint
+stablecoin tokens as long as they remain properly over-collateralized. The
+contract can also be closed at any time by depositing an equal amount of
+stablecoins to get the same collateral back.
 
-The creation and destruction of stablecoins are controlled by the speculator.
-Anyone can create a debt-contract, deposit collateral and mint stablecoin tokens
-as long as they remain properly overcollateralized. The contract can also be
-closed at any time by depositing an equal amount of stablecoins to get the same
-collateral back.
-
-It is important to know that, in this system, the amount of stablecoins created
-is determined by the price, in say dollars, of the collateral at the time of
-minting. This leads to the following incentive structure:
-
-If the market value of the token is higher that 1 dollar a speculator is
-incentivised to deposit more collateral and mint more tokens. These token can
-then be sold on the market. Increasing the supply, thus dropping the price back
-to one dollar. The benefit of the speculator here is that they were able to
-create a debt contract at a favorable rate. If, when they pay back the tokens,
-the market value of the token is lower than when they sold the coins, they will
-make a profit.
+In this system, the amount of stablecoins created is determined by the price, in
+say dollars, of the collateral at the time of minting. This leads a particular
+incentive structure. If the market value of the token is higher that 1 dollar a
+speculator is incentivised to deposit more collateral and mint more tokens.
+These token can then be sold on the market. Increasing the supply, thus dropping
+the price back to one dollar. The benefit of the speculator here is that they
+were able to create a CDP at a favorable rate. If, when they pay back the
+tokens, the market value of the token is lower than when they sold the coins,
+they will make a profit.
 
 If the market value of the token is lower than a dollar, any speculator with an
-open contract can buy the tokens at a discount and close their contract out at a
+open contract can buy the tokens at a discount and close out their CDP at a
 profit given that they bought sold the tokens at a higher price. This leads to
 fewer coins on the market, thus increasing the value back up to a dollar.
 
@@ -655,12 +653,10 @@ This creates a "soft peg" as there is no guarantee for the speculator that when
 they mint and a coin they will be able to buy it back again at a lower price.
 This can lead to the market price of the token rising to a different price
 level, and the peg can stabilise at a price level that is higher or lower than
-any collateral held.
-
-The price level of the token is thus determined by what the market believes it
-is worth. There is some indication however, that the coin will not drop below 1
-dollar, since that is the value that is returned to investors in the case of
-margin calls or a global settlement scenario.
+any collateral held. The price level of the token is thus still determined by
+what the market believes it is worth. There is some indication however, that the
+coin will not drop below 1 dollar, since that is the value that is returned to
+investors in the case of margin calls or a global settlement scenario.
 
 In this scenario, the speculator takes on a certain amount of risk speculating
 on the value of the collateral and the price of the token. Initially it seems
@@ -668,11 +664,11 @@ like the speculator gets their value from speculation only. They can, for
 example, sell their tokens on the market for more of the collateral thus
 leveraging their speculation on the collateral by some factor.
 
-Usually, the designer intended way for the speculator to make a profit is by peer
-to peer lending. Instead of selling the tokens on the market, the speculator can
-lend out the tokens to makes some extra dividends while speculating on the
-collateral. In this way, the speculator acts as the reserve bank increasing
-the supply of the token by lending out more.
+Usually, the intended way for the speculator to make a profit is by peer to peer
+lending. Instead of selling the tokens on the market, the speculator can lend
+out the tokens to makes some extra dividends while speculating on the
+collateral. In this way, the speculator acts as the reserve bank increasing the
+supply of the token by lending out more.
 
 Irregardless of how the speculator chooses to use their tokens, anyone investor
 buying them has a some guarantee that they will be worth at least a dollar in
