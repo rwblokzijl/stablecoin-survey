@@ -215,10 +215,10 @@ to match demand or vice versa. All the stablecoins discussed in this survey will
 do this in a certain way.
 
 To manage market forces a diverse set of strategies have emerged, which can be
-categorised in the categories visualised in \ref{taxonomy_label}. The easiest
-way to manage the price is through centralisation. This involves a centralised
-party that controls the currency in various ways to keep it stable. Within the
-centralised category there are two sub categories. In the controlled
+categorised in the categories visualised in figure \ref{taxonomy_label}. The
+easiest way to manage the price is through centralisation. This involves a
+centralised party that controls the currency in various ways to keep it stable.
+Within the centralised category there are two sub categories. In the controlled
 category, we have currencies that are stabilised through monetary policy like
 systems. This includes coins announced by some investment firms, but also
 digital currencies deployed and run by a central bank. The other category under
@@ -325,6 +325,28 @@ market, anyone can make an instant profit by buying the coins on the open
 market, and immediately burning them. This process will continue to decrease the
 supply of the asset until the price is back up to 1 dollar.
 
+\begin{table*}[t]
+\caption{Centralised collateralized stablecoins in the top 300 cryptocurrencies}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l l}
+\toprule
+Stablecoin                            & Market Cap (USD) & Pegged asset   & Escrow               & FDIC-insurance & Launch \\
+\midrule
+Tether \cite{Tether:whitepaper}       & 62 Billion       & USD            & Single organisation  & No             & 2014   \\
+USDC \cite{Centre:whitepaper}         & 26 Billion       & USD            & Single organisation  & Some exchanges & 2018   \\
+Binance USD \cite{Binance:whitepaper} & 10 Billion       & USD            & PAXos                & Yes            & 2019   \\
+TrueUSD \cite{TrueUSD:whitepaper}     & 1.5 Billion      & USD            & Multiple independent & Some escrows   & 2018   \\
+PAXos \cite{PAXos:whitepaper}         & 921 Million      & USD            & Single organisation  & Yes            & 2018   \\
+HUSD \cite{HUSD}                      & 577 Million      & USD            & PAXos                & Yes            & 2019   \\
+Gemini \cite{Gemini:whitepaper}       & 295 Million      & USD            & Si                   & Yes            & 2019   \\
+PAX Gold \cite{PAXGold:whitepaper}    & 108 Million      & Gold (1 ounce) & PAXos                & No             & 2019   \\
+Stasis \cite{Stasis:whitepaper}       & 106 Million      & Euro           & Multiple independent & No             & 2018   \\
+\bottomrule
+\end{tabularx}
+\label{table_centralised}
+\end{center}
+\end{table*}
+
 ### Benefits of Centralisation
 
 While decentralised currencies can peg to fiat-currencies, these pegs can not be
@@ -389,31 +411,8 @@ collateralization of decentralised currencies.
 
 To provide a glimpse of the usage of the techniques described in this
 subsection, Table \ref{table_centralised} describes the 9 central stablecoins with the
-highest market capitalization and some of their operational aspects:
-
-\begin{table*}[t]
-\caption{9 largest stablecoins by marketcap}
-\begin{center}
-\begin{tabularx}{\textwidth}{l l l l l l l}
-\toprule
-Stablecoin                            & Market Cap (USD) & Pegged asset   & Escrow               & FDIC-insurance & Launch \\
-\midrule
-Tether \cite{Tether:whitepaper}       & 62 Billion       & USD            & Single organisation  & No             & 2014   \\
-USDC \cite{Centre:whitepaper}         & 26 Billion       & USD            & Single organisation  & Some exchanges & 2018   \\
-Binance USD \cite{Binance:whitepaper} & 10 Billion       & USD            & PAXos                & Yes            & 2019   \\
-TrueUSD \cite{TrueUSD:whitepaper}     & 1.5 Billion      & USD            & Multiple independent & Some escrows   & 2018   \\
-PAXos \cite{PAXos:whitepaper}         & 921 Million      & USD            & Single organisation  & Yes            & 2018   \\
-HUSD \cite{HUSD}                      & 577 Million      & USD            & PAXos                & Yes            & 2019   \\
-Gemini \cite{Gemini:whitepaper}       & 295 Million      & USD            & Si                   & Yes            & 2019   \\
-PAX Gold \cite{PAXGold:whitepaper}    & 108 Million      & Gold (1 ounce) & PAXos                & No             & 2019   \\
-Stasis \cite{Stasis:whitepaper}       & 106 Million      & Euro           & Multiple independent & No             & 2018   \\
-\bottomrule
-\end{tabularx}
-\label{table_centralised}
-\end{center}
-\end{table*}
-
-Some interesting observations can be made from the table.
+highest market capitalization and some of their operational aspects. Some
+observations can be made from the data:
 
 1. The PAXos company operates the escrows of 3 of the top 9 stablecoins.
 2. 3 of the top 9 stablecoins are operated by exchanges including the second
@@ -781,6 +780,24 @@ likely because of a larger, thus more resilient, market.
 
 ### Debt-pool Tracker service
 
+\begin{table*}[t]
+\caption{Decentralised collateralized stablecoins in the top 300 cryptocurrencies}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l l}
+\toprule
+Stablecoin (System)                               & Collateral & Min. col. & Matchmaking                   & Interest paid                        \\
+\midrule
+DAI (MakerDAO) \cite{MakerDAO:whitepaper}         & ETH + 6,   & ~150\%    & Reserve bank speculator model & To Speculator (external)             \\
+BitAssets (BitShares) \cite{BitShares:whitepaper} & BTS        & 300\%     & Margin Trading                & Variable premium, once to speculator \\
+Synths (Synthetix) \cite{synthetix:whitepaper}    & SNX        & 750\%     & Debt-Pool Tracker             & Global interest calculation          \\
+USDQ (QDAO) \cite{QDAO}                           & Bitcoin    & 200\%     & Reserve bank speculator model & To Speculator (external)             \\
+LUSD (Liquity) \cite{Liquity:whitepaper}          & ETH        & 110\%     & Reserve bank speculator model & None                                 \\
+\bottomrule
+\end{tabularx}
+\label{table_decentralised}
+\end{center}
+\end{table*}
+
 The final matchmaking system is very similar to the reserve bank system, but
 abstracts away from the concept of having a single stablecoin, and just aims to
 track the prices of many assets.
@@ -811,6 +828,32 @@ speculators as incentive for the speculators to collateralize the system.
 
 This system can provide a whole ecosystem for tracking real world assets and
 allows easy movement between them.
+
+## Overview of crypto-collateralized stablecoins
+
+As can be seen in table \ref{table_decentralised} There are a few large players in the
+crypto collateralized stablecoin scene.
+
+MakerDAO is currently the largest most trusted system. They now allow for
+multiple different types of collateral, including Ether, BAT, REP and X0. They
+allow the community to vote using their (MKR) token. On which assets will be
+added for collateral.
+
+BitShares is the system with one of the oldest working stablecoin, BitCNY,
+active since September 2014. BitShares is a decentralised exchange that allows
+users to speculate on a number of different BitAssets, including BitUSD, BitEUR,
+and BitBTC.
+
+Synthetix describes itself as a "synthetic asset platform" and provides a number
+of stablecoins that track multiple real world currencies and assets. They allow
+direct conversion from one to another using the debt-pool tracker system where
+speculators provide collateral for the system at a minimum of 750%. The
+Synthetix platform started of centralised and is still a work in progress but is
+making major steps towards decentralisation. They offer many tracking assets
+like: sEUR, sUSD, sBTC, sETH. They also offer inverted assets to bet against
+some assets like: iBTC, and iETH. Currently, they also support commodities like
+sXAU which tracks the Philadelphia Gold and Silver Index, and they plan to add
+trackers for various company stocks.
 
 ## Oracles
 
@@ -844,7 +887,7 @@ levels. Some stablecoins do not track the price, but have token holders vote
 whether the price is too high or too low, and based on that will trigger either
 "inflationary", or "deflationary" periods [@BitBay:whitepaper].
 
-This concept can also ben generalised even further. A long desired goal is to get
+This concept can also be generalised even further. A long desired goal is to get
 real world information onto the blockchain in general. Solutions have emerged
 [@Chainlink:whitepaper] that aim to solve this problem by creating a general
 infrastructure of nodes that access real world data and record this data onto
@@ -852,51 +895,6 @@ the blockchain. To incentivise honesty of nodes, they stake an amount of network
 tokens that can be taken from them if the rest of the network disagrees with
 their votes. In addition, node reputation van be tracked on-chain in order to
 allow users to choose the most trustworthy nodes.
-
-
-## Overview
-
-As can be seen in \ref{table_decentralised} There are a few large players in the
-crypto collateralized stablecoin scene.
-
-\begin{table*}[t]
-\caption{Decentralised collateralized stablecoins}
-\begin{center}
-\begin{tabularx}{\textwidth}{l l l l l l l}
-\toprule
-Stablecoin (System)                               & Collateral & Min. col. & Matchmaking                   & Interest paid                        \\
-\midrule
-DAI (MakerDAO) \cite{MakerDAO:whitepaper}         & ETH + 6,   & ~150\%    & Reserve bank speculator model & To Speculator (external)             \\
-BitAssets (BitShares) \cite{BitShares:whitepaper} & BTS        & 300\%     & Margin Trading                & Variable premium, once to speculator \\
-Synths (Synthetix) \cite{synthetix:whitepaper}    & SNX        & 750\%     & Debt-Pool Tracker             & Global interest calculation          \\
-USDQ (QDAO) \cite{QDAO}                           & Bitcoin    & 200\%     & Reserve bank speculator model & To Speculator (external)             \\
-LUSD (Liquity) \cite{Liquity:whitepaper}          & ETH        & 110\%     & Reserve bank speculator model & None                                 \\
-\bottomrule
-\end{tabularx}
-\label{table_decentralised}
-\end{center}
-\end{table*}
-
-MakerDAO is currently the largest most trusted system. They now allow for
-multiple different types of collateral, including Ether, BAT, REP and X0. They
-allow the community to vote using their (MKR) token. On which assets will be
-added for collateral.
-
-BitShares is the system with one of the oldest working stablecoin, BitCNY,
-active since September 2014. BitShares is a decentralised exchange that allows
-users to speculate on a number of different BitAssets, including BitUSD, BitEUR,
-and BitBTC.
-
-Synthetix describes itself as a "synthetic asset platform" and provides a number
-of stablecoins that track multiple real world currencies and assets. They allow
-direct conversion from one to another using the debt-pool tracker system where
-speculators provide collateral for the system at a minimum of 750%. The
-Synthetix platform started of centralised and is still a work in progress but is
-making major steps towards decentralisation. They offer many tracking assets
-like: sEUR, sUSD, sBTC, sETH. They also offer inverted assets to bet against
-some assets like: iBTC, and iETH. Currently, they also support commodities like
-sXAU which tracks the Philadelphia Gold and Silver Index, and they plan to add
-trackers for various company stocks.
 
 # Algorithmic Stablecoins
 
@@ -978,7 +976,7 @@ function that maps price target mismatch to bond parameters.
 ## Overview of real world algorithmic stablecoins
 
 \begin{table*}[t]
-\caption{Algorithmic stablecoins}
+\caption{Top Algorithmic stablecoins in the top 300 cryptocurrencies}
 \begin{center}
 \begin{tabularx}{\textwidth}{l l l l l l}
 \toprule
@@ -987,13 +985,19 @@ Stablecoin (System)                        & Target & Price tracking & Seigniora
 TerraUSD \cite{TerraUSD:whitepaper}        & USD    & Oracle         & Speculation, transaction fees & Central, DAO planned \\
 Neutrino USD \cite{NeutrinoUSD:whitepaper} & USD    & Oracle         & Speculation                   & DAO (NSBT)           \\
 Reserve Rights \cite{Reserve:whitepaper}   & None   & Oracle         & Speculation                   & Central, DAO planned \\
+\midrule
 Nubits \cite{Nubits:whitepaper}            & USD    & Voting         & Interest                      & DAO (NuShares)       \\
-BitBay \cite{BitBay:whitepaper}            & None   & Voting         & Speculation                   & DAO (BitBay)         \\
 \bottomrule
 \end{tabularx}
 \label{table_algorithmic}
 \end{center}
 \end{table*}
+
+Table \ref{table_algorithmic} shows the largest algorithmic stablecoins by
+market cap, TerraUSD is currently the largest algorithmic stablecoin by market
+capitalization. Not many algorithmic stablecoins are live to date, but this is
+changing fast. The three top algorithmic stablecoins have all launched within
+the last 2 years.
 
 The first stablecoin to be stable for a year was NuBits[@Nubits:whitepaper].
 NuBits stabilised by using a bond mechanism as well as voted in "guardians" who
@@ -1011,10 +1015,8 @@ When then the crypto market started to recover, many sold their NuBits putting
 large pressure on the guardians who were now forced to buy NuBits for fewer
 bitcoins than they bought then for during the crash. This under-collateralized
 NuBits to a point where the guardians ran out of collateral, the currency lost
-its price guarantee, and the peg could no longer be maintained.
-
-NuBits provides an example of the main flaw of the securities model, it requires
-trust in the mechanism, which lacks when it is needed most: in a down market.
+its price guarantee, and the peg could no longer be maintained. We have included
+it for historical purposes, though today they are no longer a real contender.
 
 ## General techniques for adding stability to any currency
 
@@ -1106,7 +1108,7 @@ This leads to a system that is less reliant on trust in large banks.
 ## Crypto Collateralized Stablecoins
 
 Decentralised currencies are more aspirational. Where Bitcoin provided a
-completely trustless currency. Decentralised currencies aim to do the same, but
+completely trust-less currency. Decentralised currencies aim to do the same, but
 with guarantees about price stability. Though this is much more difficult to get
 working securely [@In_stability_for_the_Blockchain], the benefit of these coins
 to society might be much greater than that of any centralised currency.
