@@ -5,13 +5,11 @@ title: Dirty notes
 
 # Plan
 
-1. Rewrite centralised
-2. Rewrite decentralised colatoralised
-3. Rewrite algorithmic
-4. Write taxonomy
-5. Rewrite paper structure at end of intro
-6. Final pass for quality
-7. Remove unused citations
+1. Fill in algorithmic table
+2. Rewrite algorithmic
+3. Rewrite decentralised collateralized
+4. Rewrite paper structure at end of intro
+5. Final pass for quality / grammarly
 
 # Introduction notes
 

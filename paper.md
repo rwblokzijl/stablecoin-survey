@@ -83,12 +83,12 @@ cryptocurrencies, and show the inherent trade-offs between various methods.
 First, in chapter 2, we discuss the topic of the purpose of money, the meaning
 of value and stability, and some currency pegs used in our traditional monetary
 system. We then describe the simplest and most successful stablecoins, namely
-the centralised coins in Chapter 3. In Chapter 4 we go into the more complex
-topic of decentralised assets and their methods for maintaining pegs to real
-world assets without a central party guaranteeing the peg. We then go deeper
-into the theory in Chapter 5 where we look at the research into the viability of
-stablecoins. We then end with a discussion of the research on stablecoins in
-Chapter 6 and a conclusion of the survey in Chapter 7.
+the centralised coins in Chapter 3. In Chapter 4 and 5 we go into the more
+complex topic of decentralised assets and their methods for maintaining pegs to
+real world assets without a central party guaranteeing the peg. We then go
+deeper into the theory in Chapter 6 where we look at the research into the
+viability of stablecoins. We then end with a discussion of the research on
+stablecoins in Chapter 7 and a conclusion of the survey in Chapter 8.
 
 # Background
 
@@ -173,7 +173,7 @@ maintainable in all economic conditions. Non-collatoralised exchange rate
 systems are also vulnerable to attacks like on black wednesday [@soros1995].
 This happened in 1992, when the European Exchange Rate Mechanism (ERM), an
 exchange rate agreement between most of the nations of the European Economic
-Community, was famously attacked by George Soros. By taking on huge amounts of
+Community[@ERM], was famously attacked by George Soros. By taking on huge amounts of
 debt denominated in british pounds, he was able to weaken the Brittish Pound to
 the point where they had to leave the ERM, and allowing the currency to quickly
 drop in value, making Soros over 1 Billion Pounds.
@@ -188,28 +188,24 @@ confidence. If the total value of the collateral is less than 100%, the token is
 considered under-collateralized. This can have large ramifications to investor
 trust, and may thus undermine the stability of the coin itself.
 
-The first collatoralised pegs were tracking the value of gold. Every unit of a
+\begin{figure*}[t]
+\centering
+\includegraphics{img/taxonomy.png}
+\caption{Taxonomy of stablecoins \label{taxonomy_label}}
+\end{figure*}
+
+The first collateralized pegs were tracking the value of gold. Every unit of a
 currency could be exchanged for a certain amount of gold. As described in "The
 Gold Standard" [@The_Gold_Standard] by Cooper, the US dollar has been pegged to
 Gold for many years. By allowing the public to trade their Dollars for a
 predetermined amount of gold, confidence in the value of the currency was
 maintained even during harsh economic times.
 
-The concept of collatoralizations is highly utilised in stablecoins. It is the
-methods of storing and managing the collatoral that differentiates the
+The concept of collateralization is highly utilised in stablecoins. It is the
+methods of storing and managing the collateral that differentiates the
 currencies.
 
 # Taxonomy of stablecoins
-
--centralised stablecoins
--cbdcs
-
-\begin{figure}
-\centering
-\includegraphics{img/Triangle.png}
-\caption{Inherent trade-offs of stablecoins}
-\label{triangle_label}
-\end{figure}
 
 The price of any commodity or market traded asset is subject to supply and
 demand, this includes crypto-currencies. If there is a difference in demand and
@@ -219,49 +215,50 @@ to match demand or vice versa. All the stablecoins discussed in this survey will
 do this in a certain way.
 
 To manage market forces a diverse set of strategies have emerged, which can be
-categorised in the categories visualised in \ref{intro_label}. The easiest way
-to manage the price is through centralisation. This is the permissioned
-category, these stablecoins are generally managed by an organisation that keeps
-a tight leash on the coin and uses themselves as a trusted third party similar
-to a central bank.
+categorised in the categories visualised in \ref{taxonomy_label}. The easiest
+way to manage the price is through centralisation. This involves a centralised
+party that controls the currency in various ways to keep it stable. Within the
+centralised category category there are two sub categories. In the controlled
+category, we have currencies that are stabilised through monetary policy like
+systems. This includes coins announced by some investment firms, but also
+digital currencies deployed and run by a central bank. The other category under
+centralised stablecoins, is those that are collateralized. These stablecoins are
+generally managed by an organisation that guarantees a 1:1 exchange rate between
+a token and underlying stable asset, most commonly the US Dollar.
 
-- decentralised stablecoin
-
-The initial promise of cryptocurrencies was to replace the financial system
-without any centralised institutions that can act as gatekeepers or single
-points of failure. Though many centralised stablecoins are becoming more
-diversified in their collateralization, the organisations that run them remain a
-central point of failure. The risk of collateral depletion by the market maker
-failure is always prevalent and though some stablecoins store their collateral
-with bankruptcy remote companies, this just moves the risk to a different
-central entity. To protect investors from the failure of any central entity and
-even the failure of the financial system as a whole, stablecoins have emerged
-that remain price-stable in a decentralised manner, keeping true to the core
-values of the Decentralised Finance (DeFi) movement.
-
--collateralised
--algorithmic
+Though many centralised stablecoins are becoming more diversified in their
+collateralization, the organisations that run them remain a central point of
+failure. The risk of collateral depletion by the market maker failure is always
+prevalent and though some stablecoins store their collateral with bankruptcy
+remote companies, this just moves the risk to a different central entity. To
+protect investors from the failure of any central entity and even the failure of
+the financial system as a whole, stablecoins have emerged that remain
+price-stable in a decentralised manner.
 
 Decentralised stablecoins come in two main categories. The first is
 Crypto-Collateralized Stablecoins. These peg to the value of some stable
-currency, usually the dollar, and creates a taylor made derivatives market using
+currency, usually the dollar, and creates a tailor made derivatives market using
 smart-contracts that makes sure the currency is stable with respect to the
-pegged asset. They remain collateralised at over 100% in some other currency
+pegged asset. They remain collateralized at over 100% in some other currency
 than the pegged currency. The second is Algorithmic Stablecoins. These
+dynamically and automatically vary different parameters of the network to
+influence one or more of the quantity theory of money parameters.
 
-- taxonomy
+Every stablecoin optimises has chosen its own set of trade-offs. These
+trade-offs are illustrated in figure \ref{triangle_label}. Ideally all
+cryptocurrencies are fully collateralized on some stable entity, fully-capital
+efficient at a collateralization ratio of exactly 100%, and fully decentralised
+to eliminate a central point of failure. However, not stablecoin has achieved
+all 3 of these. Centralised stablecoins sacrifice decentralisation, algorithmic
+stablecoins sacrifice collateralization, and all crypto-collatoralised
+stablecoins are collateralized for more than 100%.
 
-\begin{figure*}
+\begin{figure}
 \centering
-\includegraphics{img/taxonomy.png}
-\caption{Taxonomy of stablecoins \label{intro_label}}
-\end{figure*}
-
-The permissionless category has as a primary goal to stay decentralised. This
-comes with larger challenges, but also a greater potential to deliver on the
-promise of a permissionless monetary system.
-
-Figure \ref{triangle_label}.
+\includegraphics{img/Triangle-white.png}
+\caption{Inherent trade-offs of stablecoins}
+\label{triangle_label}
+\end{figure}
 
 # Centralised stablecoins
 
@@ -391,7 +388,7 @@ collateralization of decentralised currencies.
 ### Overview of the largest centralised stablecoins
 
 To provide a glimpse of the usage of the techniques described in this
-subsection, Table \ref{TODO} describes the 9 central stablecoins with the
+subsection, Table \ref{table_centralised} describes the 9 central stablecoins with the
 highest market capitalisation and some of their operational aspects:
 
 \begin{table*}[t]
@@ -412,7 +409,7 @@ PAX Gold \cite{PAXGold:whitepaper}    & 108 Million      & Gold (1 ounce) & PAXo
 Stasis \cite{Stasis:whitepaper}       & 106 Million      & Euro           & Multiple independent & No             & 2018   \\
 \bottomrule
 \end{tabularx}
-\label{table-tab2}
+\label{table_centralised}
 \end{center}
 \end{table*}
 
@@ -860,23 +857,24 @@ allow users to choose the most trustworthy nodes.
 
 ## Overview
 
-As can be seen in \ref{TODO} There are a few large players in the crypto collateralized stablecoin scene.
+As can be seen in \ref{table_decentralised} There are a few large players in the
+crypto collateralized stablecoin scene.
 
 \begin{table*}[t]
 \caption{Decentralised collateralised stablecoins}
 \begin{center}
 \begin{tabularx}{\textwidth}{l l l l l l l}
 \toprule
-Stablecoin (System)   & Collateral & Min. col. & Matchmaking                   & Interest paid                        \\
+Stablecoin (System)                               & Collateral & Min. col. & Matchmaking                   & Interest paid                        \\
 \midrule
-DAI (MakerDAO)        & ETH + 6,   & ~150\%    & Reserve bank speculator model & To Speculator (external)             \\
-BitAssets (BitShares) & BTS        & 300\%     & Margin Trading                & Variable premium, once to speculator \\
-Synths (Synthetix)    & SNX        & 750\%     & Debt-Pool Tracker             & Global interest calculation          \\
-USDQ (QDAO)           & Bitcoin    & 200\%     & Reserve bank speculator model & To Speculator (external)             \\
-LUSD (Liquity)        & ETH        & 110\%     & Reserve bank speculator model & None                                 \\
+DAI (MakerDAO) \cite{MakerDAO:whitepaper}         & ETH + 6,   & ~150\%    & Reserve bank speculator model & To Speculator (external)             \\
+BitAssets (BitShares) \cite{BitShares:whitepaper} & BTS        & 300\%     & Margin Trading                & Variable premium, once to speculator \\
+Synths (Synthetix) \cite{synthetix:whitepaper}    & SNX        & 750\%     & Debt-Pool Tracker             & Global interest calculation          \\
+USDQ (QDAO) \cite{QDAO}                           & Bitcoin    & 200\%     & Reserve bank speculator model & To Speculator (external)             \\
+LUSD (Liquity) \cite{Liquity:whitepaper}          & ETH        & 110\%     & Reserve bank speculator model & None                                 \\
 \bottomrule
 \end{tabularx}
-\label{table-tab2}
+\label{table_decentralised}
 \end{center}
 \end{table*}
 
@@ -913,11 +911,11 @@ significantly stablecoins.
 
 Some stablecoins, rather than offloading risk to speculators, aim to reduce
 volatility by controlling the demand and supply of currencies in other ways. In
-this section we describe the securities model for expanding and contracting the
+this section we describe the seigniorage model for expanding and contracting the
 money supply, as well as some more theoretical techniques and currency
 parameters for reducing volatility.
 
-## Securities model
+## Seigniorage model
 
 The stabilisation of currencies is much older than cryptocurrencies. So to see
 how cryptocurrencies can be stabilised, some have taken inspiration from the way
@@ -925,11 +923,11 @@ central banks stabilise traditional currencies. Specifically open market
 operations employed by central banks and the federal reserve.
 
 When the fed wants to increase the money supply in times of deflation, they
-often buy government securities thus getting money out into the hands of the
+often buy government bonds thus getting money out into the hands of the
 public. When they then want to decrease the money supply, they will sell the
-securities thus getting the money out of the system.
+bonds thus getting the money out of the system.
 
-The securities stablecoin model utilises this concept. In times of inflation
+The seigniorage stablecoin model utilises this concept. In times of inflation
 when the currency is undervalued, the blockchain will start selling bonds. These
 bonds lock up a buyers coins for a period of time, and will pay them back,
 including some interest, after a certain time. Since some of the money is now
@@ -940,9 +938,11 @@ In times of deflation when the currency in overvalued, bonds can be discouraged
 or disabled. Outstanding bonds can also be payed back prematurely in order to
 increase the money supply. When all bonds have released and deflation is still a
 problem, more money can be printed and distributed in some way until there the
-price is back down to the desired level.
+price is back down to the desired level. This creates a natural tendency in the
+market towards the desired price.
 
-Variables that can be tweaked to maintain the desired price level are:
+In order to tune the effect of the price corrections differences parameters
+can be tweaked to maintain the desired price level. These are:
 
 - The interest payed over the bond - higher encourages purchase
 - The lifetime of the bond - this is how long the money is out of circulation
@@ -953,7 +953,7 @@ expanded or retracted still needs to be made in a decentralised way.
 Consequently this is where the largest differences between the existing
 stablecoins lie.
 
-** Self stabilisation mechanisms **
+### Self stabilisation mechanisms
 
 By tweaking bond lifetime and interest rates a currency can be stabilised.
 However there still needs to be some decentralised mechanism that triggers
@@ -975,6 +975,47 @@ risk takers.
 
 Note that even oracle based stablecoins are usually DAO's that vote on the
 function that maps price target mismatch to bond parameters.
+
+## Overview of real world algorithmic stablecoins
+
+\begin{table*}[t]
+\caption{Algorithmic stablecoins}
+\begin{center}
+\begin{tabularx}{\textwidth}{l l l l l l}
+\toprule
+Stablecoin (System)                        & Target & Method & Price tracking & Interest rate & Governance (token)   \\
+\midrule
+TerraUSD \cite{TerraUSD:whitepaper}        & USD    & Seigniorage (Luna) & Oracle         &               & Central, DAO planned \\
+Neutrino USD \cite{NeutrinoUSD:whitepaper} & USD    & Seigniorage (WAVES) & Oracle         &               & DAO (NSBT)           \\
+Reserve Rights \cite{Reserve:whitepaper}   & None   & Yes () & Oracle         &               & Central, DAO planned \\
+Nubits \cite{Nubits:whitepaper}            & USD    & Yes () & Voting         & Voted         & DAO (NuShares)       \\
+BitBay \cite{BitBay:whitepaper}            & None   & Yes () & Voting         & None          & DAO (BitBay)         \\
+\bottomrule
+\end{tabularx}
+\label{table_algorithmic}
+\end{center}
+\end{table*}
+
+The first stablecoin to be stable for a year was NuBits[@Nubits:whitepaper].
+NuBits stabilised by using a bond mechanism as well as voted in "guardians" who
+would get newly printed NuBits and would in turn provide liquidity to the market.
+These guardians would sell and buy the NuBits on the market at the price
+determined by the peg. In a way this turns the guardians into holders of
+collateral.
+
+NuBits lost their peg twice and successfully recovered once in 2016, but after
+the "Christmas crash" of late 2017-2018 investors massively bought the
+stablecoin as presumably it was safe compared to the rest of the crashing crypto
+market because of its peg to the dollar. This grew the market cap of NuBits by
+1500% over a few months while the guardians mostly held collateral in bitcoin.
+When then the crypto market started to recover, many sold their NuBits putting
+large pressure on the guardians who were now forced to buy NuBits for fewer
+bitcoins than they bought then for during the crash. This under-collateralized
+NuBits to a point where the guardians ran out of collateral, the currency lost
+its price guarantee, and the peg could no longer be maintained.
+
+NuBits provides an example of the main flaw of the securities model, it requires
+trust in the mechanism, which lacks when it is needed most: in a down market.
 
 ## General techniques for adding stability to any currency
 
@@ -1041,52 +1082,6 @@ leads more mining when the price is high and less when it is low.
 PoSW has the benefit of scaling better into the future as the sequential
 speed of processors improve at a much slower rate than parallel speeds.
 
-## Overview of real world algorithmic stablecoins
-
-\begin{table*}[t]
-\caption{Algorithmic stablecoins}
-\begin{center}
-\begin{tabularx}{\textwidth}{l l l l l l}
-\toprule
-Stablecoin (System)                        & Target & Stabilisation Mechanism & Duration  & Interest & Governance (token) \\
-\midrule
-TerraUSD \cite{TerraUSD:whitepaper}        & USD    &                         &           &          &                    \\
-Neutrino USD \cite{NeutrinoUSD:whitepaper} & USD    &                         &           &          &                    \\
-Reserver Rights \cite{Reserve:whitepaper}  & None   &                         &           &          &                    \\
-Fei protocol                               &        &                         &           &          &                    \\
-Frax                                       &        &                         &           &          &                    \\
-Nubits \cite{Nubits:whitepaper}            & USD    & Voting                  & Voted     & Voted    & DAO (NuShares)     \\
-BitBay \cite{BitBay:whitepaper}            & None   & Voting                  & Unlimited & None     & DAO (BitBay)       \\
-Anchor \cite{Anchor:whitepaper}            &        &                         &           &          &                    \\
-Basis \cite{Basis:whitepaper}              & USD    & Oracle                  & 5 years   & Voted    & DAO                \\
-Ampleforth \cite{Ampleforth:whitepaper}    &        &                         &           &          &                    \\
-\bottomrule
-\end{tabularx}
-\label{table_algorithmic}
-\end{center}
-\end{table*}
-
-The first stablecoin to be stable for a year was NuBits[@Nubits:whitepaper].
-NuBits stabilised by using a bond mechanism as well as voted in "guardians" who
-would get newly printed NuBits and would in turn provide liquidity to the market.
-These guardians would sell and buy the NuBits on the market at the price
-determined by the peg. In a way this turns the guardians into holders of
-collateral.
-
-NuBits lost their peg twice and successfully recovered once in 2016, but after
-the "Christmas crash" of late 2017-2018 investors massively bought the
-stablecoin as presumably it was safe compared to the rest of the crashing crypto
-market because of its peg to the dollar. This grew the market cap of NuBits by
-1500% over a few months while the guardians mostly held collateral in bitcoin.
-When then the crypto market started to recover, many sold their NuBits putting
-large pressure on the guardians who were now forced to buy NuBits for fewer
-bitcoins than they bought then for during the crash. This under-collateralized
-NuBits to a point where the guardians ran out of collateral, the currency lost
-its price guarantee, and the peg could no longer be maintained.
-
-NuBits provides an example of the main flaw of the securities model, it requires
-trust in the mechanism, which lacks when it is needed most: in a down market.
-
 # Discussion
 
 Stablecoins are an even younger development in the young field of
@@ -1116,12 +1111,6 @@ completely trust less currency. Decentralised currencies aim to do the same, but
 with guarantees about price stability. Though this is much more difficult to get
 working securely [@In_stability_for_the_Blockchain], the benefit of these coins
 to society might be much greater than that of any centralised currency.
-
-Separate from the issue of price stable currency, many decentralised stablecoins
-have shown decentralised alternatives to mechanisms like contracts for
-difference [TODO cite something]. Even if these mechanisms don't end up working
-for stablecoins in the long term, they still mark an important step in the world
-of Decentralised Finance (DeFi).
 
 ## Related Work
 
@@ -1167,11 +1156,16 @@ to get margin-called creating a run-away feedback loop.
 # Conclusion
 
 There is a lot happening in the stablecoin and DeFi space right now. Stablecoins
-are being tested in a trial by fire in the real-world as we speak. Through this
-organisations such as MakerDAO and Synthetix are developing completely systems
-that promise to either revolutionise the world by taking Decentralised Finance
-to the next level, or they will spectacularly go up in a ball of fire. Only time
-will tell.
+are being tested in a trial by fire in the real-world as we speak. While central
+banks are still deliberating on their requirements for their CBDCs, market
+stablecoins are innovating at a rapid pace. Centralised stablecoins, currently
+the biggest players in the space, are getting a lot of attention for their
+success. Meanwhile, decentralised stablecoins such as MakerDAO and Synthetix are
+developing completely systems that promise to either take Decentralised Finance
+to the next level, or fail spectacularly. Within the last year algorithmic
+stablecoins have entered also gained significant traction. The future of stable
+currencies will depend on the success of the decentralised players, and the next
+steps of the central banks.
 
 # References
 
